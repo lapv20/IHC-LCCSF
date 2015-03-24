@@ -1,0 +1,24 @@
+para hacer la "bitacora" (tabla historial) necesito que cada vez que un usuario haga "algo" lo almacenen en esta tabla,
+la tabla tiene :
+	-idhistorial
+	-idactividad
+	-nombre_usuairo
+	-fecha
+el campo idactividad lo vamos a sacar de la tabla actividad que ahi estaran guardadas las actividades que puede hacer cada usuario, edy propone estas como primeras, a medida que se necesiten mas actividades agregan otro registro a la tabla 
+actividad
+
+1- generar orden de servicio
+2- anular orden de servicio
+3- cambiar estatus de orden de servicio
+4- eliminar paciente
+5- agregar paciente
+6- modificar paciente
+7- actualizar afiliados (cuando se sube un txt con personas)
+.
+.
+.
+n
+
+por ejemplo ivonne cuando agregues datos de los nuevos afiliados y eso debes agregar un registro a la tabla historial,entonces colocas el idactividad 7 y los demas
+campos. 
+Si se necesita alguna actividad, pueden agregarla en la tabla actividad y decirle a los demas para que lo agreguemos tambien.

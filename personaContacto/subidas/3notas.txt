@@ -1,0 +1,7 @@
+1
+Cedula: V55555555
+Nombre: Eduardo
+Apellido: Carvallo
+Fecha_nac: 1993-03-20
+Genero: M
+Telefono: 04144415939

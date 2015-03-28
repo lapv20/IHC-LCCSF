@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Laboratorio Clinico Cesar Sanchez Font</title>
 <link rel="stylesheet" href="admin/archivos/css/style.default.css" type="text/css" />
-<link rel="stylesheet" href="archivos/css/style.shinyblue.css" type="text/css" />
 
 <script type="text/javascript" src="admin/archivos/js/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="admin/archivos/js/jquery-migrate-1.1.1.min.js"></script>
@@ -100,7 +99,6 @@ if(!isset($_SESSION['userid'])) //para saber si existe o no ya la variable de se
         } 
     }
 ?> 
-
 <div class="loginpanel">
     <div class="loginpanelinner">
         <div class="logo animate0 bounceIn"><img src="web/logo.png" alt="" width="250px;"/></div>
@@ -119,8 +117,11 @@ if(!isset($_SESSION['userid'])) //para saber si existe o no ya la variable de se
         <div class="inputwrapper ">
             <!--<button name="submit">Entrar</button>-->
             <input class="boton_login" name="login" type="submit" value="Ingresar" style="width:270px;">
+            <br><p style="color: white; font-size: 16px;">Usuarios:<br>
+            allin1   /   1234    = Administrador<br>
+            edy1192  /   1234    = Secretaria (LCCSF/web/principal.php)<br>
+            lapv1992 /   lapv1992 = Contacto Empresa</p>
         </div>
-        
     </form> 
     </div><!--loginpanelinner-->
 </div><!--loginpanel-->

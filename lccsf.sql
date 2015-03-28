@@ -3,8 +3,8 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 13-11-2014 a las 14:06:16
--- Versión del servidor: 5.6.12-log
+-- Tiempo de generación: 28-03-2015 a las 17:15:52
+-- Versión del servidor: 5.6.22-log
 -- Versión de PHP: 5.4.16
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -187,16 +187,16 @@ CREATE TABLE IF NOT EXISTS `ordenservicio` (
   KEY `idempresa_2` (`idempresa`),
   KEY `idsucursal` (`idsucursal`),
   KEY `idperfil` (`idperfil`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=14 ;
 
 --
 -- Volcado de datos para la tabla `ordenservicio`
 --
 
 INSERT INTO `ordenservicio` (`idordenservicio`, `numero_orden`, `hora_estimada`, `estatus`, `cedula_paciente`, `idempresa`, `idsucursal`, `idperfil`) VALUES
-(4, '14-1', '07:59:52', 'Pendiente', 'V21479441', 1, 2, 2),
-(8, '14-1', '17:06:29', 'Anulada', 'V17707200', 1, 2, 1),
-(10, '14-2', '18:18:19', 'Anulada', 'V17707200', 1, 6, 4),
+(4, '14-1', '07:59:52', 'Anulado', 'V21479441', 1, 2, 2),
+(8, '14-1', '17:06:29', 'Anulado', 'V17707200', 1, 2, 1),
+(10, '14-2', '18:18:19', 'Anulado', 'V17707200', 1, 6, 4),
 (12, '14-3', '18:24:52', 'Anulada', 'V18166738', 1, 3, 3),
 (13, '14-4', '18:25:34', 'Procesado', 'V22224952', 1, 6, 4);
 
@@ -216,7 +216,7 @@ CREATE TABLE IF NOT EXISTS `paciente` (
   `telefono` varchar(200) NOT NULL,
   PRIMARY KEY (`idpaciente`),
   KEY `cedula` (`cedula`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
 
 --
 -- Volcado de datos para la tabla `paciente`
@@ -293,7 +293,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   KEY `tipo_usuario` (`tipo_usuario`),
   KEY `idempresa` (`idempresa`),
   KEY `nombre_usuario` (`nombre_usuario`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
 -- Volcado de datos para la tabla `usuario`
@@ -301,7 +301,8 @@ CREATE TABLE IF NOT EXISTS `usuario` (
 
 INSERT INTO `usuario` (`idusuario`, `nombre_usuario`, `clave`, `nombres`, `apellidos`, `idempresa`, `tipo_usuario`, `correo`, `telefono`) VALUES
 (1, 'edy1192', '1234', 'edilianny ', 'sanchez', 1, 2, 'edy@gmail.com', '02418912661'),
-(2, 'allin1', '1234', 'allinson', 'mota', 1, 1, 'allin@gmail.com', '04141234567');
+(2, 'allin1', '1234', 'allinson', 'mota', 1, 1, 'allin@gmail.com', '04141234567'),
+(3, 'lapv1992', 'lapv1992', 'Luis', 'Perez', 1, 3, 'lapv1992@gmail.com', '04144415939');
 
 --
 -- Restricciones para tablas volcadas
@@ -318,8 +319,8 @@ ALTER TABLE `convenio_paciente`
 -- Filtros para la tabla `historial`
 --
 ALTER TABLE `historial`
-  ADD CONSTRAINT `historial_ibfk_2` FOREIGN KEY (`nombre_usuario`) REFERENCES `usuario` (`nombre_usuario`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `historial_ibfk_1` FOREIGN KEY (`idactividad`) REFERENCES `actividades` (`idactividad`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `historial_ibfk_1` FOREIGN KEY (`idactividad`) REFERENCES `actividades` (`idactividad`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `historial_ibfk_2` FOREIGN KEY (`nombre_usuario`) REFERENCES `usuario` (`nombre_usuario`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `ordenservicio`

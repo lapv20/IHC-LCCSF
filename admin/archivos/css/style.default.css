@@ -65,9 +65,9 @@ text-align: center; margin: auto; margin-top: 10px; padding: 15px; background-co
 box-shadow: 0px 0px 35px -8px rgba(0,0,0,0.8);
 }
 .boton_login{
-border-radius: 5px; font-variant: small-caps; font-size: 16px;
-}
-.boton_login:hover{
+display: block; border: 1px solid #0c57a3; padding: 10px; background: #0972dd; width: 100%;
+color: #000; text-transform: uppercase; }
+.boton_login:focus, .boton_login:active, .boton_login:hover { background: #1e82e8;
 -webkit-box-shadow: 0px 0px 35px -8px rgba(0,0,0,1);
 -moz-box-shadow: 0px 0px 35px -8px rgba(0,0,0,1);
 box-shadow: 0px 0px 35px -8px rgba(0,0,0,1);

@@ -103,11 +103,6 @@ if(!isset($_SESSION['userid'])) //para saber si existe o no ya la variable de se
     <div class="loginpanelinner">
         <div class="logo animate0 bounceIn"><img src="web/logo.png" alt="" width="250px;"/></div>
     <form action="" method="post" class="login"> 
-        <!--<div><label>Usuario: </label><br><input name="user" type="text" placeholder="Usuario"></div>
-        <div><label>Clave:</label><br><input name="password" type="password" placeholder="Contraseña"></div>
-        <br> 
-        <div class="inputwrapper"><input name="login" type="submit" value="Ingresar"></div>--> 
-        
         <div class="inputwrapper ">
             <input type="text" name="user" id="username" placeholder="Usuario" />
         </div>
@@ -117,9 +112,9 @@ if(!isset($_SESSION['userid'])) //para saber si existe o no ya la variable de se
         <div class="inputwrapper ">
             <!--<button name="submit">Entrar</button>-->
             <input class="boton_login" name="login" type="submit" value="Ingresar" style="width:270px;">
-            <br><p style="color: white; font-size: 16px;">Usuarios:<br>
+            <br><p style="color: white; font-size: 13px;"><b>Usuarios:</b><br>
             allin1   /   1234    = Administrador<br>
-            edy1192  /   1234    = Secretaria (LCCSF/web/principal.php)<br>
+            edy1192  /   1234    = Secretaria /principal<br>
             lapv1992 /   lapv1992 = Contacto Empresa</p>
         </div>
     </form> 

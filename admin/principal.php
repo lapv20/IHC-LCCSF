@@ -173,15 +173,27 @@
     <div class="rightpanel">
         
         <ul class="breadcrumbs">
-        
+            <li><a href="principal.php"><i class="iconfa-home"></i></a> </li>
+            <?php 							
+			if(isset($_GET["accion"]) || isset($_GET['tipo'])){
+				if($_GET["accion"]=="cuentas" && $_GET['tipo']=="nuevo"){
+					?><li><span class="separator"></span> Cuentas <span class="separator"></span> <a href="principal.php?accion=cuentas&tipo=nuevo">Agregar Cuenta</a></li><?php
+				}
+				if($_GET["accion"]=="cuentas" && $_GET['tipo']=="modificar"){
+					?><li><span class="separator"></span> Cuentas <span class="separator"></span> <a href="principal.php?accion=cuentas&tipo=modificar">Modificar Cuenta</a></li><?php
+				}
+				if($_GET["accion"]=="cuentas" && $_GET['tipo']=="eliminar"){
+					?><li><span class="separator"></span> Cuentas <span class="separator"></span> <a href="principal.php?accion=cuentas&tipo=eliminar">Eliminar Cuenta</a></li><?php
+				}
+			}
+		?>
+        </ul>
         </ul>
         
         <div class="maincontent">
             <div class="maincontentinner">
                 <div class="row-fluid">
                     <div id="dashboard-left" class="span">
-                    <div class="divider30"></div>
-                        
                         <?php 							
 							if(isset($_GET["accion"]) || isset($_GET['tipo'])){
 								if($_GET["accion"]=="cuentas" && $_GET['tipo']=="nuevo"){

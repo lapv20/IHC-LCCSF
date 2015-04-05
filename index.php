@@ -121,13 +121,13 @@ if(!isset($_SESSION['userid'])) //para saber si existe o no ya la variable de se
         <br> 
         <div class="inputwrapper"><input name="login" type="submit" value="Ingresar"></div>--> 
         
-        <div class="inputwrapper ">
+        <div class="inputwrapper animate1 bounceIn">
             <input type="text" name="user" id="username" placeholder="Usuario" />
         </div>
-        <div class="inputwrapper ">
+        <div class="inputwrapper animate2 bounceIn">
             <input type="password" name="password" id="password" placeholder="Contraseña" />
         </div>
-        <div class="inputwrapper ">
+        <div class="inputwrapper animate3 bounceIn">
             <!--<button name="submit">Entrar</button>-->
             <input name="login" type="submit" value="Ingresar" style="width:270px;">
         </div>

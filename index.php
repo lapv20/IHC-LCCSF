@@ -140,7 +140,7 @@ if(!isset($_SESSION['userid'])) //para saber si existe o no ya la variable de se
 </div><!--loginpanel-->
 
 <div class="loginfooter">
-    <p>allin1 - 1234 - Administrador</p>
+    <p>allin1 - 1234 - Administrador<br />lapv1992 - lapv1992 - Persona Contacto</p>
 </div>
 
 <?php 

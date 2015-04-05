@@ -1,6 +1,6 @@
 <?php 
-	/*session_start();*/
-	 include("conexbd.php");
+	session_start();
+	include("conexbd.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -62,7 +62,7 @@
         
         <div class="leftmenu">        
             <ul class="nav nav-tabs nav-stacked">
-            	<li class="nav-header"><a href="principal.php">Inicio</a></li>
+            	<li class=""><a href="principal.php"><span class=" iconfa-home"></span> INICIO</a></li>              
                  <?php 
 					$pacientes="";
 					$ordenser="";
@@ -84,20 +84,20 @@
 						
 					}
 				?>
-  <li class="dropdown <?php if($pacientes!=""){ echo $pacientes;}?>"><a href=""><span class="icon-user"></span>Pacientes</a>
+  <li class="dropdown <?php if($pacientes!=""){ echo $pacientes;}?>"><a href=""><span class="iconfa-user"></span>Pacientes</a>
                 	<ul <?php if ($pacientes!=""){?>style="display: block" <?php  } ?> >                    	
                     	<li><a href="principal.php?accion=pacientes&tipo=nuevo">Añadir Paciente</a></li>
                         <li><a href="principal.php?accion=pacientes&tipo=vep">Ver Pacientes</a></li>                     
                     </ul>
                 </li>
-  <li class="dropdown <?php if($ordenser!=""){ echo $ordenser;}?>"><a href=""><span class="icon-file"></span>Ordenes de Servicio</a>
+  <li class="dropdown <?php if($ordenser!=""){ echo $ordenser;}?>"><a href=""><span class="iconfa-file"></span>Ordenes de Servicio</a>
                 	<ul <?php if ($ordenser!=""){?>style="display: block" <?php  } ?> >
                     	<li><a href="principal.php?accion=ordenser&tipo=nuevo">Crear Orden de Servicio</a></li>
                         <li><a href="principal.php?accion=ordenser&tipo=veros">Ver Ordenes de Servicio</a></li>
                     </ul>
                 </li>
                 
-                <li><a href="logout.php">Salir</a></li>
+                <li><a href="logout.php"><span class=" iconfa-off"></span> Salir</a></li>
                 <!--<li><a href="archivos/typography.html"><span class="iconfa-font"></span> Typography</a></li>
                 <li><a href="archivos/charts.html"><span class="iconfa-signal"></span> Graph &amp; Charts</a></li>
                 <li><a href="archivos/messages.html"><span class="iconfa-envelope"></span> Messages</a></li>
@@ -128,7 +128,26 @@
     <div class="rightpanel">
         
         <ul class="breadcrumbs">
-        
+        	<li><a href="principal.php"><i class="iconfa-home"></i></a> <span class="separator"></span> Inicio</li>
+        	<?php 							
+			if(isset($_GET["accion"]) || isset($_GET['tipo'])){
+				if($_GET["accion"]=="pacientes" && $_GET['tipo']=="nuevo"){
+					?><li><span class="separator"></span> Pacientes <span class="separator"></span> <a href="principal.php?accion=pacientes&tipo=nuevo">Añadir Paciente</a></li><?php
+				}
+				if($_GET["accion"]=="pacientes" && $_GET['tipo']=="vep"){
+					?><li><span class="separator"></span> Pacientes <span class="separator"></span> <a href="principal.php?accion=pacientes&tipo=vep">Ver Pacientes</a></li><?php
+				}
+				if($_GET["accion"]=="ordenser" && $_GET['tipo']=="nuevo"){
+					?><li><span class="separator"></span> Ordenes de Servicio <span class="separator"></span> <a href="principal.php?accion=ordenser&tipo=nuevo">Crear Orden de Servicio</a></li><?php
+				}
+				if($_GET["accion"]=="ordenser" && $_GET["tipo"]=="veros"){
+					?><li><span class="separator"></span> Ordenes de Servicio <span class="separator"></span> <a href="principal.php?accion=ordenser&tipo=veros">Ver Ordenes de Servicio</a></li><?php
+				}
+			}
+		?>
+        	<li class="right">
+                <a href=""><i class="icon-user"></i> <?php echo $_SESSION['nombres']; echo " "; echo $_SESSION['apellidos']; ?></a>
+            </li>
         </ul>
         
         <div class="maincontent">

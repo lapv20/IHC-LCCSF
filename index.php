@@ -110,24 +110,24 @@ if(!isset($_SESSION['userid'])) //para saber si existe o no ya la variable de se
             $_SESSION['userid'] = $result->nombre_usuario; 
 			verificar_usuario($_POST['user'],$_POST['password']);
         }else{ 
-            echo '<div class="error">Su usuario es incorrecto<br />intente nuevamente.</div>'; //Si la función verificar_login() no pasa, que se muestre un mensaje de error. 
+            echo '<div class="error animate0 bounceIn">Su usuario es incorrecto<br />intente nuevamente.</div>'; //Si la función verificar_login() no pasa, que se muestre un mensaje de error. 
         } 
     } 
 ?>
-<div class="logo animate0 bounceIn"><img src="web/logo.png" alt="Laboratorio Clinico Cesar Sánchez Font" width="250px"/></div>
+<div class="logo animate1 bounceIn"><img src="web/logo.png" alt="Laboratorio Clinico Cesar Sánchez Font" width="250px"/></div>
     <form action="" method="post" class="login"> 
         <!--<div><label>Usuario: </label><br><input name="user" type="text" placeholder="Usuario"></div>
         <div><label>Clave:</label><br><input name="password" type="password" placeholder="Contraseña"></div>
         <br> 
         <div class="inputwrapper"><input name="login" type="submit" value="Ingresar"></div>--> 
         
-        <div class="inputwrapper animate1 bounceIn">
+        <div class="inputwrapper animate2 bounceIn">
             <input type="text" name="user" id="username" placeholder="Usuario" />
         </div>
-        <div class="inputwrapper animate2 bounceIn">
+        <div class="inputwrapper animate3 bounceIn">
             <input type="password" name="password" id="password" placeholder="Contraseña" />
         </div>
-        <div class="inputwrapper animate3 bounceIn">
+        <div class="inputwrapper animate4 bounceIn">
             <!--<button name="submit">Entrar</button>-->
             <input name="login" type="submit" value="Ingresar" style="width:270px;">
         </div>

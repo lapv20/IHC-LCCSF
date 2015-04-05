@@ -1,10 +1,10 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Laboratorio Clinico Cesar Sanchez Font</title>
-<link rel="stylesheet" href="archivos/css/style.default.css" type="text/css" />
 
 <link rel="stylesheet" href="archivos/css/responsive-tables.css">
 <link rel="stylesheet" href="../web/archivos/css/style.default.css" type="text/css" />
@@ -206,7 +206,7 @@
 			}
 		?>
 			<li class="right">
-                <a href=""><i class="icon-user"></i> Nombre de la Persona</a>
+                <a href=""><i class="icon-user"></i> <?php echo $_SESSION['nombres']; echo " "; echo $_SESSION['apellidos']; ?></a>
             </li>
         </ul>
         

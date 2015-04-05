@@ -108,6 +108,9 @@ if(!isset($_SESSION['userid'])) //para saber si existe o no ya la variable de se
         { 
             /*Si el login fue correcto, registramos la variable de sesión y al mismo tiempo refrescamos la pagina index.php.*/ 
             $_SESSION['userid'] = $result->nombre_usuario; 
+            $_SESSION['nombres'] = $result->nombres;
+            $_SESSION['apellidos'] = $result->apellidos;
+            
 			verificar_usuario($_POST['user'],$_POST['password']);
         }else{ 
             echo '<div class="error animate0 bounceIn">Su usuario es incorrecto<br />intente nuevamente.</div>'; //Si la función verificar_login() no pasa, que se muestre un mensaje de error. 

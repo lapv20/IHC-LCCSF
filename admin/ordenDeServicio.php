@@ -57,12 +57,10 @@
                          <?php
 						 	if($row['estatus']!="Realizado"){
 						  ?>
-                          <a onclick="anular('<?php echo $row['numero_orden'];?>');" title="Modificar" class="iconsweets-cog4" style="cursor:pointer;"></a></center>
-                         <?php
-							}
-						  ?>
+                          <a onclick="anular('<?php echo $row['numero_orden'];?>');" title="Modificar" style="cursor:pointer; text-decoration:none;"><span class=" iconfa-remove"></span></a></center>
+                         <?php } ?>
                           </td>
                         </tr>
-                        <?php }?>
+                        <?php } ?>
 </tbody>
                 </table>

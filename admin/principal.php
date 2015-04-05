@@ -70,24 +70,19 @@
 <body>
 
 <div class="mainwrapper">
-    
     <!--<div class="header" style="background:url(logo.png); background-repeat:no-repeat;background-size:500px 500px;">-->
     <div class="header" >
-    <div>
-        <div class="logo">
-         	 <a href="principal.php"> <img src="../web/Logo.png"/></a>
-    	</div>   
-    </div>
-        
-       
+	    <div>
+	        <div class="logo">
+	         	 <a href="principal.php"> <img src="../web/Logo.png"/></a>
+	    	</div>   
+	    </div>
     </div>
     
     <div class="leftpanel">
-        
         <div class="leftmenu">        
             <ul class="nav nav-tabs nav-stacked">
-            	<li class="nav-header"><a href="principal.php">Inicio</a></li>
-                
+            	<li class=""><a href="principal.php"><span class=" iconfa-home"></span> INICIO</a></li>              
                 <?php 
 					$cuentas="";
 					$orden="";
@@ -137,7 +132,7 @@
                 <li class="<?php if($orden!=""){ echo $orden;}?>"><a href="principal.php?accion=orden&tipo=anular"><span class=" iconfa-briefcase"></span> Orden de Servicio</a>
                 	
                 </li>
-                <li class=" dropdown <?php if($empresa!=""){ echo $empresa;}?>"><a href=""><span class="iconfa-home"></span> Empresas</a>
+                <li class=" dropdown <?php if($empresa!=""){ echo $empresa;}?>"><a href=""><span class="iconsweets-home2"></span> Empresas</a>
                 	<ul <?php if ($empresa!=""){?>style="display: block" <?php  } ?> >
                     	<li><a href="principal.php?accion=empresa&tipo=nuevo">Agregar</a></li>
                         <li><a href="principal.php?accion=empresa&tipo=modificar">Modificar/Eliminar</a></li>
@@ -173,7 +168,7 @@
     <div class="rightpanel">
         
         <ul class="breadcrumbs">
-            <li><a href="principal.php"><i class="iconfa-home"></i></a> </li>
+            <li><a href="principal.php"><i class="iconfa-home"></i></a> <span class="separator"></span> Inicio</li>
             <?php 							
 			if(isset($_GET["accion"]) || isset($_GET['tipo'])){
 				if($_GET["accion"]=="cuentas" && $_GET['tipo']=="nuevo"){
@@ -185,9 +180,34 @@
 				if($_GET["accion"]=="cuentas" && $_GET['tipo']=="eliminar"){
 					?><li><span class="separator"></span> Cuentas <span class="separator"></span> <a href="principal.php?accion=cuentas&tipo=eliminar">Eliminar Cuenta</a></li><?php
 				}
+				if($_GET["accion"]=="orden" && $_GET["tipo"]=="anular"){
+					?><li><span class="separator"></span> Orden de Servicio <span class="separator"></span> <a href="principal.php?accion=orden&tipo=anular">Anular Orden de Servicio</a></li><?php
+				}
+				if($_GET["accion"]=="empresa" && $_GET["tipo"]=="nuevo"){
+					?><li><span class="separator"></span> Empresas <span class="separator"></span> <a href="principal.php?accion=empresa&tipo=nuevo">Agregar Nueva Empresa</a></li><?php
+				}
+				if($_GET["accion"]=="empresa" && $_GET["tipo"]=="modificar"){
+					?><li><span class="separator"></span> Empresas <span class="separator"></span> <a href="principal.php?accion=empresa&tipo=modificar">Modificar o Eliminar</a></li><?php
+				}
+				if($_GET["accion"]=="sucursal" && $_GET["tipo"]=="nuevo"){
+					?><li><span class="separator"></span> Sucursales <span class="separator"></span> <a href="principal.php?accion=sucursal&tipo=nuevo">Añadir Sucursal</a></li><?php
+				}
+				if($_GET["accion"]=="sucursal" && $_GET["tipo"]=="modificar"){
+					?><li><span class="separator"></span> Sucursales <span class="separator"></span> <a href="principal.php?accion=sucursal&tipo=modificar">Modificar o Eliminar</a></li><?php
+				}
+				if($_GET["accion"]=="tipoUsuario" && $_GET["tipo"]=="nuevo"){
+					?><li><span class="separator"></span> Tipos de Usuario <span class="separator"></span> <a href="principal.php?accion=tipoUsuario&tipo=nuevo">Nuevo Tipo</a></li><?php
+				}
+				if($_GET["accion"]=="tipoUsuario" && $_GET["tipo"]=="modificar"){
+					?><li><span class="separator"></span> Tipos de Usuario <span class="separator"></span> <a href="principal.php?accion=tipoUsuario&tipo=modificar">Modificar o Eliminar</a></li><?php
+				}if($_GET["accion"]=="historial" && $_GET["tipo"]=="consultar"){
+					?><li><span class="separator"></span> Historial <span class="separator"></span> <a href="principal.php?accion=historial&tipo=consultar"> Ver Historial </a></li><?php
+				}
 			}
 		?>
-        </ul>
+			<li class="right">
+                <a href=""><i class="icon-user"></i> Nombre de la Persona</a>
+            </li>
         </ul>
         
         <div class="maincontent">
@@ -232,6 +252,52 @@
 								if($_GET["accion"]=="tipoUsuario" && $_GET['tipo']=="modificar"){
 									include("modificarTipoUsuarios.php");
 								}
+							}else{
+								?>
+							
+							<h4 class="widgettitle title-primary">Información sobre la Acciones</h4><br />
+							<div class="accordion accordion-inverse">
+                            <h3><a href="#">Section 1</a></h3>
+                            <div>
+                                <p>
+                                    Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+                                    ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+                                    amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+                                    odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+                                </p>
+                            </div>
+                            <h3><a href="#">Section 2</a></h3>
+                            <div>
+                                <p>
+                                    Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+                                    purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+                                    velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+                                    suscipit faucibus urna.
+                                </p>
+                            </div>
+                            <h3><a href="#">Section 3</a></h3>
+                            <div>
+                                <p>
+                                    Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+                                    Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+                                    ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+                                    lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+                                </p>
+                            </div>
+                            <h3><a href="#">Section 4</a></h3>
+                            <div>
+                                <p>
+                                    Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+                                    et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+                                    faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+                                    mauris vel est.
+                                </p>
+                            </div>
+                        </div><!--#accordion-->
+
+
+
+								<?php
 							}
 						?>
                         
@@ -319,13 +385,9 @@
     
         
         //datepicker
-        jQuery('#datepicker').datepicker();
-        
+        jQuery('#datepicker').datepicker();   
         // tabbed widget
         jQuery('.tabbedwidget').tabs();
-        
-        
-    
     });
 </script>
 </body>

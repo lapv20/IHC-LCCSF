@@ -26,12 +26,19 @@
         });
     });
 </script>
-
-
-
-
+<style type="text/css">
+    .error{
+        border-radius: 6px;
+        background-color:red;
+        padding: 10px;
+        vertical-align: middle;
+        text-align: center;
+        font-size: 14px;
+        color: white;
+        max-width: 100%;
+    }
+</style>
 </head>
-
 <body class="loginpage">
 
 
@@ -86,6 +93,10 @@ function verificar_usuario($user,$password)
 	
 }
 
+?>
+<div class="loginpanel">
+    <div class="loginpanelinner">
+<?php
 /*Luego haremos una serie de condicionales que identificaran el momento en el boton de login es presionado y cuando este sea presionado llamaremos a la función verificar_login() pasandole los parámetros ingresados:*/ 
 
 if(!isset($_SESSION['userid'])) //para saber si existe o no ya la variable de sesión que se va a crear cuando el usuario se logee 
@@ -93,25 +104,17 @@ if(!isset($_SESSION['userid'])) //para saber si existe o no ya la variable de se
     if(isset($_POST['login'])) //Si la primera condición no pasa, haremos otra preguntando si el boton de login fue presionado 
     { 
 		$num_login = verificar_login($_POST['user'],$_POST['password'],$result);
-        if($num_login > 0) //Si el boton fue presionado llamamos a la función verificar_login() dentro de otra condición preguntando si resulta verdadero y le pasamos los valores ingresados como parámetros. 
+        if($num_login > 0) //Si el boton fue presionado llamamos a la función verificar_login() dentro de otra condición preguntando si resulta verdadero y le pasamos los valores ingresados como parámetros.
         { 
             /*Si el login fue correcto, registramos la variable de sesión y al mismo tiempo refrescamos la pagina index.php.*/ 
             $_SESSION['userid'] = $result->nombre_usuario; 
 			verificar_usuario($_POST['user'],$_POST['password']);
-			
-        } 
-        else 
-        { 
-            echo '<div class="error">Su usuario es incorrecto, intente nuevamente.</div>'; //Si la función verificar_login() no pasa, que se muestre un mensaje de error. 
+        }else{ 
+            echo '<div class="error">Su usuario es incorrecto<br />intente nuevamente.</div>'; //Si la función verificar_login() no pasa, que se muestre un mensaje de error. 
         } 
     } 
-?> 
-
-
-
-<div class="loginpanel">
-    <div class="loginpanelinner">
-        <div class="logo animate0 bounceIn"><img src="web/logo.png" alt="" width="250px;"/></div>
+?>
+<div class="logo animate0 bounceIn"><img src="web/logo.png" alt="Laboratorio Clinico Cesar Sánchez Font" width="250px"/></div>
     <form action="" method="post" class="login"> 
         <!--<div><label>Usuario: </label><br><input name="user" type="text" placeholder="Usuario"></div>
         <div><label>Clave:</label><br><input name="password" type="password" placeholder="Contraseña"></div>
@@ -132,6 +135,10 @@ if(!isset($_SESSION['userid'])) //para saber si existe o no ya la variable de se
     </form> 
     </div><!--loginpanelinner-->
 </div><!--loginpanel-->
+
+<div class="loginfooter">
+    <p>allin1 - 1234 - Administrador</p>
+</div>
 
 <?php 
 } else { 

@@ -15,7 +15,7 @@ function validar(){
 </script>
 
 
-<div class="widget">
+<div class="widget ">
 	<center><h4 class="widgettitle"> Nuevo Usuario</h4></center>
     <div class="widgetcontent">
     

@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Laboratorio Clinico Cesar Sánchez Font</title>
+<title>Laboratorio Clinico Cesar Sanchez Font</title>
 <link rel="stylesheet" href="archivos/css/style.default.css" type="text/css" />
 
 <link rel="stylesheet" href="archivos/css/responsive-tables.css">
@@ -128,9 +128,9 @@
                 
                 <li class="dropdown <?php if($cuentas!=""){ echo $cuentas;}?>"><a href=""><span class="iconfa-user"></span> Cuentas</a>
                 	<ul <?php if ($cuentas!=""){?>style="display: block" <?php  } ?> >
-                    	<li><a href="principal.php?accion=cuentas&tipo=nuevo">Agregar Cuenta</a></li>                       
-                        <li><a href="principal.php?accion=cuentas&tipo=modificar">Modificar Cuenta</a></li>
-                        <li><a href="principal.php?accion=cuentas&tipo=eliminar">Eliminar Cuenta</a></li>
+                    	<li><a href="principal.php?accion=cuentas&tipo=nuevo">Agregar</a></li>                       
+                        <li><a href="principal.php?accion=cuentas&tipo=modificar">Modificar</a></li>
+                        <li><a href="principal.php?accion=cuentas&tipo=eliminar">Eliminar</a></li>
                     </ul>
                 </li>
                 
@@ -170,11 +170,18 @@
         
     </div><!-- leftpanel -->
     
-    <div class="rightpanel"> 
+    <div class="rightpanel">
+        
+        <ul class="breadcrumbs">
+        
+        </ul>
+        
         <div class="maincontent">
             <div class="maincontentinner">
                 <div class="row-fluid">
-                    <div id="dashboard-left" class="span">                        
+                    <div id="dashboard-left" class="span">
+                    <div class="divider30"></div>
+                        
                         <?php 							
 							if(isset($_GET["accion"]) || isset($_GET['tipo'])){
 								if($_GET["accion"]=="cuentas" && $_GET['tipo']=="nuevo"){
@@ -221,10 +228,10 @@
                 
                 <div class="footer">
                     <div class="footer-left">
-                        <span>FOOTER LEFT</span>
+                        <span></span>
                     </div>
                     <div class="footer-right">
-                        <span>FOOTER RIGHT</span>
+                        <span></span>
                     </div>
                 </div><!--footer-->
                 
@@ -232,6 +239,7 @@
         </div><!--maincontent-->
         
     </div><!--rightpanel-->
+    
 </div><!--mainwrapper-->
 <script type="text/javascript">
 

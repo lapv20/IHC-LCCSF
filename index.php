@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Laboratorio Clinico Cesar Sanchez Font</title>
 <link rel="stylesheet" href="admin/archivos/css/style.default.css" type="text/css" />
+<link rel="stylesheet" href="archivos/css/style.shinyblue.css" type="text/css" />
 
 <script type="text/javascript" src="admin/archivos/js/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="admin/archivos/js/jquery-migrate-1.1.1.min.js"></script>
@@ -26,8 +27,14 @@
     });
 </script>
 
+
+
+
 </head>
+
 <body class="loginpage">
+
+
 <?php 
 session_start(); //session_start() crea una sesión para ser usada mediante una petición GET o POST, o pasado por una cookie  
 include_once "web/conexbd.php"; //es la sentencia q usaremos para incluir el archivo de conexión a la base de datos que creamos anteriormente. 
@@ -35,7 +42,7 @@ include_once "web/conexbd.php"; //es la sentencia q usaremos para incluir el arc
 
 function verificar_login($user,$password,&$result) 
     { 
-        $sql = "SELECT * FROM usuario WHERE nombre_usuario = '$user' AND clave = '$password'"; 
+        $sql = "SELECT * FROM usuario WHERE nombre_usuario = '$user' and clave = '$password'"; 
         $rec = mysql_query($sql); 
         $count = 0; 
         while($row = mysql_fetch_object($rec)) 
@@ -97,12 +104,20 @@ if(!isset($_SESSION['userid'])) //para saber si existe o no ya la variable de se
         { 
             echo '<div class="error">Su usuario es incorrecto, intente nuevamente.</div>'; //Si la función verificar_login() no pasa, que se muestre un mensaje de error. 
         } 
-    }
+    } 
 ?> 
+
+
+
 <div class="loginpanel">
     <div class="loginpanelinner">
         <div class="logo animate0 bounceIn"><img src="web/logo.png" alt="" width="250px;"/></div>
     <form action="" method="post" class="login"> 
+        <!--<div><label>Usuario: </label><br><input name="user" type="text" placeholder="Usuario"></div>
+        <div><label>Clave:</label><br><input name="password" type="password" placeholder="Contraseña"></div>
+        <br> 
+        <div class="inputwrapper"><input name="login" type="submit" value="Ingresar"></div>--> 
+        
         <div class="inputwrapper ">
             <input type="text" name="user" id="username" placeholder="Usuario" />
         </div>
@@ -111,12 +126,9 @@ if(!isset($_SESSION['userid'])) //para saber si existe o no ya la variable de se
         </div>
         <div class="inputwrapper ">
             <!--<button name="submit">Entrar</button>-->
-            <input class="boton_login" name="login" type="submit" value="Ingresar" style="width:270px;">
-            <br><p style="color: white; font-size: 13px;"><b>Usuarios:</b><br>
-            allin1   /   1234    = Administrador<br>
-            edy1192  /   1234    = Secretaria /principal<br>
-            lapv1992 /   lapv1992 = Contacto Empresa</p>
+            <input name="login" type="submit" value="Ingresar" style="width:270px;">
         </div>
+        
     </form> 
     </div><!--loginpanelinner-->
 </div><!--loginpanel-->

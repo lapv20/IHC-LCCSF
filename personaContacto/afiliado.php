@@ -95,7 +95,7 @@
         <div class="maincontent">
             <div class="maincontentinner">
                 <div class="row-fluid">
-                    <div id="dashboard-left" class="span8">
+                    <div id="dashboard-left" class="span">
                     
                       <?php 
 					  		if(isset($_GET['pag']))

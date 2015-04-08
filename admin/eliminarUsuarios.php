@@ -57,8 +57,7 @@ function eliminar(e){
                             <td><?php echo $row['nombre_empresa'];?></td>
                             <td><?php echo $row['nombres'];?></td>
                             <td class="center"><?php echo $row['apellidos'];?></td>
-                            
-                          <td><center><a  title="Modificar" onClick="eliminar('<?php echo $row['nombre_usuario'];?>');" class=" icon-trash"></a></center></td>
+                          <td><center><a title="Eliminar" onClick="eliminar('<?php echo $row['nombre_usuario'];?>');" class=" icon-trash"></a></center></td>
                         </tr>
                         <?php }?>
 </tbody>

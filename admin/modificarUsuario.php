@@ -11,8 +11,6 @@
 <link rel="stylesheet" href="archivos/css/bootstrap-fileupload.min.css" type="text/css" />
 <link rel="stylesheet" href="archivos/css/bootstrap-timepicker.min.css" type="text/css" />
 
-
-
 <script type="text/javascript" src="archivos/js/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="archivos/js/jquery-migrate-1.1.1.min.js"></script>
 <script type="text/javascript" src="archivos/js/jquery-ui-1.9.2.min.js"></script>
@@ -116,7 +114,7 @@
             <p class="stdformbutton">
                     <input type="submit" class="btn btn-primary" value="Guardar">
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <input type="reset" class="btn btn-primary" value="Cancelar">
+                    <input type="button" onclick="window.close();" class="btn btn-primary" value="Cancelar">
             </p>
         </form>
     </div>

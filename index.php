@@ -74,20 +74,16 @@ function verificar_usuario($user,$password)
 	$b = mysql_query($a);
 	$c = mysql_result($b,0);
 	echo ($c);
-	if($c == 1)
-	{
+	if($c == 1){
 		 header("location:admin/principal.php"); 
 	}
-	if($c == 2)
-	{
+	if($c == 2){
 		 header("location:web/principal.php"); 
 	}
-	if($c == 3)
-	{
+	if($c == 3){
 		 header("location:personaContacto/contacto.php"); 
 	}
-	if($c == 4)
-	{
+	if($c == 4){
 		 header("location:personaContacto/afiliado.php"); 
 	}
 	

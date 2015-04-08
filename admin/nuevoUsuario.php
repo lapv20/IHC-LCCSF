@@ -14,9 +14,8 @@ function validar(){
 }
 </script>
 
-
 <div class="widget ">
-	<center><h4 class="widgettitle"> Nuevo Usuario</h4></center>
+	<center><h4 class="widgettitle">Nuevo Usuario</h4></center>
     <div class="widgetcontent">
     
     	<form class="stdform" method="post" action="usuarios.php?accion=nuevo">

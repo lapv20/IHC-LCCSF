@@ -1,6 +1,7 @@
 /* Foundation v2.1.4 http://foundation.zurb.com */
 /* Artfully masterminded by ZURB  */
 
+.sorting, .icon-trash{ cursor: pointer; }
 	
 table.responsive { margin-bottom: 0; }
 	

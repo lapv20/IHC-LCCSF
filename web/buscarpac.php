@@ -3,8 +3,6 @@
 <head>
 <meta charset="utf-8">
 <script type="text/javascript">
-     
-	
 	  function validarNumeros(e) { // 1
         tecla = (document.all) ? e.keyCode : e.which; // 2
         if (tecla==8) return true; // backspace
@@ -28,11 +26,7 @@
 
 <body>
 <div class="widget">
-<?php 
-	
-
-?> 
-            <h4 class="widgettitle">Buscar Paciente</h4>
+         <h4 class="widgettitle">Buscar Paciente</h4>
             <div class="widgetcontent">
                 <form class="stdform" action="principal.php?accion=busqueda" method="post">
                                
@@ -50,11 +44,6 @@
                  </p>
                  </form>
             </div>
-</div>       
-<?php 
-	
-
-
-?>  
+</div> 
 </body>
 </html>

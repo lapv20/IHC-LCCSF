@@ -35,6 +35,7 @@
 <script type="text/javascript" src="js/responsive-tables.js"></script>
 <script type="text/javascript" src="archivos/js/custom.js"></script>
 <script type="text/javascript" src="archivos/js/forms.js"></script>
+
 <script type="text/javascript">
     jQuery(document).ready(function(){
         // dynamic table
@@ -265,9 +266,6 @@
         
         // tabbed widget
         jQuery('.tabbedwidget').tabs();
-        
-        
-    
     });
 </script>
 </body>

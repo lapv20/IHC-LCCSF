@@ -154,10 +154,7 @@
                 </li>
               
                 
-                 <li class="<?php if($historial!=""){ echo $historial;}?>"><a href="principal.php?accion=historial&tipo=consultar"><span class=" iconfa-list-alt"></span> Historial</a>
-                
-                
-                
+                <li class="<?php if($historial!=""){ echo $historial;}?>"><a href="principal.php?accion=historial&tipo=consultar"><span class=" iconfa-list-alt"></span> Historial</a>
                 <li class=""><a href="../web/logout.php"><span class=" iconfa-off"></span> Salir</a></li>
                 
             </ul>
@@ -206,7 +203,11 @@
 			}
 		?>
 			<li class="right">
-                <a href=""><i class="icon-user"></i> <?php echo $_SESSION['nombres']; echo " "; echo $_SESSION['apellidos']; ?></a>
+                <a href="" data-toggle="dropdown" class="dropdown-toggle"><i class="icon-user"></i> <?php echo $_SESSION['nombres']; echo " "; echo $_SESSION['apellidos']; ?></a>
+                <ul class="dropdown-menu pull-right skin-color">
+                    <li><a href="">Ver Mi Información</a></li>
+                    <li><a href="../web/logout.php">Cerrar Sesión</a></li>
+                </ul>
             </li>
         </ul>
         

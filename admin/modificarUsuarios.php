@@ -47,7 +47,7 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
                             <td><?php echo $row['nombre_empresa'];?></td>
                             <td><?php echo $row['nombres'];?></td>
                             <td class="center"><?php echo $row['apellidos'];?></td>
-                          <td><center><a href="#" title="Modificar" class="iconsweets-cog4" onClick="MM_openBrWindow('modificarUsuario.php?usuario=<?php echo $row['nombre_usuario'];?>','Modificar','width=800,height=500')"></a></center></td>
+                          <td><center><a href="#" title="Modificar" class="icon-edit" onClick="MM_openBrWindow('modificarUsuario.php?usuario=<?php echo $row['nombre_usuario'];?>','Modificar','width=800,height=500')"></a></center></td>
                         </tr>
                         <?php }?>
 </tbody>

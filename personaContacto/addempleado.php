@@ -15,46 +15,48 @@
 
 <body>
 <div class="widget">
-            <h4 class="widgettitle">Añadir Empleado</h4>
-            <div class="widgetcontent">
-                <form class="stdform" action="gempleado.php?action=nuevo" method="post">                
-                 <p>
-                   <label>Cedula</label>                       
-                    <span class="formwrapper">
-                    	  <input name="cedula" type="text" required class="input-large" placeholder="Numero" />
-                          <input name="tipo_cedula" type="radio" required value="V" /> V &nbsp;&nbsp; 
-                          <input name="tipo_cedula" type="radio" required value="E" /> E &nbsp;&nbsp;
-                     </span>        
-                     <label>Nombres</label>
-                     <span class="formwrapper">  
-                     <input name="nombre1" type="text" required class="input-large" placeholder="Primer Nombre" />
-                     <input name="nombre2" type="text"  class="input-large" placeholder="Segundo Nombre" />                  	</span>
-                     <label>Apellidos</label>
-                     <span class="formwrapper">  
-                     <input name="apellido1" type="text" required class="input-large" placeholder="Primer Apellido" />
-                     <input name="apellido2" type="text"  class="input-large" placeholder="Segundo Apellido" />                  	</span>
-               	  <div class="par">
-                    <label>Fecha de Nacimiento</label>
-                    <input type="text" name="fecha_nacimiento" id="fecha_nacimiento"/>
-                  </div>
-                    <label>Genero</label>                       
-                    <span class="formwrapper">
-                          <input name="genero" type="radio" required value="F" /> F &nbsp;&nbsp; 
-                          <input name="genero" type="radio" required value="M" /> M &nbsp;&nbsp;
-                  </span>
-                     <label>Telefonos</label>                       
-                    <span class="formwrapper">
-                          <input name="telefono" type="tel" required class="input-large" id="telefono" placeholder="04141234567">
-                          <input name="telefono2" type="tel" class="input-large" id="telefono2" placeholder="04141234567">
-                  </span>                 
-                  </p>
-                  <p class="stdformbutton">
-                     <button class="btn btn-primary">Añadir</button>
-                      <button type="reset" class="btn">Restablecer</button>
-                  </p> 
-                  </form>
-                  </div>
-                  </div>
+						<h4 class="widgettitle">Añadir Empleado</h4>
+						<div class="widgetcontent">
+								<form class="stdform" action="gempleado.php?action=nuevo" method="post">                
+								 <p>
+									 <label>Cedula</label>                       
+										<span class="formwrapper">
+												<input name="cedula" type="text" required class="input-large" placeholder="Numero" />
+													<input name="tipo_cedula" type="radio" required value="V" /> V &nbsp;&nbsp; 
+													<input name="tipo_cedula" type="radio" required value="E" /> E &nbsp;&nbsp;
+										 </span>        
+										 <label>Nombres</label>
+										 <span class="formwrapper">  
+										 <input name="nombre1" type="text" required class="input-large" placeholder="Primer Nombre" />
+										 <input name="nombre2" type="text"  class="input-large" placeholder="Segundo Nombre" />
+										</span>
+										 <label>Apellidos</label>
+										 <span class="formwrapper"> 
+										 <input name="apellido1" type="text" required class="input-large" placeholder="Primer Apellido" />
+										 <input name="apellido2" type="text"  class="input-large" placeholder="Segundo Apellido"/>
+										</span>
+										<label>Fecha de Nacimiento</label>
+										<span class="formwrapper">
+										<input type="text" name="fecha_nacimiento" id="fecha_nacimiento"/>
+										</span>
+										<label>Genero</label>                       
+										<span class="formwrapper">
+													<input name="genero" type="radio" required value="F" /> F &nbsp;&nbsp; 
+													<input name="genero" type="radio" required value="M" /> M &nbsp;&nbsp;
+										</span>
+										<label>Telefonos</label>                       
+										<span class="formwrapper">
+													<input name="telefono" type="tel" required class="input-large" id="telefono" placeholder="04141234567">
+													<input name="telefono2" type="tel" class="input-large" id="telefono2" placeholder="04141234567">
+										</span>                 
+									</p>
+									<p class="stdformbutton">
+										 <button class="btn btn-primary">Añadir</button>
+											<button type="reset" class="btn">Restablecer</button>
+									</p> 
+									</form>
+									</div>
+									</div>
 <script type="text/javascript">
 $(function() {
 	$( "#fecha_nacimiento" ).datepicker(

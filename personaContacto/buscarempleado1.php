@@ -42,7 +42,7 @@ function eliminar(id){
                    </span> 
                  </p>
                  <p class="stdformbutton">
-                 <button class="btn btn-primary">Buscar</button>
+                 <button class="btn btn-primary"><span class="iconfa-search"></span> Buscar</button>
                   <button type="reset" class="btn">Restablecer</button>
                </p>
                  </form>

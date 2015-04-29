@@ -69,7 +69,7 @@ h1,h2,h3,h4,h5 { font-weight: normal; line-height: normal; }
 
 /*** LOGIN PAGE ***/
 
-.loginpanel { position: absolute; top: 30%; left: 50%; height: 300px; }
+.loginpanel { position: absolute; top: 50%; left: 50%; height: 300px; }
 .loginpanelinner { position: relative; top: -150px; left: -50%; }
 .loginpanelinner .logo { text-align: center; padding: 20px 0; }
 
@@ -84,6 +84,13 @@ h1,h2,h3,h4,h5 { font-weight: normal; line-height: normal; }
 .inputwrapper label input { width: auto; margin: -3px 5px 0 0; vertical-align: middle; }
 .inputwrapper .remember { padding: 0; background: none; }
 
+/* AÑADIDAS POR LUIS */
+p label, .stdform label{
+	margin-top: 4px;
+	font-size: 13px;
+}
+/* FIN AÑADIDAS POR LUIS */
+
 .login-alert { display: none; }
 .login-alert .alert { font-size: 11px; text-align: center; padding: 5px 0; border: 0; }
 
@@ -93,9 +100,9 @@ h1,h2,h3,h4,h5 { font-weight: normal; line-height: normal; }
 
 /*** HEADER ***/
 
-.header { background: #0866c6; clear: both; height: 110px; }
+.header { background: #0866c6; clear: both; height: 90px; }
 .headerinner { margin-left: 260px; }
-.header .logo { width: 260px; text-align: center; padding-top: 40px; float: left; }
+.header .logo { width: 260px; text-align: center; padding-top: 10px; padding-left:10px;  float: left; }
 
 .headmenu { list-style: none; }
 .headmenu .dropdown-menu { border: 2px solid #0866c6; border-top: 0; margin: 0; }
@@ -185,7 +192,7 @@ h1,h2,h3,h4,h5 { font-weight: normal; line-height: normal; }
 .breadcrumbs {
 		  list-style: none; height: 22px; background: #ddd; padding: 4px 0 4px 10px;
 		  border-bottom: 1px solid #ccc; position: relative; }
-.breadcrumbs > li { display: inline-block; float: left; margin-right: 5px; font-size: 11px; color: #666; }
+.breadcrumbs > li { display: inline-block; float: left; margin-right: 5px; font-size: 12px; color: #666; }
 .breadcrumbs > li.right {
 		  float: right; padding: 0; border-left: 1px solid #bbb; margin: -4px 0 0 0; }
 .breadcrumbs > li.right .dropdown-menu a { font-size: 11px; padding: 2px 10px; }
@@ -214,7 +221,7 @@ h1,h2,h3,h4,h5 { font-weight: normal; line-height: normal; }
 }
 
 .maincontent { float: left; width: 100%; }
-.maincontentinner { padding: 20px; }
+.maincontentinner { padding: 15px; }
 .subtitle { text-transform: uppercase; font-size: 11px; color: #999; margin-bottom: 5px; }
 .subtitle2 { font-size: 13px; text-transform: uppercase; color: #333; margin-bottom: 5px; }
 
@@ -931,7 +938,7 @@ ul.list-inline li { display: inline-block; margin: 0 5px 10px 0; }
 .wizard .hormenu li a:hover { text-decoration: none; }
 .wizard .hormenu li a span.h2 { font-size: 16px; color: #999; display: block; margin-bottom: 5px; }
 .wizard .hormenu li span.label { display: block; color: #999; background: none; text-shadow: none; padding: 0; font-size: 12px; }
-.wizard .hormenu li a span.dot span { width: 20px; height: 20px; display: inline-block; background: url(../../../archivos/img/steps.png) no-repeat 0 -40px; }
+.wizard .hormenu li a span.dot span { width: 20px; height: 20px; display: inline-block; background: url(../img/steps.png) no-repeat 0 -40px; }
 .wizard .hormenu li:first-child a span.dot { margin-left: 47%; text-align: left; }
 .wizard .hormenu li:last-child a span.dot { margin-right: 47%; text-align: right; }
 .wizard .hormenu li a.done { background: #0866c6; border-right: 1px solid rgba(255,255,255,0.2); }
@@ -1130,7 +1137,7 @@ ul.list-inline li { display: inline-block; margin: 0 5px 10px 0; }
 .nomargin { margin: 0; }
 .padding5 { padding: 5px; }
 .divider15 { clear: both; height: 15px; }
-.divider30 { height: 30px; }
+.divider30 { height: 20px; }
 .marginleft15 { margin-left: 15px; }
 .marginleft5 { margin-left: 5px; }
 .tooltipflot { background: #333; color: #fff; font-size: 11px; padding: 2px 10px; }
@@ -1397,7 +1404,7 @@ input[type="search"], input[type="tel"], input[type="color"], .uneditable-input,
 .popover, .popover-title { -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0; }
 .popover { padding: 0; }
 
-.alert .close { right: -25px; top: 1px; }
+.alert .close {  right: -25px; top: 1px; }
 
 .table th { font-weight: normal; text-transform: uppercase; font-size: 12px; border-top: 0; background: #333; color: #fff; }
 .table th.centeralign, .table td.centeralign { text-align: center; }

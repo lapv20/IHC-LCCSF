@@ -57,15 +57,7 @@ function verificar_login($user,$password,&$result)
             $count++; 
             $result = $row; 
         } 
-        if($count == 1) 
-        { 
-			
-			return 1; 
-        } 
-        else 
-        { 
-            return 0; 
-        } 
+        if($count == 1) { return 1; } else { return 0; } 
     } 
 
 function verificar_usuario($user,$password)
@@ -86,7 +78,6 @@ function verificar_usuario($user,$password)
 	if($c == 4){
 		 header("location:personaContacto/afiliado.php"); 
 	}
-	
 }
 
 ?>
@@ -94,7 +85,6 @@ function verificar_usuario($user,$password)
     <div class="loginpanelinner">
 <?php
 /*Luego haremos una serie de condicionales que identificaran el momento en el boton de login es presionado y cuando este sea presionado llamaremos a la función verificar_login() pasandole los parámetros ingresados:*/ 
-
 if(!isset($_SESSION['userid'])) //para saber si existe o no ya la variable de sesión que se va a crear cuando el usuario se logee 
 { 
     if(isset($_POST['login'])) //Si la primera condición no pasa, haremos otra preguntando si el boton de login fue presionado 
@@ -121,7 +111,7 @@ if(!isset($_SESSION['userid'])) //para saber si existe o no ya la variable de se
         <div class="inputwrapper"><input name="login" type="submit" value="Ingresar"></div>--> 
         
         <div class="inputwrapper animate2 bounceIn">
-            <input type="text" name="user" id="username" placeholder="Usuario" />
+            <input type="text" name="user" id="username" placeholder="Usuario" autocomplete="off" />
         </div>
         <div class="inputwrapper animate3 bounceIn">
             <input type="password" name="password" id="password" placeholder="Contraseña" />
@@ -136,7 +126,8 @@ if(!isset($_SESSION['userid'])) //para saber si existe o no ya la variable de se
 </div><!--loginpanel-->
 
 <div class="loginfooter">
-    <p>allin1 - 1234 - Administrador<br />lapv1992 - lapv1992 - Persona Contacto</p>
+    <p>allin1 - 1234 - Administrador<br />lapv1992 - lapv1992 - Persona Contacto Empresa
+        <br />edy1192 - 1234 - Secretaria<br>sapv1993 - 2743 - Persona Contacto Afiliado</p>
 </div>
 
 <?php 

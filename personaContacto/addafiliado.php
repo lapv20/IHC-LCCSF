@@ -1,9 +1,9 @@
 <!doctype html>
 <html>
+
 <head>
 <meta charset="utf-8">
 <title>Añadir afiliado</title>
-
 
 <link href="jQueryAssets/jquery.ui.core.min.css" rel="stylesheet" type="text/css">
 <link href="jQueryAssets/jquery.ui.theme.min.css" rel="stylesheet" type="text/css">
@@ -14,25 +14,23 @@
 </head>
 
 <body>
-<div class="widget">
-            <h4 class="widgettitle">Actualizar Afiliados</h4>
-            <div class="widgetcontent">
-        	<form action="subirarchivo.php" method="post" enctype="multipart/form-data" >
-            <input type="file" name="archivo" id="archivo" />
-           <!-- Subir Archivo:  <input name="userfile" type="file" /> -->
-            <p>
-            <input type="submit" value="Enviar Archivo"/></p>
-            </form>
-            
-            
-            
-            </body>
-
+  <div class="widget">
+    <h4 class="widgettitle">Actualizar Afiliados</h4>
+    <div class="widgetcontent nopadding">
+      <form class="stdform stdform2" action="subirarchivo.php" method="post" enctype="multipart/form-data" >
+        <p>
+          <label>Ubicación del Archivo</label>
+          <span class="field">
+            <input class="input-xxlarge" type="file" name="archivo" id="archivo" />
+          </span>
+        </p>
+        <!-- Subir Archivo:  <input name="userfile" type="file" /> -->
+        <p class="stdformbutton"><input class="btn btn-primary" type="submit" value="Enviar Archivo"/></p>
+      </form>
+</body>
 </html>
 
 <?php
-
-
 
 /*if ($_FILES['archivo']["error"] > 0)
   {

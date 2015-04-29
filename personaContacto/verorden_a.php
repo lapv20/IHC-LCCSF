@@ -1,4 +1,4 @@
-<?php 
+<?php
 	include("conexbd.php");
 ?>
 <!doctype html>
@@ -26,7 +26,6 @@
                             <th class="head1">Cedula</th>
                             <th class="head1">Numero Orden de Servicio</th>
                             <th class="head1">Estatus</th>
-                    
                         </tr>
                     </thead>
                     <tbody>

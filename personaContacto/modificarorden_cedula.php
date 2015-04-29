@@ -13,21 +13,20 @@
 
 ?> 
 			
-            <h4 class="widgettitle">Modificar Orden de Servicio</h4>
-            <div class="widgetcontent">
-                <form class="stdform" action="contacto.php?pag=bo&&acc=pac&&tipo=sbo" method="post">
-                               
-                 <p>
-                   <label>Cedula</label>                       
-                    <span class="formwrapper">
+<h4 class="widgettitle">Modificar Orden de Servicio</h4>
+	<div class="widgetcontent nopadding">
+			<form class="stdform stdform2" action="contacto.php?pag=bo&&acc=pac&&tipo=sbo" method="post">
+				<p>
+					<label>Cedula</label>                       
+                    <span class="field">
                     	  <input name="cedula" type="text" required class="input-large" placeholder="Numero" />
                           <input name="tipo_cedula" type="radio" required value="V" /> V &nbsp;&nbsp; 
                           <input name="tipo_cedula" type="radio" required value="E" /> E &nbsp;&nbsp;
-                      <p class="stdformbutton">
-                         <button class="btn btn-primary">Buscar</button>
-                          <button type="reset" class="btn">Restablecer</button>
-                       </p>
-                   </span> 
+                   </span>
+                   <p class="stdformbutton">
+                        <button class="btn btn-primary"><span class="iconfa-search"></span> Buscar</button>
+                        <button type="reset" class="btn">Restablecer</button>
+                    </p>
                  </p>
                  </form>
             </div>

@@ -2,73 +2,64 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Laboratorio Clinico Cesar Sanchez Font</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Laboratorio Clinico Cesar Sanchez Font</title>
 
-<link rel="stylesheet" href="archivos/css/responsive-tables.css">
-<link rel="stylesheet" href="../web/archivos/css/style.default.css" type="text/css" />
-<link rel="stylesheet" href="archivos/css/bootstrap-fileupload.min.css" type="text/css" />
-<link rel="stylesheet" href="archivos/css/bootstrap-timepicker.min.css" type="text/css" />
+	<link rel="stylesheet" href="archivos/css/responsive-tables.css">
+	<link rel="stylesheet" href="../web/archivos/css/style.default.css" type="text/css" />
+	<link rel="stylesheet" href="archivos/css/bootstrap-fileupload.min.css" type="text/css" />
+	<link rel="stylesheet" href="archivos/css/bootstrap-timepicker.min.css" type="text/css" />
+	<link rel="stylesheet" href="archivos/prettify/prettify.css" type="text/css" />
+	<link rel="shortcut icon" href="logo.png">
 
-<link rel="stylesheet" href="archivos/prettify/prettify.css" type="text/css" />
+	<script type="text/javascript" src="archivos/js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="archivos/js/jquery-migrate-1.1.1.min.js"></script>
+	<script type="text/javascript" src="archivos/js/jquery-ui-1.9.2.min.js"></script>
+	<script type="text/javascript" src="archivos/js/modernizr.min.js"></script>
+	<script type="text/javascript" src="archivos/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="archivos/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="archivos/js/jquery.uniform.min.js"></script>
+	<script type="text/javascript" src="archivos/js/flot/jquery.flot.min.js"></script>
+	<script type="text/javascript" src="archivos/js/flot/jquery.flot.resize.min.js"></script>
+	<script type="text/javascript" src="archivos/js/responsive-tables.js"></script>
+	<script type="text/javascript" src="archivos/js/custom.js"></script>
 
-<link rel="shortcut icon" href="logo.png">
-
-<script type="text/javascript" src="archivos/js/jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="archivos/js/jquery-migrate-1.1.1.min.js"></script>
-<script type="text/javascript" src="archivos/js/jquery-ui-1.9.2.min.js"></script>
-<script type="text/javascript" src="archivos/js/modernizr.min.js"></script>
-<script type="text/javascript" src="archivos/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="archivos/js/jquery.cookie.js"></script>
-<script type="text/javascript" src="archivos/js/jquery.uniform.min.js"></script>
-<script type="text/javascript" src="archivos/js/flot/jquery.flot.min.js"></script>
-<script type="text/javascript" src="archivos/js/flot/jquery.flot.resize.min.js"></script>
-<script type="text/javascript" src="archivos/js/responsive-tables.js"></script>
-<script type="text/javascript" src="archivos/js/custom.js"></script>
-
-<script type="text/javascript" src="archivos/js/bootstrap-fileupload.min.js"></script>
-<script type="text/javascript" src="archivos/js/jquery.validate.min.js"></script>
-<script type="text/javascript" src="archivos/js/bootstrap-timepicker.min.js"></script>
-<script type="text/javascript" src="archivos/js/jquery.tagsinput.min.js"></script>
-<script type="text/javascript" src="archivos/js/jquery.autogrow-textarea.js"></script>
-<script type="text/javascript" src="archivos/js/charCount.js"></script>
-<script type="text/javascript" src="archivos/js/colorpicker.js"></script>
-<script type="text/javascript" src="archivos/js/ui.spinner.min.js"></script>
-<script type="text/javascript" src="archivos/js/chosen.jquery.min.js"></script>
-<script type="text/javascript" src="archivos/js/forms.js"></script>
-
-
-<script type="text/javascript" src="archivos/js/jquery.dataTables.min.js"></script>
-
-<script type="text/javascript" src="archivos/prettify/prettify.js"></script>
-<script type="text/javascript" src="archivos/js/jquery.jgrowl.js"></script>
-<script type="text/javascript" src="archivos/js/jquery.alerts.js"></script>
-<script type="text/javascript" src="archivos/js/elements.js"></script>
+	<script type="text/javascript" src="archivos/js/bootstrap-fileupload.min.js"></script>
+	<script type="text/javascript" src="archivos/js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="archivos/js/bootstrap-timepicker.min.js"></script>
+	<script type="text/javascript" src="archivos/js/jquery.tagsinput.min.js"></script>
+	<script type="text/javascript" src="archivos/js/jquery.autogrow-textarea.js"></script>
+	<script type="text/javascript" src="archivos/js/charCount.js"></script>
+	<script type="text/javascript" src="archivos/js/colorpicker.js"></script>
+	<script type="text/javascript" src="archivos/js/ui.spinner.min.js"></script>
+	<script type="text/javascript" src="archivos/js/chosen.jquery.min.js"></script>
+	<script type="text/javascript" src="archivos/js/forms.js"></script>
+	<script type="text/javascript" src="archivos/js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" src="archivos/prettify/prettify.js"></script>
+	<script type="text/javascript" src="archivos/js/jquery.jgrowl.js"></script>
+	<script type="text/javascript" src="archivos/js/jquery.alerts.js"></script>
+	<script type="text/javascript" src="archivos/js/elements.js"></script>
 
 
-<script>
-	 jQuery(document).ready(function(){
-        // dynamic table
-        jQuery('#dyntable').dataTable({
-            "sPaginationType": "full_numbers",
-            "aaSortingFixed": [[0,'asc']],
-            "fnDrawCallback": function(oSettings) {
-                jQuery.uniform.update();
-            }
-        });
-	 });
-	 
-	 
-</script>
-
-
-
-<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/excanvas.min.js"></script><![endif]-->
+	<script>
+		 jQuery(document).ready(function(){
+	        // dynamic table
+	        jQuery('#dyntable').dataTable({
+	            "sPaginationType": "full_numbers",
+	            "aaSortingFixed": [[0,'asc']],
+	            "fnDrawCallback": function(oSettings) {
+	                jQuery.uniform.update();
+	            }
+	        });
+		 });
+		 
+		 
+	</script>
+	<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/excanvas.min.js"></script><![endif]-->
 </head>
 
 <body>
-
 <div class="mainwrapper">
     <!--<div class="header" style="background:url(logo.png); background-repeat:no-repeat;background-size:500px 500px;">-->
     <div class="header" >

@@ -19,13 +19,15 @@
     <div class="widgetcontent nopadding">
       <form class="stdform stdform2" action="subirarchivo.php" method="post" enctype="multipart/form-data" >
         <p>
-          <label>Ubicación del Archivo</label>
+          <label>Ubicación del Archivo
+            <small>Ubique el archivo .xls donde se encuentran los usuarios</small>
+          </label>
           <span class="field">
             <input class="input-xxlarge" type="file" name="archivo" id="archivo" />
           </span>
         </p>
         <!-- Subir Archivo:  <input name="userfile" type="file" /> -->
-        <p class="stdformbutton"><input class="btn btn-primary" type="submit" value="Enviar Archivo"/></p>
+        <p class="stdformbutton"><button class="btn btn-primary" type="submit"/><span class="iconfa-file"></span> Enviar Archivo</button></p>
       </form>
 </body>
 </html>

@@ -57,7 +57,7 @@
                          <?php
 						 	if($row['estatus']!="Realizado"){
 						  ?>
-                          <a onclick="anular('<?php echo $row['numero_orden'];?>');" title="Modificar" style="cursor:pointer; text-decoration:none;"><span class=" iconfa-remove"></span></a></center>
+                          <a onclick="anular('<?php echo $row['numero_orden'];?>');" title="Anular" style="cursor:pointer; text-decoration:none;" class=" iconfa-trash"></a></center>
                          <?php } ?>
                           </td>
                         </tr>

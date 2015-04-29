@@ -4,7 +4,6 @@
 <meta charset="utf-8">
 <title>Añadir Paciente</title>
 
-
 <link href="jQueryAssets/jquery.ui.core.min.css" rel="stylesheet" type="text/css">
 <link href="jQueryAssets/jquery.ui.theme.min.css" rel="stylesheet" type="text/css">
 <link href="jQueryAssets/jquery.ui.datepicker.min.css" rel="stylesheet" type="text/css">
@@ -49,41 +48,46 @@
 <body>
 <div class="widget">
             <h4 class="widgettitle">Añadir Paciente</h4>
-            <div class="widgetcontent">
-                <form id="form1" class="stdform" action="gpaciente.php?accion=nuevo" method="post">                
+            <div class="widgetcontent nopadding">
+                <form id="form1" class="stdform stdform2" action="gpaciente.php?accion=nuevo" method="post">                
                  <p>
                    <label>Cedula</label>                       
-                    <span class="formwrapper">
+                    <span class="field">
                     	  <input name="cedula" type="text" onkeydown="return validarNumeros(event)" size="30" required class="input-large" placeholder="Numero" />
                           <input name="tipo_cedula" type="radio" required value="V" /> V &nbsp;&nbsp; 
                           <input name="tipo_cedula" type="radio" required value="E" /> E &nbsp;&nbsp;
-                     </span>        
+                     </span>
+                  </p><p>
                      <label>Nombres</label>
-                     <span class="formwrapper">  
+                     <span class="field">  
                      <input name="nombre1" type="text" onKeyDown="return validarLetras(event)" size="40" required class="input-large" placeholder="Primer Nombre" />
                      <input name="nombre2" type="text" onKeyDown="return validarLetras(event)" size="40" class="input-large" placeholder="Segundo Nombre" />                  	</span>
+                  </p><p>
                      <label>Apellidos</label>
-                     <span class="formwrapper">  
+                     <span class="field">  
                      <input name="apellido1" type="text" onKeyDown="return validarLetras(event)" size="40" required class="input-large" placeholder="Primer Apellido" />
                      <input name="apellido2" type="text" onKeyDown="return validarLetras(event)" size="40"  class="input-large" placeholder="Segundo Apellido" />                  	</span>
-               	  <div class="par">
-                    <label>Fecha de Nacimiento</label>
-                    <input type="text" name="fecha_nacimiento" id="fecha_nacimiento"/>
-                  </div>
+                  </p><p>
+               	  <label>Fecha de Nacimiento</label>
+                  <span class="field">
+                      <input type="text" name="fecha_nacimiento" id="fecha_nacimiento"/>
+                    </span>
+                  </p><p>
                     <label>Genero</label>                       
-                    <span class="formwrapper">
+                    <span class="field">
                           <input name="genero" type="radio" required value="F" /> F &nbsp;&nbsp; 
                           <input name="genero" type="radio" required value="M" /> M &nbsp;&nbsp;
                   </span>
+                  </p><p>
                      <label>Telefonos</label>                       
-                    <span class="formwrapper">
+                    <span class="field">
                           <input name="telefono" type="text" onkeydown="return validarNumeros(event)" required class="input-large" id="telefono" placeholder="04141234567">
                           <input name="telefono2" type="tel" onkeydown="return validarNumeros(event)" class="input-large" id="telefono2" placeholder="04141234567">
                   </span>                 
                   </p>
                   <p class="stdformbutton">
-                     <button class="btn btn-primary">Añadir</button>
-                      <button type="reset" class="btn">Restablecer</button>
+                     <button class="btn btn-primary"><span class="iconfa-plus"></span> Añadir</button>
+                      <button type="reset" class="btn"><i class=" iconfa-refresh icon-white"></i> Restablecer</button>
                   </p> 
                   </form>
                   </div>

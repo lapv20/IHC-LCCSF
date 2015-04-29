@@ -27,18 +27,17 @@
 <body>
 <div class="widget">
          <h4 class="widgettitle">Buscar Paciente</h4>
-            <div class="widgetcontent">
-                <form class="stdform" action="principal.php?accion=busqueda" method="post">
-                               
+            <div class="widgetcontent nopadding">
+                <form class="stdform stdform2" action="principal.php?accion=busqueda" method="post">   
                  <p>
                    <label>Cedula</label>                       
-                    <span class="formwrapper">
+                    <span class="field">
                     	  <input name="cedula" type="text" required class="input-large" onkeydown="return validarNumeros(event)" placeholder="Numero" />
                           <input name="tipo_cedula" type="radio" required value="V" /> V &nbsp;&nbsp; 
                           <input name="tipo_cedula" type="radio" required value="E" /> E &nbsp;&nbsp;
                       <p class="stdformbutton">
-                         <button class="btn btn-primary">Buscar</button>
-                          <button type="reset" class="btn">Restablecer</button>
+                        <button class="btn btn-primary"><span class="iconfa-search"></span> Buscar</button>
+                        <button type="reset" class="btn"><i class=" iconfa-refresh icon-white"></i> Restablecer</button>
                        </p>
                    </span> 
                  </p>

@@ -7,7 +7,7 @@
 	<title>Laboratorio Clinico Cesar Sanchez Font</title>
 
 	<link rel="stylesheet" href="archivos/css/responsive-tables.css">
-	<link rel="stylesheet" href="../web/archivos/css/style.default.css" type="text/css" />
+	<link rel="stylesheet" href="archivos/css/style.default.css" type="text/css" />
 	<link rel="stylesheet" href="archivos/css/bootstrap-fileupload.min.css" type="text/css" />
 	<link rel="stylesheet" href="archivos/css/bootstrap-timepicker.min.css" type="text/css" />
 	<link rel="stylesheet" href="archivos/prettify/prettify.css" type="text/css" />
@@ -123,7 +123,7 @@
                 <li class="<?php if($orden!=""){ echo $orden;}?>"><a href="principal.php?accion=orden&tipo=anular"><span class=" iconfa-briefcase"></span> Orden de Servicio</a>
                 	
                 </li>
-                <li class=" dropdown <?php if($empresa!=""){ echo $empresa;}?>"><a href=""><span class="iconsweets-home2"></span> Empresas</a>
+                <li class="dropdown <?php if($empresa!=""){ echo $empresa;}?>"><a href=""><span class="iconsweets-home2"></span> Empresas</a>
                 	<ul <?php if ($empresa!=""){?>style="display: block" <?php  } ?> >
                     	<li><a href="principal.php?accion=empresa&tipo=nuevo">Agregar</a></li>
                         <li><a href="principal.php?accion=empresa&tipo=modificar">Modificar/Eliminar</a></li>
@@ -251,6 +251,7 @@
 							<div class="accordion accordion-inverse">
                             <h3><a href="#">Section 1</a></h3>
                             <div>
+                            	<a class="btn btn-danger alertdanger"><small>Alert Danger</small></a>
                                 <p>
                                     Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
                                     ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit

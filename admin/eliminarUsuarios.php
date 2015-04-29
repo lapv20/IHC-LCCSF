@@ -16,11 +16,7 @@ function eliminar(e){
 	if(respuesta){
 		window.location='usuarios.php?accion=eliminar&idusuario='+e;
 	}
-	
-	
 }
-
-
 </script>
 
 
@@ -57,7 +53,7 @@ function eliminar(e){
                             <td><?php echo $row['nombre_empresa'];?></td>
                             <td><?php echo $row['nombres'];?></td>
                             <td class="center"><?php echo $row['apellidos'];?></td>
-                          <td><center><a title="Eliminar" onClick="eliminar('<?php echo $row['nombre_usuario'];?>');" class=" icon-trash"></a></center></td>
+                          <td><center><a title="Eliminar" class=" icon-trash" onClick="eliminar('<?php echo $row['nombre_usuario'];?>');"></a></center></td>
                         </tr>
                         <?php }?>
 </tbody>

@@ -42,7 +42,7 @@
 <script type="text/javascript" src="../admin/archivos/js/elements.js"></script>
 <link rel="stylesheet" href="../admin/archivos/css/responsive-tables.css">
 <link rel="stylesheet" href="../admin/archivos/prettify/prettify.css" type="text/css" />
-<link rel="shortcut icon" href="logo.png">
+<link rel="shortcut icon" href="../admin/archivos/images/logo.png">
 
 <script type="text/javascript">
     jQuery(document).ready(function(){
@@ -134,7 +134,6 @@
             <div class="maincontentinner">
                 <div class="row-fluid">
                     <div id="dashboard-left" class="span">
-                    
                       <?php 
 					  		if(isset($_GET['pag']))
 							{

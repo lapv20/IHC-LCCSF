@@ -5,7 +5,6 @@
 <title>Documento sin título</title>
 
 <link rel="stylesheet" href="archivos/css/style.default.css" type="text/css" />
-
 <link rel="stylesheet" href="archivos/css/responsive-tables.css">
 <link rel="stylesheet" href="archivos/css/style.default.css" type="text/css" />
 <link rel="stylesheet" href="archivos/css/bootstrap-fileupload.min.css" type="text/css" />
@@ -39,8 +38,13 @@
 
 </head>
 
-<body>
+<style type="text/css">
+    body{
+        background: none;
+    }
+</style>
 
+<body>
 <?php 
 	include("conexion.php");
 	$usuario = $_GET['usuario'];
@@ -49,12 +53,9 @@
 	$row = mysql_fetch_array($result);
 	
 ?>
-
-<div class="widget " >
 	<center><h4 class="widgettitle" > Modificar Usuario</h4></center>
-    <div class="widgetcontent">
-    
-    	<form class="stdform" method="post" action="usuarios.php?accion=modificar&amp;usuario=<?php echo $usuario;?>">
+    <div class="widgetcontent nopadding">
+        <form class="stdform stdform2" method="post" action="usuarios.php?accion=modificar&amp;usuario=<?php echo $usuario;?>">
         	<p>
                 <label>Nombre</label>
                 <span class="field"><input type="text" id="nombre" name="nombre" class="input-medium" placeholder="Nombre" value="<?php echo $row['nombres'];?>"/></span>
@@ -112,13 +113,12 @@
             </p>
             
             <p class="stdformbutton">
-                    <input type="submit" class="btn btn-primary" value="Guardar">
+                <input type="submit" class="btn btn-primary" value="Guardar">
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <input type="button" onclick="window.close();" class="btn btn-primary" value="Cancelar">
+                <input type="button" onclick="window.close();" class="btn btn-primary" value="Cancelar">
             </p>
         </form>
     </div>
-</div>
 
 </body>
 </html>

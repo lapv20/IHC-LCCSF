@@ -17,18 +17,16 @@ function validar(){
 
 <div class="widget ">
 	<center><h4 class="widgettitle"> Nuevo Tipo de Usuario</h4></center>
-    <div class="widgetcontent">
-    
-    	<form class="stdform" method="post" action="tipoUsuario.php?accion=nuevo">
+    <div class="widgetcontent nopadding">
+    	<form class="stdform stdform2" method="post" action="tipoUsuario.php?accion=nuevo">
         	<p>
                 <label>Nombre</label>
-                <span class="field"><input type="text" id="nombre" name="nombre" class="input-medium" placeholder="Nombre" /></span>
+                <span class="field"><input type="text" id="nombre" name="nombre" class="input-xxlarge" placeholder="Nombre" /></span>
             </p>
             
             
             <p class="stdformbutton">
                     <input type="submit" class="btn btn-primary" value="Crear">
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <input type="reset" class="btn btn-primary" value="Cancelar">
             </p>
         </form>

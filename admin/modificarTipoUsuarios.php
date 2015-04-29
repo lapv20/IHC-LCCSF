@@ -50,10 +50,9 @@ function eliminar(e,n){
                             <input type="checkbox" />
            	    </span></td>
                             <td><?php echo $row['nombretipo_usuario'];?></td>
-                          <td><center><a href="#" title="Modificar" class="iconsweets-cog4" onClick="MM_openBrWindow('modificarTipoUsuario.php?id=<?php echo $row['idtipousuario'];?>','Modificar','width=900,height=200')"></a>
+                          <td><center><a href="#" title="Modificar" class="icon-edit" onClick="MM_openBrWindow('modificarTipoUsuario.php?id=<?php echo $row['idtipousuario'];?>','Modificar','width=900,height=200')"></a>
                           
                           &nbsp;&nbsp;&nbsp;
-                          
                           <a href="#" title="Eliminar" class="icon-trash" onClick="eliminar('<?php echo $row['idtipousuario'];?>','<?php echo $row['nombretipo_usuario'];?>');"></a></center>
                            
                           </td>

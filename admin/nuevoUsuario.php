@@ -16,9 +16,8 @@ function validar(){
 
 <div class="widget ">
 	<center><h4 class="widgettitle">Nuevo Usuario</h4></center>
-    <div class="widgetcontent">
-    
-    	<form class="stdform" method="post" action="usuarios.php?accion=nuevo">
+    <div class="widgetcontent nopadding">
+        <form class="stdform stdform2" method="post" action="usuarios.php?accion=nuevo">
         	<p>
                 <label>Nombre</label>
                 <span class="field"><input type="text" id="nombre" name="nombre" class="input-medium" placeholder="Nombre" /></span>

@@ -54,7 +54,7 @@ function eliminar(e,n){
                             <td><?php echo $row['nombre_laboratorio'];?></td>
                             <td><?php echo $row['telefono'];?></td>
                             <td ><?php echo $row['rif'];?></td>
-                          <td><center><a href="#" title="Modificar" class="iconsweets-cog4" onClick="MM_openBrWindow('modificarSucursal.php?id=<?php echo $row['idsucursal'];?>','Modificar','width=900,height=560')"></a>
+                          <td><center><a href="#" title="Modificar" class="icon-edit" onClick="MM_openBrWindow('modificarSucursal.php?id=<?php echo $row['idsucursal'];?>','Modificar','width=900,height=560')"></a>
                           
                           &nbsp;&nbsp;&nbsp;
                           

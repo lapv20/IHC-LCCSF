@@ -73,8 +73,8 @@
     <div class="leftpanel">
         <div class="leftmenu">        
             <ul class="nav nav-tabs nav-stacked">
-            	<li class=""><a href="principal.php"><span class=" iconfa-home"></span> INICIO</a></li>              
-                <?php 
+            	<?php
+            		$home = "";
 					$cuentas="";
 					$orden="";
 					$consulta="";
@@ -108,10 +108,11 @@
 								$tipoUsuario = "active";
 							break;
 						}
-						
+					}else{
+						$home = "active";
 					}
 				?>
-                
+            	<li class="<?php if($home!=""){ echo $home;}?>"><a href="principal.php"><span class="iconfa-home"></span> INICIO</a></li>                  
                 <li class="dropdown <?php if($cuentas!=""){ echo $cuentas;}?>"><a href=""><span class="iconfa-user"></span> Cuentas</a>
                 	<ul <?php if ($cuentas!=""){?>style="display: block" <?php  } ?> >
                     	<li><a href="principal.php?accion=cuentas&tipo=nuevo">Agregar</a></li>                       
@@ -120,17 +121,17 @@
                     </ul>
                 </li>
                 
-                <li class="<?php if($orden!=""){ echo $orden;}?>"><a href="principal.php?accion=orden&tipo=anular"><span class=" iconfa-briefcase"></span> Orden de Servicio</a>
+                <li class="<?php if($orden!=""){ echo $orden;}?>"><a href="principal.php?accion=orden&tipo=anular"><span class=" iconfa-calendar"></span> Orden de Servicio</a>
                 	
                 </li>
-                <li class="dropdown <?php if($empresa!=""){ echo $empresa;}?>"><a href=""><span class="iconsweets-home2"></span> Empresas</a>
+                <li class="dropdown <?php if($empresa!=""){ echo $empresa;}?>"><a href=""><span class="iconfa-briefcase"></span> Empresas</a>
                 	<ul <?php if ($empresa!=""){?>style="display: block" <?php  } ?> >
                     	<li><a href="principal.php?accion=empresa&tipo=nuevo">Agregar</a></li>
                         <li><a href="principal.php?accion=empresa&tipo=modificar">Modificar/Eliminar</a></li>
                     </ul>
                 </li>
                 
-                <li class=" dropdown <?php if($sucursal!=""){ echo $sucursal;}?>"><a href=""><span class="iconsweets-companies	"></span> Sucursales</a>
+                <li class=" dropdown <?php if($sucursal!=""){ echo $sucursal;}?>"><a href=""><span class="iconfa-globe"></span> Sucursales</a>
                 	<ul <?php if ($sucursal!=""){?>style="display: block" <?php  } ?> >
                     	<li><a href="principal.php?accion=sucursal&tipo=nuevo">Nueva Sucursal</a></li>
                         <li><a href="principal.php?accion=sucursal&tipo=modificar">Modificar/Eliminar</a></li>

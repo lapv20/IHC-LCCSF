@@ -20,11 +20,11 @@ function validar(){
         <form class="stdform stdform2" method="post" action="usuarios.php?accion=nuevo">
         	<p>
                 <label>Nombre</label>
-                <span class="field"><input type="text" id="nombre" name="nombre" class="input-medium" placeholder="Nombre" /></span>
+                <span class="field"><input type="text" id="nombre" name="nombre" class="input-xlarge" placeholder="Nombre" /></span>
             </p>
             <p>
                 <label>Apellido</label>
-                <span class="field"><input type="text" name="apellido" class="input-medium" placeholder="Apellido" /></span>
+                <span class="field"><input type="text" name="apellido" class="input-xlarge" placeholder="Apellido" /></span>
             </p>
             
             <?php 
@@ -48,11 +48,11 @@ function validar(){
             
             <p>
                 <label>Telefono</label>
-                <span class="field"><input type="text" name="telefono" class="input-medium" placeholder="Telefono" /></span>
+                <span class="field"><input type="text" name="telefono" class="input-xlarge" placeholder="Telefono" /></span>
             </p>
             <p>
                 <label>Correo</label>
-                <span class="field"><input type="text" name="correo" class="input-medium" placeholder="Correo" /></span>
+                <span class="field"><input type="text" name="correo" class="input-xlarge" placeholder="Correo" /></span>
             </p>
              <?php 
 				$wsql ="select * from tipo_usuario";
@@ -73,9 +73,8 @@ function validar(){
             </p>
             
             <p class="stdformbutton">
-                    <input type="submit" class="btn btn-primary" value="Crear">
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <input type="reset" class="btn btn-primary" value="Cancelar">
+                <button type="submit" class="btn btn-primary"><span class="iconfa-plus"></span> Añadir Cuenta</button>
+                <button type="reset" class="btn"><i class=" iconfa-refresh icon-white"></i> Restablecer</button>
             </p>
         </form>
     </div>

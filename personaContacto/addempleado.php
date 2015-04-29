@@ -56,7 +56,7 @@
 				</span>                 
 		</p>
 			<p class="stdformbutton">
-				<button class="btn btn-primary"><span class="iconfa-plus"></span> Añadir</button>
+				<button type="submit" class="btn btn-primary"><span class="iconfa-plus"></span> Añadir</button>
 				<button type="reset" class="btn"><i class=" iconfa-refresh icon-white"></i> Restablecer</button>
 			</p> 
 		</form>

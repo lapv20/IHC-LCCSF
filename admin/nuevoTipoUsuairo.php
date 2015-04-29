@@ -23,11 +23,9 @@ function validar(){
                 <label>Nombre</label>
                 <span class="field"><input type="text" id="nombre" name="nombre" class="input-xxlarge" placeholder="Nombre" /></span>
             </p>
-            
-            
             <p class="stdformbutton">
-                    <input type="submit" class="btn btn-primary" value="Crear">
-                    <input type="reset" class="btn btn-primary" value="Cancelar">
+                <button type="submit" class="btn btn-primary"><span class="iconfa-plus"></span> Añadir Nuevo Tipo</button>
+                <button type="reset" class="btn"><i class=" iconfa-refresh icon-white"></i> Restablecer</button>
             </p>
         </form>
     </div>

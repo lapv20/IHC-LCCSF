@@ -21,10 +21,10 @@
             
             <p>
                 <label>Telefono</label>
-                <span class="field"><input type="text" name="telefono" class="input-medium" placeholder="Telefono" /></span>
+                <span class="field"><input type="text" name="telefono" class="input-xlarge" placeholder="Telefono" /></span>
             </p>
             <p>
-            	<label>RIF</label>
+            	<label>RIF<small>Registro de Identificación Fiscal</small></label>
                 <span class="field">
             	<select  name="rif1" data-placeholder="Seleccione una Opcion" style="width:50px;" tabindex="2">
                     	<option value="V">V</option>
@@ -44,9 +44,8 @@
             </p>
             
             <p class="stdformbutton">
-                    <input type="submit" class="btn btn-primary" value="Crear">
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <input type="reset" class="btn btn-primary" value="Cancelar">
+                <button type="submit" class="btn btn-primary"><span class="iconfa-plus"></span> Crear Empresa</button>
+                <button type="reset" class="btn"><i class=" iconfa-refresh icon-white"></i> Restablecer</button>
             </p>
         </form>
     </div>

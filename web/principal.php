@@ -36,15 +36,21 @@
 <script type="text/javascript" src="archivos/js/custom.js"></script>
 <script type="text/javascript" src="archivos/js/forms.js"></script>
 
+
 <script type="text/javascript">
     jQuery(document).ready(function(){
         // dynamic table
-        jQuery('#dyntable2').dataTable( {
-            "bScrollInfinite": true,
-            "bScrollCollapse": true,
-            "sScrollY": "300px"
+        jQuery('#dyntable').dataTable({
+            "sPaginationType": "full_numbers",
+            "aaSortingFixed": [[0,'asc']],
+            "sLengthMenu":     "Mostrar _MENU_ registros",
+            "fnDrawCallback": function(oSettings) {
+                jQuery.uniform.update();
+            },
+
         });
-	 });
+        
+    });
 </script>
 </head>
 
@@ -82,6 +88,8 @@
 								$consultas="active";
 							break;
 						}
+
+
 						
 					}
 				?>
@@ -99,29 +107,7 @@
                 </li>
                 
                 <li><a href="logout.php"><span class=" iconfa-off"></span> Salir</a></li>
-                <!--<li><a href="archivos/typography.html"><span class="iconfa-font"></span> Typography</a></li>
-                <li><a href="archivos/charts.html"><span class="iconfa-signal"></span> Graph &amp; Charts</a></li>
-                <li><a href="archivos/messages.html"><span class="iconfa-envelope"></span> Messages</a></li>
-                <li><a href="archivos/calendar.html"><span class="iconfa-calendar"></span> Calendar</a></li>
-                <li class="dropdown"><a href=""><span class="iconfa-book"></span> Other Pages</a>
-                	<ul>
-                    	<li><a href="archivos/404.html">404 Error Page</a></li>
-                        <li><a href="archivos/editprofile.html">Edit Profile</a></li>
-                        <li><a href="archivos/invoice.html">Invoice Page</a></li>
-                        <li><a href="archivos/discussion.html">Discussion Page</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown"><a href=""><span class="iconfa-th-list"></span> Three Level Menu Sample</a>
-                	<ul>
-                    	<li class="dropdown"><a href="">Second Level Menu</a>
-                        <ul>
-                            <li><a href="">Third Level Menu</a></li>
-                            <li><a href="">Another Third Level Menu</a></li>
-                        </ul>
-                     </li>
-                    </ul>
-                </li>
-            </ul>-->
+     
         </div><!--leftmenu-->
         
     </div><!-- leftpanel -->

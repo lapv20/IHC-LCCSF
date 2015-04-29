@@ -26,7 +26,7 @@ function eliminar(id){
 
 <body>
 <h4 class="widgettitle">Pacientes</h4>
-                <table class="table table-bordered table-infinite" id="dyntable2">
+                <table id="dyntable" class="table table-bordered responsive">
                     <thead>
                         <tr>                          
                            	<th class="head1">Nombres</th>

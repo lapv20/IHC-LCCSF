@@ -26,7 +26,7 @@ function anular(id){
 
 <body>
 <h4 class="widgettitle">Ordenes de Servicio</h4>
-                <table class="table table-bordered table-infinite" id="dyntable2">
+                <table id="dyntable" class="table table-bordered responsive">
                     <colgroup>
                         <col class="con0" style="align: center; width: 4%" />
                         <col class="con1" />

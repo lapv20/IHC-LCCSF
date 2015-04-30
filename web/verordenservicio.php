@@ -1,6 +1,5 @@
 <?php 
 	include("conexbd.php");
-	//session_start();
 ?>
 <!doctype html>
 <html>
@@ -12,44 +11,40 @@
 function MM_openBrWindow(theURL,winName,features) { //v2.0
   window.open(theURL,winName,features);
 }
-
 function anular(id){
-	
-	var respuesta = confirm('Desea anular la orden de servicio');
-	
+	var respuesta = confirm('Desea anular la orden de servicio');	
 	if(respuesta){
 		window.location.href = 'gorden.php?accion=anular&idordenservicio='+id;
-		
 	}
 }
 </script>
 </head>
-
 <body>
-<h4 class="widgettitle">Ordenes de Servicio</h4>
-                <table id="dyntable" class="table table-bordered responsive">
-                    <colgroup>
-                        <col class="con0" style="align: center; width: 4%" />
-                        <col class="con1" />
-                        <col class="con0" />
-                        <col class="con1" />
-                        <col class="con0" />
-                        <col class="con1" />
-                    </colgroup>
-                    <thead>
-                        <tr>                
-                           	<th class="head1">Nombres</th>
-                            <th class="head0">Apellidos</th>
-                            <th class="head1">Cedula</th>
-                            <th class="head1">Numero de Orden</th>
-                            <th class="head0">Sucursal</th>
-                            <th class="head1">Perfil</th>
-                            <th class="head1">Estatus</th>
-                            <th>Editar</th> 
-                        </tr>
-                    </thead>
-                    <tbody>
-               <?php 
+	<h4 class="widgettitle">Ordenes de Servicio</h4>
+		<table id="dyntable" class="table table-bordered responsive">
+			<colgroup>
+				<col class="con0" />
+				<col class="con1" />
+				<col class="con0" />
+				<col class="con1" />
+				<col class="con0" />
+				<col class="con1" />
+			</colgroup>
+			<thead>
+				<tr>                
+					<th class="head0"></th>
+					<th class="head0">Nombres</th>
+					<th class="head0">Apellidos</th>
+					<th class="head1">Cedula</th>
+					<th class="head0">Numero de Orden</th>
+					<th class="head1">Sucursal</th>
+					<th class="head0">Perfil</th>
+					<th class="head1">Estatus</th>
+					<th class="head0">Editar</th> 
+				</tr>
+			</thead>
+			<tbody>
+	   <?php 
 						
 						$wsql="SELECT * FROM ordenservicio o,paciente p WHERE o.cedula_paciente=p.cedula";
 						$result = mysql_query($wsql,$link);
@@ -77,24 +72,27 @@ function anular(id){
 							if($estatus!='Anulada')
 							{
 					?>
-                        <tr class="gradeX">
-                            <td><?php echo $row1['nombres']; ?></td>
-                            <td><?php echo $row1['apellidos']; ?></td>
-                            <td><?php echo $row1['cedula']; ?></td>
-                            <td><?php echo $row['numero_orden']; ?></td>
-                            <td><?php echo $row3['nombre_laboratorio']; ?></td>
-                            <td><?php echo $row2['nombre_perfil']; ?></td>
-                            <td><?php echo $estatus; ?></td>
-                            <td><a href="#" <?php if($estatus=='Pendiente'){?> onClick="MM_openBrWindow('modificarorden.php?sucursal=<?php echo $row['idsucursal'] ?>&perfil=<?php echo $row['idperfil'] ?>&idordenservicio=<?php echo $idorden ?>','modificarorden','width=800,height=396')"<?php }else{?> onClick="alert('No se puede modificar una orden cuyo estatus no sea pendiente')"<?php } ?> > <li class="icon-edit"></li></a>                          
-                            <a href="#" <?php if($estatus=='Pendiente'){?> onClick="anular(<?php echo $row['idordenservicio']; ?>);"<?php }else{?> onClick="alert('No se puede anular una orden cuyo estatus no sea pendiente')"<?php } ?>> <li class="icon-remove"></li></a>
-                            </td>
-
-                        </tr>
-                    <?php
+						<tr class="gradeX">
+							<td></td>
+							<td><?php echo $row1['nombres']; ?></td>
+							<td><?php echo $row1['apellidos']; ?></td>
+							<td><?php echo $row1['cedula']; ?></td>
+							<td><?php echo $row['numero_orden']; ?></td>
+							<td><?php echo $row3['nombre_laboratorio']; ?></td>
+							<td><?php echo $row2['nombre_perfil']; ?></td>
+							<td><?php echo $estatus; ?></td>
+							<td>
+								<center>
+									<a href="#" <?php if($estatus=='Pendiente'){?> onClick="MM_openBrWindow('modificarorden.php?sucursal=<?php echo $row['idsucursal'] ?>&perfil=<?php echo $row['idperfil'] ?>&idordenservicio=<?php echo $idorden ?>','modificarorden','width=800,height=396')"<?php }else{?> onClick="alert('No se puede modificar una orden cuyo estatus no sea pendiente')"<?php } ?> > <li class="icon-edit"></li></a>
+									<a href="#" <?php if($estatus=='Pendiente'){?> onClick="anular(<?php echo $row['idordenservicio']; ?>);"<?php }else{?> onClick="alert('No se puede anular una orden cuyo estatus no sea pendiente')"<?php } ?>> <li class="icon-trash"></li></a>
+								</center>
+							</td>
+						</tr>
+					<?php
 							}
 						 }
 					?>
-                     </tbody>
-                </table>
+					 </tbody>
+				</table>
 </body>
 </html>

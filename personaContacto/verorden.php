@@ -27,7 +27,7 @@ function anular(id){
 <h4 class="widgettitle">Ordenes de Servicio</h4>
                 <table class="table table-bordered table-infinite" id="dyntable2">
                     <colgroup>
-                        <col class="con0" style="align: center; width: 4%" />
+                        <col class="con0" />
                         <col class="con1" />
                         <col class="con0" />
                         <col class="con1" />
@@ -85,9 +85,11 @@ function anular(id){
                             <td><?php echo $laboratorio['nombre_laboratorio']; ?></td>
                             <td><?php echo $n_perfil['nombre_perfil']; ?></td>
                             <td><?php echo $esta; ?></td>
-
-                            <td> <a href="#" <?php if($esta=='Pendiente'){?> onClick="MM_openBrWindow('modificarorden.php?sucursal=<?php echo $row['idsucursal'] ?>&perfil=<?php echo $row['idperfil'] ?>&idordenservicio=<?php echo $id_orden; ?>','modificarorden','width=805,height=280')"><?php }else{?> onClick="alert('No se puede modificar una orden cuyo estatus no sea pendiente')" <?php } ?><li class="icon-edit"></li></a> 
-                            <a href="#" <?php if($esta=='Pendiente'){?> onClick="anular(<?php echo $row['idordenservicio']; ?>);"<?php }else{?> onClick="alert('No se puede anular una orden cuyo estatus no sea pendiente')"<?php } ?>> <li class="icon-remove"></li></a>
+                            <td>
+                            	<center>
+                            		<a href="#" <?php if($esta=='Pendiente'){?> onClick="MM_openBrWindow('modificarorden.php?sucursal=<?php echo $row['idsucursal'] ?>&perfil=<?php echo $row['idperfil'] ?>&idordenservicio=<?php echo $id_orden; ?>','modificarorden','width=805,height=280')"><?php }else{?> onClick="alert('No se puede modificar una orden cuyo estatus no sea pendiente')" <?php } ?><li class="icon-edit"></li></a>
+                            		<a href="#" <?php if($esta=='Pendiente'){?> onClick="anular(<?php echo $row['idordenservicio']; ?>);"<?php }else{?> onClick="alert('No se puede anular una orden cuyo estatus no sea pendiente')"<?php } ?>> <li class="icon-remove"></li></a>
+                            	</center>
                             </td>
 	
 

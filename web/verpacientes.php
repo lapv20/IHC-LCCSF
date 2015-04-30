@@ -1,6 +1,4 @@
-<?php 
-	include("conexbd.php");
-?>
+<?php include("conexbd.php"); ?>
 <!doctype html>
 <html>
 <head>
@@ -10,14 +8,10 @@
 function MM_openBrWindow(theURL,winName,features) { //v2.0
   window.open(theURL,winName,features);
 }
-
 function eliminar(id){
-	
 	var respuesta = confirm('Desea Eliminar este paciente');
-	
 	if(respuesta){
 		window.location.href = 'gpaciente.php?accion=eliminar&paciente='+id;
-		
 	}
 }
 </script>
@@ -29,6 +23,7 @@ function eliminar(id){
                 <table id="dyntable" class="table table-bordered responsive">
                     <thead>
                         <tr>                          
+                            <th class="head1"></th>
                            	<th class="head1">Nombres</th>
                             <th class="head0">Apellidos</th>
                             <th class="head1">Cedula</th>
@@ -48,14 +43,15 @@ function eliminar(id){
 
 				?>
                         <tr class="gradeX">
+                            <td></td>
                             <td><?php echo $row['nombres']; ?></td>
                             <td><?php echo $row['apellidos']; ?></td>
                             <td><?php echo $row['cedula']; ?></td>
                             <td><?php echo $row['fecha_nac']; ?></td>
                             <td><?php echo $row['genero']; ?></td>
                             <td><?php echo $row['telefono']; ?></td>
-                            <td><a href="#" title="Modificar" class="icon-edit" onClick="MM_openBrWindow('modificarpaciente.php?paciente=<?php echo $row['idpaciente'];?>','Modificar','width=805,height=398')"></a>
-                                <a href="#" title="Eliminar" class="icon-trash" onClick="eliminar(<?php echo $row['idpaciente']; ?>);"></a></td>
+                            <td><center><a href="#" title="Modificar" class="icon-edit" onClick="MM_openBrWindow('modificarpaciente.php?paciente=<?php echo $row['idpaciente'];?>','Modificar','width=805,height=398')"></a>
+                                <a href="#" title="Eliminar" class="icon-trash" onClick="eliminar(<?php echo $row['idpaciente']; ?>);"></a></center></td>
                         </tr>
                     <?php
 						 }

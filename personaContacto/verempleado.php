@@ -28,7 +28,7 @@ function eliminar(id){
 <h4 class="widgettitle">Empleados</h4>
                 <table class="table table-bordered table-infinite" id="dyntable2">
                     <colgroup>
-                        <col class="con0" style="align: center; width: 4%" />
+                        <col class="con0" />
                         <col class="con1" />
                         <col class="con0" />
                         <col class="con1" />
@@ -76,7 +76,10 @@ function eliminar(id){
                             <td><?php echo $row['telefono']; ?></td>
                             <td><?php if((mysql_num_rows($result_orden))>0){ echo (mysql_num_rows($result_orden));} else
 							{ echo ('No posee');} ?></td>
-                            <td> <a href="#" onClick="MM_openBrWindow('modificarempleado.php?cedula=<?php echo $row['cedula'] ?>','modificarorden','width=805,height=400')"><li class="icon-edit"></li></a> <a href="#" onClick="eliminar(<?php echo $row['idpaciente']; ?>);"> <li class="icon-remove"></li></a></td>
+                            <td>
+                                <center>
+                                    <a href="#" onClick="MM_openBrWindow('modificarempleado.php?cedula=<?php echo $row['cedula'] ?>','modificarorden','width=805,height=400')"><li class="icon-edit"></li></a>
+                                    <a href="#" onClick="eliminar(<?php echo $row['idpaciente']; ?>);"> <li class="icon-remove"></li></a></center></td>
 
 
                         </tr>

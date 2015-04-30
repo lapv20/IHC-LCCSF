@@ -40,7 +40,6 @@
 				
 				$fecha=date("Y-m-d");
 				$wsql4="INSERT INTO historial (idactividad,nombre_usuario,fecha) VALUES ('$idactividad','$nombreusuario','$fecha')";
-				echo $nombreusuario;
 				$result4 = mysql_query($wsql4,$link);
 				echo mysql_error($link);	
 				
@@ -61,7 +60,6 @@
 				$nombreusuario = $_SESSION['userid'];
 				$fecha=date("Y-m-d");
 				$wsql4="INSERT INTO historial (idactividad,nombre_usuario,fecha) VALUES ('$idactividad','$nombreusuario','$fecha')";
-				echo $wsql4;
 				$result4 = mysql_query($wsql4,$link);
 				echo mysql_error($link);	
 				

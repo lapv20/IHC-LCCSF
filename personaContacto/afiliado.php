@@ -78,7 +78,7 @@
                 <li class="active"><a href="afiliado.php"><span class="iconfa-home"></span> Inicio</a></li>
                 <li class="dropdown"><a href=""><span class="iconfa-user"></span>Afiliados</a>
                 	<ul>                    	
-                    	<li><a href="afiliado.php?pag=adde&&acc=pac&&tipo=sadde">Actualizar Afiliados</a></li>
+                    	<li><a href="afiliado.php?pag=adde&&acc=pac&&tipo=sadde"><span class="icon-refresh"></span> Actualizar Afiliados</a></li>
                         <!-- <li><a href="afiliado.php?pag=morosos">Moroso</a></li> -->
                         
                        <!-- <li><a href="afiliado.php?pag=me&&acc=pac&&tipo=sme">Modificar afiliado</a></li>
@@ -88,7 +88,7 @@
                 </li>
                 <li class="dropdown"><a href=""><span class="iconfa-book"></span>Orden de Servicio</a>
                 	<ul>                    	
-                        <li><a href="afiliado.php?pag=vo&&acc=pac&&tipo=svo">Ver Ordenes de Servicio</a></li>                    
+                        <li><a href="afiliado.php?pag=vo&&acc=pac&&tipo=svo"><span class="icon-list"></span> Ver Ordenes de Servicio</a></li>                    
                     </ul>
                 </li>
                 <li class=""><a href="../web/logout.php"><span class="iconfa-off"></span>Salir</a></li>
@@ -100,14 +100,29 @@
     <div class="rightpanel">
         
         <ul class="breadcrumbs">
-        
+            <li><a href="principal.php"><i class="iconfa-home"></i></a> <span class="separator"></span> Inicio</li>
+            <?php 							
+			if(isset($_GET["pag"])){
+				if($_GET["pag"]=="adde"){?>
+					<li><span class="separator"></span> Afiliados <span class="separator"></span> <a href="afiliado.php?pag=adde"> Actualizar Afiliados</a></li><?php
+				}if($_GET["pag"]=="vo"){?>
+					<li><span class="separator"></span> Orden de Servicio <span class="separator"></span> <a href="afiliado.php?pag=vo"> Ver Ordenes de Servicio</a></li><?php
+				}
+			}
+		?>
+			<li class="right">
+                <a href="" data-toggle="dropdown" class="dropdown-toggle"><i class="icon-user"></i> <?php echo $_SESSION['nombres']; echo " "; echo $_SESSION['apellidos']; ?></a>
+                <ul class="dropdown-menu pull-right">
+                    <li><a href=""><span class="iconfa-user"></span> Ver Mi Información</a></li>
+                    <li class=""><a href="../web/logout.php"><span class="iconfa-off"></span> Salir</a></li>
+                </ul>
+            </li>
         </ul>
         
         <div class="maincontent">
             <div class="maincontentinner">
                 <div class="row-fluid">
                     <div id="dashboard-left" class="span">
-                    
                       <?php 
 					  		if(isset($_GET['pag']))
 							{

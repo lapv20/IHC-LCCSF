@@ -2,6 +2,36 @@
 <html>
 <head>
 <meta charset="utf-8">
+<script type="text/javascript">
+function validarLetras(e) 
+{ 
+    tecla = (document.all) ? e.keyCode : e.which; 
+        if (tecla==8) return true; // backspace
+        if (tecla==9) return true; // tabulador
+        if (tecla==32) return true; // espacio
+        if (e.ctrlKey && tecla==86) { return true;} //Ctrl v
+        if (e.ctrlKey && tecla==67) { return true;} //Ctrl c
+        if (e.ctrlKey && tecla==88) { return true;} //Ctrl x
+        patron = /[a-zA-Z]/; //patron
+        te = String.fromCharCode(tecla); 
+        return patron.test(te); // prueba de patron
+}  
+function validarNumeros(e) 
+{ // 1
+    tecla = (document.all) ? e.keyCode : e.which; // 2
+    if (tecla==8) return true; // backspace
+    if (tecla==109) return true; // menos
+    if (tecla==110) return true; // punto
+    if (tecla==189) return false; // guion
+    if (e.ctrlKey && tecla==86) { return true}; //Ctrl v
+    if (e.ctrlKey && tecla==67) { return true}; //Ctrl c
+    if (e.ctrlKey && tecla==88) { return true}; //Ctrl x
+    if (tecla>=96 && tecla<=105) { return true;} //numpad
+    patron = /[0-9]/; // patron
+    te = String.fromCharCode(tecla); 
+    return patron.test(te); // prueba
+}
+</script>
 </head>
 
 <body>
@@ -17,12 +47,13 @@
 	<div class="widgetcontent nopadding">
 			<form class="stdform stdform2" action="contacto.php?pag=bo&&acc=pac&&tipo=sbo" method="post">
 				<p>
-					<label>Cedula</label>                       
-                    <span class="field">
-                    	  <input name="cedula" type="text" required class="input-large" placeholder="Numero" />
-                          <input name="tipo_cedula" type="radio" required value="V" /> V &nbsp;&nbsp; 
-                          <input name="tipo_cedula" type="radio" required value="E" /> E &nbsp;&nbsp;
-                   </span>
+					<label>Cedula<small>V: Venezolano, E: Extranjero</small></label>                       
+					<span class="field">
+					<input name="cedula" type="text" onkeydown="return validarNumeros(event)" size="30" required class="input-large" placeholder="Numero de Cedula" />
+					<input name="tipo_cedula" type="radio" required value="V" /> V &nbsp;&nbsp; 
+					<input name="tipo_cedula" type="radio" required value="E" /> E &nbsp;&nbsp;
+					</span>
+				</p>
                    <p class="stdformbutton">
                         <button class="btn btn-primary"><span class="iconfa-search"></span> Buscar</button>
                         <button type="reset" class="btn">Restablecer</button>

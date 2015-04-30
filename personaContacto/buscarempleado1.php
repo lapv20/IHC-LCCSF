@@ -28,15 +28,30 @@ function eliminar(id){
 		
 	}
 }
+function validarNumeros(e) 
+{ // 1
+    tecla = (document.all) ? e.keyCode : e.which; // 2
+    if (tecla==8) return true; // backspace
+    if (tecla==109) return true; // menos
+    if (tecla==110) return true; // punto
+    if (tecla==189) return false; // guion
+    if (e.ctrlKey && tecla==86) { return true}; //Ctrl v
+    if (e.ctrlKey && tecla==67) { return true}; //Ctrl c
+    if (e.ctrlKey && tecla==88) { return true}; //Ctrl x
+    if (tecla>=96 && tecla<=105) { return true;} //numpad
+    patron = /[0-9]/; // patron
+    te = String.fromCharCode(tecla); 
+    return patron.test(te); // prueba
+}
 </script>
 <h4 class="widgettitle">Buscar Empleado</h4>
     <div class="widgetcontent nopadding">
       <form class="stdform stdform2" action="contacto.php?pag=me&&acc=pac&&tipo=sme" method="post">
                                
                  <p>
-                   <label>Cedula</label>                       
+                   <label>Cedula<small>V: Venezolano, E: Extranjero</small></label>                       
                     <span class="field">
-                    	  <input name="cedula" type="text" required class="input-large" placeholder="Numero" />
+                    	  <input name="cedula" type="text" onkeydown="return validarNumeros(event)" required class="input-large" placeholder="Numero de Cedula" />
                           <input name="tipo_cedula" type="radio" required value="V" /> V &nbsp;&nbsp; 
                           <input name="tipo_cedula" type="radio" required value="E" /> E &nbsp;&nbsp;
                    </span> 
@@ -158,7 +173,7 @@ function eliminar(id){
 				
 ?>
 				<div class="alert">
-                <button data-dismiss="alert" class="close" type="button" onClick="window.location.href='principal.php'">&times;</button>
+                <button data-dismiss="alert" class="close" type="button" onClick="window.location.href='contacto.php'">&times;</button>
                  <strong>No se encontraron Resultados</strong>
 				</div>
 
@@ -169,7 +184,7 @@ function eliminar(id){
 		{ 
 ?>
 				<div class="alert alert-error">
-                   <button data-dismiss="alert" class="close" type="button" onClick="window.location.href='principal.php'">&times;</button>
+                   <button data-dismiss="alert" class="close" type="button" onClick="window.location.href='contacto.php'">&times;</button>
                       <strong>Error!</strong>&nbsp;<?php echo $cadena . "  NO es valido<br>" ?>
 </div>			
 <?php	
@@ -179,7 +194,7 @@ function eliminar(id){
 	{ 
 ?>		
 			<div class="alert alert-error">
-                   <button data-dismiss="alert" class="close" type="button" onClick="window.location.href='principal.php'">&times;</button>
+                   <button data-dismiss="alert" class="close" type="button" onClick="window.location.href='contacto.php'">&times;</button>
                       <strong>Error!</strong>Los Campos no pueden estar Vacios
 </div>		
 <?php

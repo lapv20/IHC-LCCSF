@@ -1,4 +1,42 @@
 <?php include("conexion.php");?>
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Nueva Sucursal</title>
+
+<script type="text/javascript">
+function validarLetras(e) 
+{ 
+    tecla = (document.all) ? e.keyCode : e.which; 
+    if (tecla==8) return true; // backspace
+    if (tecla==9) return true; // tabulador
+    if (tecla==32) return true; // espacio
+    if (e.ctrlKey && tecla==86) { return true;} //Ctrl v
+    if (e.ctrlKey && tecla==67) { return true;} //Ctrl c
+    if (e.ctrlKey && tecla==88) { return true;} //Ctrl x
+    patron = /[a-zA-Z]/; //patron
+    te = String.fromCharCode(tecla); 
+    return patron.test(te); // prueba de patron
+}
+function validarNumeros(e) 
+{  
+    tecla = (document.all) ? e.keyCode : e.which; // 2
+    if (tecla==8) return true; // backspace
+    if (tecla==109) return true; // menos
+    if (tecla==110) return true; // punto
+    if (tecla==189) return false; // guion
+    if (e.ctrlKey && tecla==86) { return true}; //Ctrl v
+    if (e.ctrlKey && tecla==67) { return true}; //Ctrl c
+    if (e.ctrlKey && tecla==88) { return true}; //Ctrl x
+    if (tecla>=96 && tecla<=105) { return true;} //numpad
+    patron = /[0-9]/; // patron
+    te = String.fromCharCode(tecla); 
+    return patron.test(te); // prueba
+}
+</script>
+</head>
+<body>
 <div class="widget ">
 	<center><h4 class="widgettitle"> Nuevo Empresa</h4></center>
     <div class="widgetcontent nopadding">
@@ -20,7 +58,7 @@
             
             <p>
                 <label>Telefono<small>Escriba Solo Números</small></label>
-                <span class="field"><input type="text" name="telefono" class="input-xlarge" placeholder="Telefono" /></span>
+                <span class="field"><input type="text" name="telefono" onkeydown="return validarNumeros(event)" required class="input-xlarge" placeholder="Telefono" /></span>
             </p>
             <p>
             	<label>RIF<small>Registro de Identificación Fiscal</small></label>
@@ -49,3 +87,4 @@
         </form>
     </div>
 </div>
+</body>

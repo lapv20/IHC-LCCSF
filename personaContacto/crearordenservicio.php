@@ -1,3 +1,7 @@
+<?php 
+	include("conexbd.php");
+	//session_start();
+?>
 <meta charset="utf-8">
 <head>
 	<title>Crear Orden de Servicio</title>
@@ -13,11 +17,16 @@
 						<select name="idpaciente" class="uniformselect chzn-select input-xxlarge" required="required" >
 							<option value="-1">Seleccione una Opción</option>
 							<?php 
-								$perf = "SELECT * FROM paciente";
-								$resultperf = mysql_query($perf);
-								while($row = mysql_fetch_array($resultperf)){?>
-									<option value="<?php echo $row['idpaciente'];?>"><?php echo $row['cedula']." - ";echo $row['nombres']." ".$row['apellidos']; ?></option>
-								<?php } ?>
+								$perf = "SELECT * FROM convenio_paciente";
+								$resultperf = mysql_query($perf,$link);
+								while ($row = mysql_fetch_array($resultperf)) 
+								{
+										$idpaciente = $row['idpaciente'];
+									$wsql="SELECT * FROM paciente WHERE idpaciente='$idpaciente'";
+									$result = mysql_query($wsql,$link);
+									while($row1 = mysql_fetch_array($result)){?>
+										<option value="<?php echo $row1['idpaciente'];?>"><?php echo $row1['cedula']." - ";echo $row1['nombres']." ".$row1['apellidos']; ?></option>
+								<?php } }?>
 							</select>
 						</span>   
 					</p>

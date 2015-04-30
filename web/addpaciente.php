@@ -51,20 +51,20 @@
 				<div class="widgetcontent nopadding">
 					<form id="form1" class="stdform stdform2" action="gpaciente.php?accion=nuevo" method="post">                
 						<p>
-							<label>Cedula</label>                       
+							<label>Cedula<small>V: Venezolano, E: Extranjero</small></label>                       
 							<span class="field">
-								<input name="cedula" type="text" onkeydown="return validarNumeros(event)" size="30" required class="input-large" placeholder="Numero" />
+								<input name="cedula" type="text" onkeydown="return validarNumeros(event)" size="30" required class="input-large" placeholder="Numero de Cedula" />
 								<input name="tipo_cedula" type="radio" required value="V" /> V &nbsp;&nbsp; 
 								<input name="tipo_cedula" type="radio" required value="E" /> E &nbsp;&nbsp;
 							</span>
 						</p>
-            <p>
-						<label>Nombres</label>
+            			<p>
+						<label>Nombres<small>Escriba Solo Letras</small></label>
 						<span class="field">  
 							<input name="nombre1" type="text" onKeyDown="return validarLetras(event)" size="40" required class="input-large" placeholder="Primer Nombre" />
 							<input name="nombre2" type="text" onKeyDown="return validarLetras(event)" size="40" class="input-large" placeholder="Segundo Nombre" />                  	</span>
 						</p><p>
-						<label>Apellidos</label>
+						<label>Apellidos<small>Escriba Solo Letras</small></label>
 						<span class="field">  
 							<input name="apellido1" type="text" onKeyDown="return validarLetras(event)" size="40" required class="input-large" placeholder="Primer Apellido" />
 							<input name="apellido2" type="text" onKeyDown="return validarLetras(event)" size="40"  class="input-large" placeholder="Segundo Apellido" />                  	</span>
@@ -74,16 +74,16 @@
 							<input type="text" name="fecha_nacimiento" id="fecha_nacimiento"/>
 						</span>
 					</p><p>
-					<label>Genero</label>                       
+					<label>Genero<small>F: Femenino, M: Masculino</small></label>                       
 					<span class="field">
 						<input name="genero" type="radio" required value="F" /> F &nbsp;&nbsp; 
 						<input name="genero" type="radio" required value="M" /> M &nbsp;&nbsp;
 					</span>
 				</p><p>
-				<label>Telefonos</label>                       
+				<label>Telefonos<small>Escriba Solo Números</small></label>                       
 				<span class="field">
-					<input name="telefono" type="text" onkeydown="return validarNumeros(event)" required class="input-large" id="telefono" placeholder="Solo Números">
-					<input name="telefono2" type="tel" onkeydown="return validarNumeros(event)" class="input-large" id="telefono2" placeholder="04141234567">
+					<input name="telefono" type="text" onkeydown="return validarNumeros(event)" required class="input-large" id="telefono" placeholder="Telefono Principal">
+					<input name="telefono2" type="tel" onkeydown="return validarNumeros(event)" class="input-large" id="telefono2" placeholder="Telefono Opcional">
 				</span>                 
 			</p>
 			<p class="stdformbutton">

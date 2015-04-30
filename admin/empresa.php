@@ -4,7 +4,7 @@
 	if(isset($_GET['accion'])){
 		if($_GET['accion']=="nuevo"){
 			extract($_POST);
-			$RIF =$rif1."-".$rif2."-".$rif3;
+			$RIF =$rif1." ".$rif2." ".$rif3;
 			
 			
 			$wsql ="insert into empresa (nombre_empresa,tipo_convenio,telefono,rif,direccion) values('$nombre','$tipo_convenio','$telefono','$RIF','$direccion')";

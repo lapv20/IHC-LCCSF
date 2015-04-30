@@ -73,7 +73,7 @@
             <p>
             <?php 
 				$RIF = array();
-				$RIF =  explode('-',$row['rif']);
+				$RIF =  explode(' ',$row['rif']);
 			?>
             	<label>RIF</label>
             	<select  name="rif1" data-placeholder="Seleccione una Opcion" style="width:50px;"  tabindex="2">

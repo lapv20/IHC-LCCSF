@@ -55,6 +55,7 @@ function eliminar(id){
                                 $row2 = mysql_fetch_array($result2)
 				?>
                         <tr class="gradeX">
+                            <td></td>
                             <td><?php echo $row1['nombres']; ?></td>
                             <td><?php echo $row1['apellidos']; ?></td>
                             <td><?php echo $row1['cedula']; ?></td>

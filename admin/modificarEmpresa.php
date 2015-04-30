@@ -82,7 +82,12 @@
             <p>
             <?php 
 				$RIF = array();
+<<<<<<< HEAD
 				$RIF = explode("-",$row['rif']);
+=======
+				$RIF = explode(" ",$row['rif']);
+                
+>>>>>>> 35dfd4cc461d2e889b6387b6bc6ac942b4c23d22
 			?>
                 <label>RIF</label>
                 <span class="field">

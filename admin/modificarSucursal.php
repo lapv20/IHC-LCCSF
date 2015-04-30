@@ -67,7 +67,7 @@
             <p>
             <?php 
 				$RIF = array();
-				$RIF =  explode('-',$row['rif']);
+				$RIF =  explode(' ',$row['rif']);
 			?>
             	<label>RIF</label>
                 <span class="field">

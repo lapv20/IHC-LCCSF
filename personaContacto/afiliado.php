@@ -79,16 +79,7 @@
                 <li class="dropdown"><a href=""><span class="iconfa-user"></span>Afiliados</a>
                 	<ul>                    	
                     	<li><a href="afiliado.php?pag=adde&&acc=pac&&tipo=sadde"><span class="icon-refresh"></span> Actualizar Afiliados</a></li>
-                        <!-- <li><a href="afiliado.php?pag=morosos">Moroso</a></li> -->
-                        
-                       <!-- <li><a href="afiliado.php?pag=me&&acc=pac&&tipo=sme">Modificar afiliado</a></li>
-                         
-                        <li><a href="afiliado.php?pag=vere&&acc=pac&&tipo=svere">Ver afiliados</a></li>     -->                
-                    </ul>
-                </li>
-                <li class="dropdown"><a href=""><span class="iconfa-book"></span>Orden de Servicio</a>
-                	<ul>                    	
-                        <li><a href="afiliado.php?pag=vo&&acc=pac&&tipo=svo"><span class="icon-list"></span> Ver Ordenes de Servicio</a></li>                    
+                                          
                     </ul>
                 </li>
                 <li class=""><a href="../web/logout.php"><span class="iconfa-off"></span>Salir</a></li>
@@ -105,8 +96,6 @@
 			if(isset($_GET["pag"])){
 				if($_GET["pag"]=="adde"){?>
 					<li><span class="separator"></span> Afiliados <span class="separator"></span> <a href="afiliado.php?pag=adde"> Actualizar Afiliados</a></li><?php
-				}if($_GET["pag"]=="vo"){?>
-					<li><span class="separator"></span> Orden de Servicio <span class="separator"></span> <a href="afiliado.php?pag=vo"> Ver Ordenes de Servicio</a></li><?php
 				}
 			}
 		?>
@@ -130,7 +119,7 @@
 								{	
 									include("addafiliado.php"); 
 								}
-								if($_GET['pag']=="vere")
+								/*if($_GET['pag']=="vere")
 								{	
 									include("verafiliado.php"); 
 								}
@@ -156,7 +145,7 @@
 								}
 								if($_GET['pag']=="morosos"){
 									include("morosos.php");
-								}
+								}*/
 								
 							}
 							else{

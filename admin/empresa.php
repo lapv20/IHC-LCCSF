@@ -16,7 +16,7 @@
 		if($_GET['accion']=="modificar"){
 			extract($_POST);
 			$id = $_GET['id'];
-			$RIF = $rif1."-".$rif2."-".$rif3;
+			$RIF =$rif1." ".$rif2." ".$rif3;
 			$wsql ="update empresa set nombre_empresa='$nombre',tipo_convenio='$tipo_convenio',telefono='$telefono',rif='$RIF',direccion='$direccion' where idempresa=$id";
 			
 			mysql_query($wsql,$link);

@@ -35,30 +35,44 @@ function eliminar(id){
                             <th class="head1">Fecha de Nacimiento</th>
                             <th class="head0">Genero</th>
                             <th class="head1">Telefonos</th>
+                            <th class="head1">Convenio</th>
                             <th class="head0">Modificar</th>
                         </tr>
                     </thead>
                     <tbody>
                <?php 
-						$wsql="SELECT * FROM paciente";
+						$wsql="SELECT * FROM convenio_paciente";
+
 						$result = mysql_query($wsql,$link);
 						echo mysql_error($link);
-						while($row = mysql_fetch_array($result))
-						{
 
+						while($row = mysql_fetch_array($result))
+						{     
+                            $idpaciente = $row['idpaciente'];
+                            $idemp=$row['idempresa'];
+                            $wsql1="SELECT * FROM paciente where idpaciente= '$idpaciente'";
+                            $result1 = mysql_query($wsql1,$link);
+                            echo mysql_error($link);
+                            while ($row1 = mysql_fetch_array($result1)) 
+                            {      
+                                $wsql2="SELECT tipo_convenio FROM empresa where idempresa= '$idemp'";
+                                $result2 = mysql_query($wsql2,$link);
+                                $row2 = mysql_fetch_array($result2)
 				?>
                         <tr class="gradeX">
-                            <td><?php echo $row['nombres']; ?></td>
-                            <td><?php echo $row['apellidos']; ?></td>
-                            <td><?php echo $row['cedula']; ?></td>
-                            <td><?php echo $row['fecha_nac']; ?></td>
-                            <td><?php echo $row['genero']; ?></td>
-                            <td><?php echo $row['telefono']; ?></td>
+                            <td><?php echo $row1['nombres']; ?></td>
+                            <td><?php echo $row1['apellidos']; ?></td>
+                            <td><?php echo $row1['cedula']; ?></td>
+                            <td><?php echo $row1['fecha_nac']; ?></td>
+                            <td><?php echo $row1['genero']; ?></td>
+                            <td><?php echo $row1['telefono']; ?></td>
+                            <td><?php echo $row2['tipo_convenio']; ?></td>
                             <td><a href="#" title="Modificar" class="icon-edit" onClick="MM_openBrWindow('modificarpaciente.php?paciente=<?php echo $row['idpaciente'];?>','Modificar','width=805,height=398')"></a>
                                 <a href="#" title="Eliminar" class="icon-trash" onClick="eliminar(<?php echo $row['idpaciente']; ?>);"></a></td>
                         </tr>
                     <?php
-						 }
+						      }
+                        }
 					?>
                      </tbody>
                 </table>

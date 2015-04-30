@@ -52,6 +52,34 @@
 		    $wsql4="INSERT INTO historial (idactividad,nombre_usuario,fecha) VALUES ('$idactividad','$nombreusuario','$fecha')";
 			$result4 = mysql_query($wsql4,$link);
 			echo mysql_error($link);
+			$sesionid = $_SESSION['userid'];
+			$persontac = "SELECT idempresa FROM usuario WHERE nombre_usuario = '$sesionid'";
+			$resultp = mysql_query($persontac);
+			$idemp = mysql_result($resultp,0);
+
+			$wsql = mysql_query("SELECT idpaciente FROM paciente WHERE cedula='$cedulag'",$link);
+			$idp = mysql_result($wsql,0);
+			
+			$verificar = mysql_query("SELECT idconvenio FROM convenio_paciente WHERE idpaciente = '$idp' AND idempresa = '$idemp'");
+			$numero_filas = mysql_num_rows($verificar);
+			
+			if($numero_filas == 0)
+			{
+				$wsql="INSERT INTO convenio_paciente (idpaciente, idempresa) VALUES ('$idp','$idemp')";
+				$result = mysql_query($wsql);
+				
+				//Historial
+				$wsql3="SELECT idactividad FROM actividades WHERE nombre_actividad='Agregar empleado'";
+				$result3 = mysql_query($wsql3,$link);
+				$row3 = mysql_fetch_array($result3);
+				$idactividad=$row3['idactividad'];
+				echo mysql_error($link);
+				$nombreusuario = $_SESSION['userid'];
+				$fecha=date("Y-m-d");
+				$wsql4="INSERT INTO historial (idactividad,nombre_usuario,fecha) VALUES ('$idactividad','$nombreusuario','$fecha')";
+				$result4 = mysql_query($wsql4,$link);
+				echo mysql_error($link);	
+			}
 			
 	echo('<script type="text/javascript"> alert("Paciente Agregado Exitosamente"); window.location.href="principal.php"	</script>');
 			

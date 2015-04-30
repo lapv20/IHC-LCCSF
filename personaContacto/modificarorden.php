@@ -33,7 +33,7 @@
 				$result_perfil = mysql_fetch_array($n_perfil);
 				
 			?>
-            <h4 class="widgettitle">Modificar Orden de Servicio</h4>
+            <center><h4 class="widgettitle">Modificar Orden de Servicio</h4></center>
             <div class="widgetcontent nopadding">
             <form class="stdform stdform2" action="gorden.php?action=modificar&idordenservicio=<?php echo $id_orden; ?>" method="post">  
                <p><label>Perfil</label>
@@ -62,8 +62,9 @@
 					 </select></span>    
                   </p>
                   <p class="stdformbutton">
-                     <button class="btn btn-primary" type="submit"> <span class="iconfa-save"></span> Guardar</button>
-                <button class="btn" type="reset" onclick="window.close();"> <span class="iconfa-remove-sign"></span> Cancelar</button>
+						<button class="btn btn-primary" type="submit"> <span class="iconfa-save"></span> Guardar</button>
+						<button class="btn" type="reset"> <span class="iconfa-refresh"></span> Restablecer</button>
+						<button class="btn btn-danger" type="reset" onclick="window.close();"> <span class="iconfa-remove-sign"></span> Cancelar</button>
                   </p> 
             </div>
         </div>

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 29-04-2015 a las 15:14:11
+-- Tiempo de generación: 30-04-2015 a las 16:50:27
 -- Versión del servidor: 5.6.22-log
 -- Versión de PHP: 5.4.16
 
@@ -63,14 +63,15 @@ CREATE TABLE IF NOT EXISTS `convenio_paciente` (
   PRIMARY KEY (`idconvenio`),
   KEY `idpaciente` (`idpaciente`,`idempresa`),
   KEY `idempresa` (`idempresa`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
 -- Volcado de datos para la tabla `convenio_paciente`
 --
 
 INSERT INTO `convenio_paciente` (`idconvenio`, `idpaciente`, `idempresa`) VALUES
-(1, 2, 2);
+(1, 2, 2),
+(2, 9, 1);
 
 -- --------------------------------------------------------
 
@@ -86,16 +87,17 @@ CREATE TABLE IF NOT EXISTS `empresa` (
   `rif` varchar(60) NOT NULL,
   `direccion` varchar(400) NOT NULL,
   PRIMARY KEY (`idempresa`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Volcado de datos para la tabla `empresa`
 --
 
 INSERT INTO `empresa` (`idempresa`, `nombre_empresa`, `tipo_convenio`, `telefono`, `rif`, `direccion`) VALUES
-(1, 'Laboratorio', 'Ninguno', '02418571086', 'J123456', 'Clinica Guerra Mendez'),
-(2, 'Empresas Polar', 'Convenio Empresarial', '02414567891', 'J234578', 'Zona Industrial'),
-(3, 'Colegio de Abogados', 'Convenio Afiliados', '024156789162', 'J45522819', 'Valencia');
+(1, 'Laboratorio', 'Ninguno', '02418571086', 'J 12345 6', 'Clinica Guerra Mendez'),
+(2, 'Empresas Polar', 'Convenio Empresarial', '02414567891', 'J 23457 8', 'Zona Industrial'),
+(3, 'Colegio de Abogados', 'Convenio Afiliados', '024156789162', 'J 4552281 9', 'Valencia'),
+(4, 'Academia Americana', 'Convenio Afiliados', '02411112233', 'E 20472048 8', 'Avenida Bolivar Norte, Torre Exterior Piso 5, Oficina 3');
 
 -- --------------------------------------------------------
 
@@ -111,7 +113,7 @@ CREATE TABLE IF NOT EXISTS `historial` (
   PRIMARY KEY (`idhistorial`),
   KEY `idactividad` (`idactividad`),
   KEY `nombre_usuario` (`nombre_usuario`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=36 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=51 ;
 
 --
 -- Volcado de datos para la tabla `historial`
@@ -137,7 +139,22 @@ INSERT INTO `historial` (`idhistorial`, `idactividad`, `nombre_usuario`, `fecha`
 (32, 5, 'edy1192', '2014-11-13'),
 (33, 1, 'edy1192', '2014-11-13'),
 (34, 4, 'edy1192', '2014-11-13'),
-(35, 7, 'edy1192', '2014-11-13');
+(35, 7, 'edy1192', '2014-11-13'),
+(36, 1, 'edy1192', '2015-04-29'),
+(37, 1, 'edy1192', '2015-04-29'),
+(38, 1, 'edy1192', '2015-04-29'),
+(39, 1, 'edy1192', '2015-04-29'),
+(40, 6, 'edy1192', '2015-04-30'),
+(41, 5, 'lapv1992', '2015-04-30'),
+(42, 8, 'lapv1992', '2015-04-30'),
+(43, 5, 'lapv1992', '2015-04-30'),
+(44, 8, 'lapv1992', '2015-04-30'),
+(45, 5, 'lapv1992', '2015-04-30'),
+(46, 8, 'lapv1992', '2015-04-30'),
+(47, 6, 'lapv1992', '2015-04-30'),
+(48, 1, 'lapv1992', '2015-04-30'),
+(49, 4, 'lapv1992', '2015-04-30'),
+(50, 4, 'lapv1992', '2015-04-30');
 
 -- --------------------------------------------------------
 
@@ -159,12 +176,12 @@ CREATE TABLE IF NOT EXISTS `laboratorios` (
 --
 
 INSERT INTO `laboratorios` (`idsucursal`, `nombre_laboratorio`, `rif`, `direccion`, `telefono`) VALUES
-(1, 'Centro Medico-Dr. Rafael Guerra Mendez', 'J-12345', 'Calle Rondon c/c 5 de Julio', '(0241)857.39.01-856.12.00-856.12.16'),
-(2, 'I.E.Q. Los Mangos', 'J-123456', 'Vía Guataparo, Planta Baja de la Torre de Consultorios. Local 3 (frente a los ascensores). Valencia - Venezuela.', '(0241)823.20.89'),
-(3, 'Centro Comercial Siglo XXI', 'J324577', 'UAMI, La Viña, Valencia', '(0241) 617.8367 (0241) 821.4458 (0241) 824.6910'),
-(4, 'C.C. Unicentro Las Marias', 'J78529359', 'Local 2, calle Arvelo, diagonal a la plaza Bolívar. Tocuyito', '(0241) 416.68.95'),
-(5, 'C.C. Comercial Cristal', 'J263828', 'Av. Paseo Cabriales. Urb. Las Quintas ', '(0241) 200.07.63'),
-(6, 'C.C. San Diego. (Fin de Siglo)', 'J62863', 'locales 1-16 / 1-17', '(0241) 872.74.33 - 872.74.99');
+(1, 'Centro Medico-Dr. Rafael Guerra Mendez', 'J 1234 5', 'Calle Rondon c/c 5 de Julio', '(0241)857.39.01-856.12.00-856.12.16'),
+(2, 'I.E.Q. Los Mangos', 'J 12345 6', 'Vía Guataparo, Planta Baja de la Torre de Consultorios. Local 3 (frente a los ascensores). Valencia - Venezuela.', '(0241)823.20.89'),
+(3, 'Centro Comercial Siglo XXI', 'J 32457 7', 'UAMI, La Viña, Valencia', '(0241) 617.8367 (0241) 821.4458 (0241) 824.6910'),
+(4, 'C.C. Unicentro Las Marias', 'J 7852935 9', 'Local 2, calle Arvelo, diagonal a la plaza Bolívar. Tocuyito', '(0241) 416.68.95'),
+(5, 'C.C. Comercial Cristal', 'J 26382 8', 'Av. Paseo Cabriales. Urb. Las Quintas ', '(0241) 200.07.63'),
+(6, 'C.C. San Diego. (Fin de Siglo)', 'J 6286 3', 'locales 1-16 / 1-17', '(0241) 872.74.33 - 872.74.99');
 
 -- --------------------------------------------------------
 
@@ -187,7 +204,7 @@ CREATE TABLE IF NOT EXISTS `ordenservicio` (
   KEY `idempresa_2` (`idempresa`),
   KEY `idsucursal` (`idsucursal`),
   KEY `idperfil` (`idperfil`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=14 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=19 ;
 
 --
 -- Volcado de datos para la tabla `ordenservicio`
@@ -198,7 +215,11 @@ INSERT INTO `ordenservicio` (`idordenservicio`, `numero_orden`, `hora_estimada`,
 (8, '14-1', '17:06:29', 'Anulado', 'V17707200', 1, 2, 1),
 (10, '14-2', '18:18:19', 'Anulado', 'V17707200', 1, 6, 4),
 (12, '14-3', '18:24:52', 'Anulado', 'V18166738', 1, 3, 3),
-(13, '14-4', '18:25:34', 'Anulado', 'V22224952', 1, 6, 4);
+(13, '14-4', '18:25:34', 'Anulado', 'V22224952', 1, 6, 4),
+(15, '15-5', '08:03:09', 'Pendiente', 'V21479441', 1, 2, 2),
+(16, '15-6', '08:22:23', 'Pendiente', 'V21479441', 1, 6, 4),
+(17, '15-7', '08:28:02', 'Pendiente', 'V17707200', 1, 3, 2),
+(18, '15-8', '02:48:08', 'Pendiente', 'V19919468', 1, 6, 3);
 
 -- --------------------------------------------------------
 
@@ -216,7 +237,7 @@ CREATE TABLE IF NOT EXISTS `paciente` (
   `telefono` varchar(200) NOT NULL,
   PRIMARY KEY (`idpaciente`),
   KEY `cedula` (`cedula`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
 
 --
 -- Volcado de datos para la tabla `paciente`
@@ -227,7 +248,8 @@ INSERT INTO `paciente` (`idpaciente`, `cedula`, `nombres`, `apellidos`, `fecha_n
 (3, 'V21479441', 'Edilianny Del Valle', 'Sanchez Ibarra', '1992-11-11', 'F', '02418912761 04124524507'),
 (4, 'V4031613', 'Edilia De Jesus', 'Sanchez Ibarra', '1954-02-12', 'F', '04163490436 02418912661'),
 (7, 'V17707200', 'Jessica Del Valle', 'Fajardo ', '1987-01-29', 'F', '04165980502 '),
-(8, 'V18166738', 'Katrina Rousali', 'Fuentes Bordones', '1987-10-03', 'F', '04125090033 ');
+(8, 'V18166738', 'Katrina Rousali', 'Fuentes Bordones', '1987-10-03', 'F', '04125090033 '),
+(9, 'V19919468', 'Luis Alberto', 'Pérez Vera', '1992-03-20', 'M', ' 04144415939 02418479997');
 
 -- --------------------------------------------------------
 
@@ -293,7 +315,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   KEY `tipo_usuario` (`tipo_usuario`),
   KEY `idempresa` (`idempresa`),
   KEY `nombre_usuario` (`nombre_usuario`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
 
 --
 -- Volcado de datos para la tabla `usuario`
@@ -303,7 +325,8 @@ INSERT INTO `usuario` (`idusuario`, `nombre_usuario`, `clave`, `nombres`, `apell
 (1, 'edy1192', '1234', 'Edilianny ', 'Sánchez Ibarra', 1, 2, 'edy@gmail.com', '02418912661'),
 (2, 'allin1', '1234', 'Allinson Alberto', 'Mota Gomez', 1, 1, 'allin@gmail.com', '04141234567'),
 (3, 'lapv1992', 'lapv1992', 'Luis', 'Perez', 1, 3, 'lapv1992@gmail.com', '04144415939'),
-(4, 'sapv1993', '2743', 'Maria', 'Vera', 3, 4, 'mveradesalas@gmail.com', '02418479997');
+(4, 'sapv1993', '2743', 'Maria', 'Vera', 3, 4, 'mveradesalas@gmail.com', '02418479997'),
+(7, 'sapv1994', '3017', 'Ana', 'Paula', 2, 2, 'ana.paula@icloud.com', '02418479997');
 
 --
 -- Restricciones para tablas volcadas

@@ -54,15 +54,13 @@
                 <label>Nombre</label>
                 <span class="field"><textarea cols="80" rows="5" class="span10" name="nombre" ><?php echo $row['nombre_laboratorio'];?></textarea></span>
             </p>
-            
             <p>
                 <label>Direccion</label>
                 <span class="field"><textarea cols="80" rows="5" class="span10" name="direccion"><?php echo $row['direccion'];?></textarea></span>
             </p>
-            
             <p>
                 <label>Telefono</label>
-                <span class="field"><input type="text" name="telefono" class="input-medium" placeholder="Telefono" value="<?php echo $row['telefono'];?>"/></span>
+                <span class="field"><input type="text" name="telefono" class="input-xlarge" placeholder="Telefono" value="<?php echo $row['telefono'];?>"/></span>
             </p>
             <p>
             <?php 
@@ -71,7 +69,7 @@
 			?>
             	<label>RIF</label>
                 <span class="field">
-                	<select  name="rif1" data-placeholder="Seleccione una Opcion" style="width:50px;"  tabindex="2">
+                	<select  name="rif1" data-placeholder="Seleccione una Opcion" style="width:50px; margin-top:10px;"  tabindex="2">
                         	<option value="V" <?php if($RIF[0]=="V"){?> selected="selected" <?php }?> >V</option>
                             <option value="J" <?php if($RIF[0]=="J"){?> selected="selected" <?php }?> >J</option>
                             <option value="E" <?php if($RIF[0]=="E"){?> selected="selected" <?php }?> >E</option>
@@ -82,8 +80,9 @@
                 </span>
             </p>
             <p class="stdformbutton">
-                    <button type="submit" class="btn btn-primary"><span class="iconfa-save"></span> Guardar</button>
-                    <button type="button" onclick="window.close();" class="btn"><span class="iconfa-remove-sign"></span> Cancelar</button>
+                <button class="btn btn-primary" type="submit"> <span class="iconfa-save"></span> Guardar</button>
+                <button class="btn" type="reset"> <span class="iconfa-refresh"></span> Restablecer</button>
+                <button class="btn btn-danger" type="reset" onclick="window.close();"> <span class="iconfa-remove-sign"></span> Cancelar</button>
             </p>
         </form>
     </div>

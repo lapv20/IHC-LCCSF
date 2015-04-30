@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Documento sin título</title>
+<title>Modificar Usuario</title>
 
 <link rel="stylesheet" href="archivos/css/style.default.css" type="text/css" />
 <link rel="stylesheet" href="archivos/css/responsive-tables.css">
@@ -33,16 +33,10 @@
 <script type="text/javascript" src="archivos/js/chosen.jquery.min.js"></script>
 <script type="text/javascript" src="archivos/js/forms.js"></script>
 
-
 <script type="text/javascript" src="archivos/js/jquery.dataTables.min.js"></script>
-
 </head>
 
-<style type="text/css">
-    body{
-        background: none;
-    }
-</style>
+<style type="text/css">body{ background: none; }</style>
 
 <body>
 <?php 
@@ -113,8 +107,9 @@
             </p>
             
             <p class="stdformbutton">
-                <button type="submit" class="btn btn-primary"><span class="iconfa-save"></span> Guardar</button>
-                <button type="button" onclick="window.close();" class="btn"><span class="iconfa-remove-sign"></span> Cancelar</button>
+                <button class="btn btn-primary" type="submit"> <span class="iconfa-save"></span> Guardar</button>
+                <button class="btn" type="reset"> <span class="iconfa-refresh"></span> Restablecer</button>
+                <button class="btn btn-danger" type="reset" onclick="window.close();"> <span class="iconfa-remove-sign"></span> Cancelar</button>
             </p>
         </form>
     </div>

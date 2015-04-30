@@ -103,8 +103,9 @@
                     </span>
             </p>
             <p class="stdformbutton">
-                    <button type="submit" class="btn btn-primary"><span class="iconfa-save"></span> Guardar</button>
-                    <button type="button" onclick="window.close();" class="btn"><span class="iconfa-remove-sign"></span> Cancelar</button>
+                    <button class="btn btn-primary" type="submit"> <span class="iconfa-save"></span> Guardar</button>
+                        <button class="btn" type="reset"> <span class="iconfa-refresh"></span> Restablecer</button>
+                        <button class="btn btn-danger" type="reset" onclick="window.close();"> <span class="iconfa-remove-sign"></span> Cancelar</button>
             </p>
         </form>
     </div>

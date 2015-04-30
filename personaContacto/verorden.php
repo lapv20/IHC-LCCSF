@@ -12,12 +12,9 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 }
 
 function anular(id){
-	
 	var respuesta = confirm('Desea anular la orden de servicio');
-	
 	if(respuesta){
 		window.location.href = 'gorden.php?accion=anular&idordenservicio='+id;
-		
 	}
 }
 </script>
@@ -43,7 +40,7 @@ function anular(id){
                             <th class="head0">Sucursal</th>
                             <th class="head1">Perfil</th>
                             <th class="head1">Estatus</th>
-                            <th>Editar</th> 
+                            <th>Opciones</th> 
                         </tr>
                     </thead>
                     <tbody>
@@ -87,8 +84,8 @@ function anular(id){
                             <td><?php echo $esta; ?></td>
                             <td>
                             	<center>
-                            		<a href="#" <?php if($esta=='Pendiente'){?> onClick="MM_openBrWindow('modificarorden.php?sucursal=<?php echo $row['idsucursal'] ?>&perfil=<?php echo $row['idperfil'] ?>&idordenservicio=<?php echo $id_orden; ?>','modificarorden','width=805,height=280')"><?php }else{?> onClick="alert('No se puede modificar una orden cuyo estatus no sea pendiente')" <?php } ?><li class="icon-edit"></li></a>
-                            		<a href="#" <?php if($esta=='Pendiente'){?> onClick="anular(<?php echo $row['idordenservicio']; ?>);"<?php }else{?> onClick="alert('No se puede anular una orden cuyo estatus no sea pendiente')"<?php } ?>> <li class="icon-remove"></li></a>
+                            		<?php if($esta!='Anulado'){?><a href="#" onClick="MM_openBrWindow('modificarorden.php?sucursal=<?php echo $row['idsucursal'] ?>&perfil=<?php echo $row['idperfil'] ?>&idordenservicio=<?php echo $id_orden; ?>','modificarorden','width=805,height=280')"><li class="icon-edit"></li></a><?php } ?>
+                            		<a href="#" <?php if($esta=='Pendiente'){?> onClick="anular(<?php echo $row['idordenservicio']; ?>);"<?php }else{?> onClick="alert('No se puede anular una orden cuyo estatus no sea pendiente')"<?php } ?>> <li class="icon-trash"></li></a>
                             	</center>
                             </td>
 	

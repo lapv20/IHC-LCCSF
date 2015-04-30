@@ -79,7 +79,7 @@ function eliminar(id){
                             <td>
                                 <center>
                                     <a href="#" onClick="MM_openBrWindow('modificarempleado.php?cedula=<?php echo $row['cedula'] ?>','modificarorden','width=805,height=400')"><li class="icon-edit"></li></a>
-                                    <a href="#" onClick="eliminar(<?php echo $row['idpaciente']; ?>);"> <li class="icon-remove"></li></a></center></td>
+                                    <a href="#" onClick="eliminar(<?php echo $row['idpaciente']; ?>);"> <li class="icon-trash"></li></a></center></td>
 
 
                         </tr>

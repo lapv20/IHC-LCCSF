@@ -76,7 +76,7 @@ function eliminar(id){
                             <td><?php echo $row['telefono']; ?></td>
                             <td><?php if((mysql_num_rows($result_orden))>0){ echo (mysql_num_rows($result_orden));} else
 							{ echo ('No posee');} ?></td>
-                            <td> <a href="#" onClick="MM_openBrWindow('modificarempleado.php?cedula=<?php echo $row['cedula'] ?>','modificarorden','width=500,height=480')"><li class="icon-edit"></li></a> <a href="#" onClick="eliminar(<?php echo $row['idpaciente']; ?>);"> <li class="icon-remove"></li></a></td>
+                            <td> <a href="#" onClick="MM_openBrWindow('modificarempleado.php?cedula=<?php echo $row['cedula'] ?>','modificarorden','width=805,height=400')"><li class="icon-edit"></li></a> <a href="#" onClick="eliminar(<?php echo $row['idpaciente']; ?>);"> <li class="icon-remove"></li></a></td>
 
 
                         </tr>

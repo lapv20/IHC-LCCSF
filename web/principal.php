@@ -11,30 +11,30 @@
 
 <link rel="shortcut icon" href="../admin/logo.png">
 
-<link rel="stylesheet" href="archivos/css/style.default.css" type="text/css" />
-<link rel="stylesheet" href="archivos/css/bootstrap-fileupload.min.css" type="text/css" />
-<link rel="stylesheet" href="archivos/css/bootstrap-timepicker.min.css" type="text/css" />
+<link rel="stylesheet" href="../admin/archivos/css/style.default.css" type="text/css" />
+<link rel="stylesheet" href="../admin/archivos/css/bootstrap-fileupload.min.css" type="text/css" />
+<link rel="stylesheet" href="../admin/archivos/css/bootstrap-timepicker.min.css" type="text/css" />
 
-<script type="text/javascript" src="archivos/js/jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="archivos/js/jquery-migrate-1.1.1.min.js"></script>
-<script type="text/javascript" src="archivos/js/jquery-ui-1.9.2.min.js"></script>
-<script type="text/javascript" src="archivos/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="archivos/js/bootstrap-fileupload.min.js"></script>
-<script type="text/javascript" src="archivos/js/bootstrap-timepicker.min.js"></script>
-<script type="text/javascript" src="archivos/js/jquery.uniform.min.js"></script>
-<script type="text/javascript" src="archivos/js/jquery.validate.min.js"></script>
-<script type="text/javascript" src="archivos/js/jquery.tagsinput.min.js"></script>
-<script type="text/javascript" src="archivos/js/jquery.autogrow-textarea.js"></script>
-<script type="text/javascript" src="archivos/js/charCount.js"></script>
-<script type="text/javascript" src="archivos/js/colorpicker.js"></script>
-<script type="text/javascript" src="archivos/js/ui.spinner.min.js"></script>
-<script type="text/javascript" src="archivos/js/chosen.jquery.min.js"></script>
-<script type="text/javascript" src="archivos/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="archivos/js/jquery.cookie.js"></script>
-<script type="text/javascript" src="archivos/js/modernizr.min.js"></script>
+<script type="text/javascript" src="../admin/archivos/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../admin/archivos/js/jquery-migrate-1.1.1.min.js"></script>
+<script type="text/javascript" src="../admin/archivos/js/jquery-ui-1.9.2.min.js"></script>
+<script type="text/javascript" src="../admin/archivos/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../admin/archivos/js/bootstrap-fileupload.min.js"></script>
+<script type="text/javascript" src="../admin/archivos/js/bootstrap-timepicker.min.js"></script>
+<script type="text/javascript" src="../admin/archivos/js/jquery.uniform.min.js"></script>
+<script type="text/javascript" src="../admin/archivos/js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="../admin/archivos/js/jquery.tagsinput.min.js"></script>
+<script type="text/javascript" src="../admin/archivos/js/jquery.autogrow-textarea.js"></script>
+<script type="text/javascript" src="../admin/archivos/js/charCount.js"></script>
+<script type="text/javascript" src="../admin/archivos/js/colorpicker.js"></script>
+<script type="text/javascript" src="../admin/archivos/js/ui.spinner.min.js"></script>
+<script type="text/javascript" src="../admin/archivos/js/chosen.jquery.min.js"></script>
+<script type="text/javascript" src="../admin/archivos/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="../admin/archivos/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="../admin/archivos/js/modernizr.min.js"></script>
 <script type="text/javascript" src="js/responsive-tables.js"></script>
-<script type="text/javascript" src="archivos/js/custom.js"></script>
-<script type="text/javascript" src="archivos/js/forms.js"></script>
+<script type="text/javascript" src="../admin/archivos/js/custom.js"></script>
+<script type="text/javascript" src="../admin/archivos/js/forms.js"></script>
 
 
 <script type="text/javascript">
@@ -95,14 +95,14 @@
 				?>
   <li class="dropdown <?php if($pacientes!=""){ echo $pacientes;}?>"><a href=""><span class="iconfa-user"></span>Pacientes</a>
                 	<ul <?php if ($pacientes!=""){?>style="display: block" <?php  } ?> >                    	
-                    	<li><a href="principal.php?accion=pacientes&tipo=nuevo">Añadir Paciente</a></li>
-                        <li><a href="principal.php?accion=pacientes&tipo=vep">Ver Pacientes</a></li>                     
+                    	<li><a href="principal.php?accion=pacientes&tipo=nuevo"><span class="icon-plus"></span> Añadir Paciente</a></li>
+                        <li><a href="principal.php?accion=pacientes&tipo=vep"><span class="icon-list"></span> Ver Pacientes</a></li>                     
                     </ul>
                 </li>
   <li class="dropdown <?php if($ordenser!=""){ echo $ordenser;}?>"><a href=""><span class="iconfa-file"></span>Ordenes de Servicio</a>
                 	<ul <?php if ($ordenser!=""){?>style="display: block" <?php  } ?> >
-                    	<li><a href="principal.php?accion=ordenser&tipo=nuevo">Crear Orden de Servicio</a></li>
-                        <li><a href="principal.php?accion=ordenser&tipo=veros">Ver Ordenes de Servicio</a></li>
+                    	<li><a href="principal.php?accion=ordenser&tipo=nuevo"><span class="icon-plus"></span> Crear Orden de Servicio</a></li>
+                        <li><a href="principal.php?accion=ordenser&tipo=veros"><span class="icon-list"></span> Ver Ordenes de Servicio</a></li>
                     </ul>
                 </li>
                 
@@ -133,7 +133,11 @@
 			}
 		?>
         	<li class="right">
-                <a href=""><i class="icon-user"></i> <?php echo $_SESSION['nombres']; echo " "; echo $_SESSION['apellidos']; ?></a>
+                <a href="" data-toggle="dropdown" class="dropdown-toggle"><i class="icon-user"></i> <?php echo $_SESSION['nombres']; echo " "; echo $_SESSION['apellidos']; ?></a>
+                <ul class="dropdown-menu pull-right">
+                    <li><a href=""><span class="iconfa-user"></span> Ver Mi Información</a></li>
+                    <li class=""><a href="../web/logout.php"><span class="iconfa-off"></span> Salir</a></li>
+                </ul>
             </li>
         </ul>
         

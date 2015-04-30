@@ -54,7 +54,8 @@ function eliminar(id){
                             <td><?php echo $row['fecha_nac']; ?></td>
                             <td><?php echo $row['genero']; ?></td>
                             <td><?php echo $row['telefono']; ?></td>
-                            <td><a href="#" title="Modificar" class="icon-edit" onClick="MM_openBrWindow('modificarpaciente.php?paciente=<?php echo $row['idpaciente'];?>','Modificar','width=800,height=398')"></a> <a href="#" title="Eliminar" class="icon-remove" onClick="eliminar(<?php echo $row['idpaciente']; ?>);"></a></td>
+                            <td><a href="#" title="Modificar" class="icon-edit" onClick="MM_openBrWindow('modificarpaciente.php?paciente=<?php echo $row['idpaciente'];?>','Modificar','width=800,height=398')"></a>
+                                <a href="#" title="Eliminar" class="icon-trash" onClick="eliminar(<?php echo $row['idpaciente']; ?>);"></a></td>
                         </tr>
                     <?php
 						 }

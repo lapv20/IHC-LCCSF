@@ -74,7 +74,6 @@
         <div class="leftmenu">        
             <ul class="nav nav-tabs nav-stacked">
             	<?php
-            		$home = "";
 					$cuentas="";
 					$orden="";
 					$consulta="";
@@ -108,16 +107,14 @@
 								$tipoUsuario = "active";
 							break;
 						}
-					}else{
-						$home = "active";
 					}
 				?>
-            	<li class="<?php if($home!=""){ echo $home;}?>"><a href="principal.php"><span class="iconfa-home"></span> INICIO</a></li>                  
+            	<li><a href="principal.php"><span class="iconfa-home"></span> INICIO</a></li>                  
                 <li class="dropdown <?php if($cuentas!=""){ echo $cuentas;}?>"><a href=""><span class="iconfa-user"></span> Cuentas</a>
                 	<ul <?php if ($cuentas!=""){?>style="display: block" <?php  } ?> >
-                    	<li><a href="principal.php?accion=cuentas&tipo=nuevo">Agregar</a></li>                       
-                        <li><a href="principal.php?accion=cuentas&tipo=modificar">Modificar</a></li>
-                        <li><a href="principal.php?accion=cuentas&tipo=eliminar">Eliminar</a></li>
+                    	<li><a href="principal.php?accion=cuentas&tipo=nuevo"><span class="icon-plus"></span> Agregar</a></li>                       
+                        <li><a href="principal.php?accion=cuentas&tipo=modificar"><span class="icon-edit"></span> Modificar</a></li>
+                        <li><a href="principal.php?accion=cuentas&tipo=eliminar"><span class="icon-trash"></span> Eliminar</a></li>
                     </ul>
                 </li>
                 
@@ -126,22 +123,22 @@
                 </li>
                 <li class="dropdown <?php if($empresa!=""){ echo $empresa;}?>"><a href=""><span class="iconfa-briefcase"></span> Empresas</a>
                 	<ul <?php if ($empresa!=""){?>style="display: block" <?php  } ?> >
-                    	<li><a href="principal.php?accion=empresa&tipo=nuevo">Agregar</a></li>
-                        <li><a href="principal.php?accion=empresa&tipo=modificar">Modificar/Eliminar</a></li>
+                    	<li><a href="principal.php?accion=empresa&tipo=nuevo"><span class="icon-plus"></span> Agregar</a></li>
+                        <li><a href="principal.php?accion=empresa&tipo=modificar"><span class="icon-edit"></span> Modificar/Eliminar</a></li>
                     </ul>
                 </li>
                 
                 <li class=" dropdown <?php if($sucursal!=""){ echo $sucursal;}?>"><a href=""><span class="iconfa-globe"></span> Sucursales</a>
                 	<ul <?php if ($sucursal!=""){?>style="display: block" <?php  } ?> >
-                    	<li><a href="principal.php?accion=sucursal&tipo=nuevo">Nueva Sucursal</a></li>
-                        <li><a href="principal.php?accion=sucursal&tipo=modificar">Modificar/Eliminar</a></li>
+                    	<li><a href="principal.php?accion=sucursal&tipo=nuevo"><span class="icon-plus"></span> Nueva Sucursal</a></li>
+                        <li><a href="principal.php?accion=sucursal&tipo=modificar"><span class="icon-edit"></span> Modificar/Eliminar</a></li>
                     </ul>
                 </li>
                 
                 <li class=" dropdown <?php if($tipoUsuario!=""){ echo $tipoUsuario;}?>"><a href=""><span class="iconfa-group"></span> Tipos de Usuario</a>
                 	<ul <?php if ($tipoUsuario!=""){?>style="display: block" <?php  } ?> >
-                    	<li><a href="principal.php?accion=tipoUsuario&tipo=nuevo">Nuevo Tipo</a></li>
-                        <li><a href="principal.php?accion=tipoUsuario&tipo=modificar">Modificar/Eliminar</a></li>
+                    	<li><a href="principal.php?accion=tipoUsuario&tipo=nuevo"><span class="icon-plus"></span> Nuevo Tipo</a></li>
+                        <li><a href="principal.php?accion=tipoUsuario&tipo=modificar"><span class="icon-edit"></span> Modificar/Eliminar</a></li>
                     </ul>
                 </li>
               
@@ -155,7 +152,6 @@
     </div><!-- leftpanel -->
     
     <div class="rightpanel">
-        
         <ul class="breadcrumbs">
             <li><a href="principal.php"><i class="iconfa-home"></i></a> <span class="separator"></span> Inicio</li>
             <?php 							
@@ -196,9 +192,9 @@
 		?>
 			<li class="right">
                 <a href="" data-toggle="dropdown" class="dropdown-toggle"><i class="icon-user"></i> <?php echo $_SESSION['nombres']; echo " "; echo $_SESSION['apellidos']; ?></a>
-                <ul class="dropdown-menu pull-right skin-color">
-                    <li><a href="">Ver Mi Información</a></li>
-                    <li><a href="../web/logout.php">Cerrar Sesión</a></li>
+                <ul class="dropdown-menu pull-right">
+                    <li><a href=""><span class="iconfa-user"></span> Ver Mi Información</a></li>
+                    <li class=""><a href="../web/logout.php"><span class="iconfa-off"></span> Salir</a></li>
                 </ul>
             </li>
         </ul>

@@ -15,7 +15,11 @@
 <script src="jQueryAssets/jquery-ui-1.9.2.datepicker.custom.min.js" type="text/javascript"></script>
 <script src="jQueryAssets/i18n/jquery.ui.datepicker-es.js" type="text/javascript"></script>
 </head>
-
+<style type="text/css">
+    body{
+        background: none;
+    }
+</style>
 <body>
 <div class="widget">
 			<?php 
@@ -30,10 +34,11 @@
 				
 			?>
             <h4 class="widgettitle">Modificar Orden de Servicio</h4>
-            <div class="widgetcontent">
-            <form class="stdform" action="gorden.php?accion=modificar&idordenservicio=<?php echo $id_orden; ?>" method="post">  
-               <label>Perfil</label>
-					<select name="perfil" class="uniformselect">
+            <div class="widgetcontent nopadding">
+            <form class="stdform stdform2" action="gorden.php?accion=modificar&idordenservicio=<?php echo $id_orden; ?>" method="post">  
+            <p>
+               <label>Perfil</label><span class="field">
+               <select name="perfil" class="uniformselect">
 				   <option value="-1">Seleccione una Opcion</option>
    					<?php 
 					 $perf = "SELECT * FROM perfiles";
@@ -44,9 +49,10 @@
        					
       				 <option <?php if($result_perfil['idperfil'] == $row['idperfil']){  ?> selected='selected' <?php } ?> value="<?php echo $row['idperfil'];?>"><?php echo $row['nombre_perfil'];?></option>
                     <?php }?>
-					 </select>
-                      
-                   <label>Sucursal</label>
+					 </select></span>
+            </p>
+            <p>
+                   <label>Sucursal</label><span class="field">
 					<select name="sucursal" class="uniformselect">
 				   <option value="-1">Seleccione una Opcion</option>
    					<?php 
@@ -56,27 +62,23 @@
   					 ?>
       				 <option <?php if($result_sucursal['idsucursal'] == $row['idsucursal']){  ?> selected='selected' <?php } ?> value="<?php echo $row['idsucursal'];?>"><?php echo $row['nombre_laboratorio'];?></option>
                     <?php }?>
-					 </select>     
-                  </p>
-                  <p>
-                    <!--<label>Estatus</label>
-                     <span class="formwrapper">
-                       <input type="radio" name="estatus" value="Procesado" />Procesado<br/>
-                        <input type="radio" name="estatus" value="Realizado" />Realizado<br/>
-                     </span>-->
-                     <label>Estatus</label>
+					 </select></span>    
+            </p>
+            <p>
+                     <label>Estatus</label><span class="field">
                      <select name="estatus">
                      	<option value="-1">Seleccione un opcion</option>
                         <option value="Procesado">Procesado</option>
                         <option value="Realizado">Realizado</option>
-                     </select>
-                  </p>
-                  <p class="stdformbutton">
-                     <button class="btn btn-primary">Modificar</button>
-                      <button type="reset" class="btn">Restablecer</button>
-                  </p> 
+                     </select></span>
+            </p>
+            <p class="stdformbutton">
+                <button class="btn btn-primary" type="submit"> <span class="iconfa-save"></span> Guardar</button>
+                <button class="btn" type="reset" onclick="window.close();"> <span class="iconfa-remove-sign"></span> Cancelar</button>
+            </p>
+        </form>
             </div>
-                  </div>
+</div>
 <script type="text/javascript">
 $(function() {
 	$( "#fecha_nacimiento" ).datepicker(

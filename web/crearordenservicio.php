@@ -8,15 +8,15 @@
 		<div class="widgetcontent nopadding">
 			<form class="stdform stdform2" id="form" action="gorden.php?accion=nuevo" method="post" onsubmit="return validateForm()">
 				<p>
-					<label>Cedula</label>                       
+					<label>Paciente</label>                       
 					<span class="field">
-						<select name="idpaciente" class="uniformselect" required="required" >
+						<select name="idpaciente" class="uniformselect chzn-select input-xxlarge" required="required" >
 							<option value="-1">Seleccione una Opción</option>
 							<?php 
 								$perf = "SELECT * FROM paciente";
 								$resultperf = mysql_query($perf);
 								while($row = mysql_fetch_array($resultperf)){?>
-									<option value="<?php echo $row['idpaciente'];?>"><?php echo $row['cedula'];?></option>
+									<option value="<?php echo $row['idpaciente'];?>"><?php echo $row['cedula']." - ";echo $row['nombres']." ".$row['apellidos']; ?></option>
 								<?php } ?>
 							</select>
 						</span>   
@@ -24,7 +24,7 @@
 					<p>     
 						<label>Perfil</label>
 						<span class="field">
-							<select name="idperfil" class="uniformselect">
+							<select name="idperfil" class="uniformselect chzn-select input-xxlarge">
 								<option value="-1">Seleccione una Opción</option>
 								<?php 
 								$perf = "SELECT * FROM perfiles";
@@ -37,7 +37,7 @@
 							</p>
 							<p>
 								<label>Sucursal</label><span class="field">
-								<select name="idsucursal" class="uniformselect">
+								<select name="idsucursal" class="uniformselect chzn-select input-xxlarge">
 									<option value="-1">Seleccione una Opcion</option>
 									<?php 
 									$labs = "SELECT * FROM laboratorios";
@@ -62,14 +62,14 @@
 		var idperfil = document.forms["form"]["idperfil"].value;
 		var idsucursal = document.forms["form"]["idsucursal"].value;
 		if (cedpaciente == null || cedpaciente == "-1") {
-			alert("No has elegido una cedula");
+			alert("No has elegido un paciente");
 			return false;
 		}
 		if (idperfil == null || idperfil == "-1") {
-			alert("No has elegido una idperfil");
+			alert("No has elegido una examen");
 			return false;
 		}if (idsucursal == null || idsucursal == "-1") {
-			alert("No has elegido una idsucursal");
+			alert("No has elegido una Sucursal");
 			return false;
 		}
 	}

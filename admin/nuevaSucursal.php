@@ -20,14 +20,14 @@
             <p>
             	<label>RIF<small>Registro de Identificación Fiscal</small></label>
                 <span class="field">
-            	<select  name="rif1" data-placeholder="Seleccione una Opcion" style="width:50px;"  tabindex="2">
-                    	<option value="V">V</option>
-                        <option value="J">J</option>
-                        <option value="E">E</option>
-                        <option value="G">G</option>
-                </select>
-                <input type="text" name="rif2" class="input-medium" placeholder="RIF" maxlength="8"/>
-                <input type="text" name="rif3" class="input-small" style="width:10px;"  maxlength="1"/>
+                	<select  name="rif1" data-placeholder="Seleccione una Opcion" style="width:50px; margin-top: 10px;"  tabindex="2">
+                        	<option value="V">V</option>
+                            <option value="J">J</option>
+                            <option value="E">E</option>
+                            <option value="G">G</option>
+                    </select>
+                    <input type="text" name="rif2" class="input-medium" placeholder="RIF" maxlength="8"/>
+                    <input type="text" name="rif3" class="input-small" style="width:10px;"  maxlength="1"/>
                 </span>
             </p>
             <p class="stdformbutton">

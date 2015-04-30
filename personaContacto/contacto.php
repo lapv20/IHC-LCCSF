@@ -78,19 +78,16 @@
                 <li class="active"><a href="contacto.php"><span class="iconfa-home"></span> Inicio</a></li>
                 <li class="dropdown"><a href=""><span class="iconfa-user"></span>Empleados</a>
                 	<ul>                    	
-                    	<li><a href="contacto.php?pag=adde&&acc=pac&&tipo=sadde">Añadir Empleado</a></li>
-                        
-                        <li><a href="contacto.php?pag=me&&acc=pac&&tipo=sme">Modificar Empleado</a></li>
-                        
-                        <li><a href="contacto.php?pag=vere&&acc=pac&&tipo=svere">Ver Empleados</a></li>                     
+                    	<li><a href="contacto.php?pag=adde&&acc=pac&&tipo=sadde"><span class="icon-plus"></span> Añadir Empleado</a></li>
+                        <li><a href="contacto.php?pag=me&&acc=pac&&tipo=sme"><span class="icon-edit"></span> Modificar Empleado</a></li>
+                        <li><a href="contacto.php?pag=vere&&acc=pac&&tipo=svere"><span class="icon-list"></span> Ver Empleados</a></li>
                     </ul>
                 </li>
                 <li class="dropdown"><a href=""><span class="iconfa-book"></span>Orden de Servicio</a>
                 	<ul>                    	
-                    	<li><a href="contacto.php?pag=co&&acc=pac&&tipo=sco">Crear Orden de Servicio</a></li>
-                        <!--<li><a href="contacto.php?pag=bo&&acc=pac&&tipo=sbo">Buscar Orden de Servicio</a></li>-->
-                        <li><a href="contacto.php?pag=mo&&acc=pac&&tipo=smo">Modificar Orden de Servicio</a></li> 
-                        <li><a href="contacto.php?pag=vo&&acc=pac&&tipo=svo">Ver Ordenes de Servicio</a></li>                    
+                    	<li><a href="contacto.php?pag=co&&acc=pac&&tipo=sco"><span class="icon-plus"></span> Crear Orden de Servicio</a></li>
+                        <li><a href="contacto.php?pag=mo&&acc=pac&&tipo=smo"><span class="icon-edit"></span> Modificar Orden de Servicio</a></li> 
+                        <li><a href="contacto.php?pag=vo&&acc=pac&&tipo=svo"><span class="icon-list"></span>  Ver Ordenes de Servicio</a></li>                    
                     </ul>
                 </li>
                 <li class=""><a href="../web/logout.php"><span class="iconfa-off"></span>Salir</a></li>
@@ -125,8 +122,12 @@
 				}
 			}
 		?>
-        <li class="right">
-                <a href=""><i class="icon-user"></i> <?php echo $_SESSION['nombres']; echo " "; echo $_SESSION['apellidos']; ?></a>
+            <li class="right">
+                <a href="" data-toggle="dropdown" class="dropdown-toggle"><i class="icon-user"></i> <?php echo $_SESSION['nombres']; echo " "; echo $_SESSION['apellidos']; ?></a>
+                <ul class="dropdown-menu pull-right">
+                    <li><a href=""><span class="iconfa-user"></span> Ver Mi Información</a></li>
+                    <li class=""><a href="../web/logout.php"><span class="iconfa-off"></span> Salir</a></li>
+                </ul>
             </li>
         </ul>
         

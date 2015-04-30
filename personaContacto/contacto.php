@@ -65,7 +65,7 @@
     <div class="header">
         <div class="logo">
             
-           <a href="afiliados.php"><img src="../web/logo.png" alt="" /></a>
+           <a href="afiliados.php"><img src="../admin/archivos/images/LogoLCCSF.png" alt="" /></a>
        
             <!--headmenu-->
         </div>

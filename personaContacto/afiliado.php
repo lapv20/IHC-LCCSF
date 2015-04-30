@@ -57,17 +57,12 @@
 
 <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/excanvas.min.js"></script><![endif]-->
 </head>
-
 <body>
 
 <div class="mainwrapper">
-    
     <div class="header">
         <div class="logo">
-            
-           <a href="afiliados.php"><img src="../web/logo.png" alt="" /></a>
-       
-            <!--headmenu-->
+           <a href="afiliados.php"><img src="../admin/archivos/images/LogoLCCSF.png" alt="" /></a>
         </div>
     </div>
     <div class="leftpanel">

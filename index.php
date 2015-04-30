@@ -4,9 +4,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Laboratorio Clinico Cesar Sanchez Font</title>
+<link rel="icon" type="image/png" href="admin/archivos/images/logo(2).png" />
 <link rel="stylesheet" href="admin/archivos/css/style.default.css" type="text/css" />
 <link rel="stylesheet" href="archivos/css/style.shinyblue.css" type="text/css" />
-
 <script type="text/javascript" src="admin/archivos/js/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="admin/archivos/js/jquery-migrate-1.1.1.min.js"></script>
 <script type="text/javascript" src="admin/archivos/js/jquery-ui-1.9.2.min.js"></script>
@@ -40,8 +40,6 @@
 </style>
 </head>
 <body class="loginpage">
-
-
 <?php 
 session_start(); //session_start() crea una sesión para ser usada mediante una petición GET o POST, o pasado por una cookie  
 include_once "web/conexbd.php"; //es la sentencia q usaremos para incluir el archivo de conexión a la base de datos que creamos anteriormente. 
@@ -103,7 +101,9 @@ if(!isset($_SESSION['userid'])) //para saber si existe o no ya la variable de se
         } 
     } 
 ?>
-<div class="logo animate1 bounceIn"><img src="web/logo.png" alt="Laboratorio Clinico Cesar Sánchez Font" width="250px"/></div>
+<div class="logo animate1 bounceIn">
+    <img src="admin/archivos/images/LogoLCCSF.png" alt="Laboratorio Clinico Cesar Sánchez Font" width="250px"/>
+</div>
     <form action="" method="post" class="login"> 
         <!--<div><label>Usuario: </label><br><input name="user" type="text" placeholder="Usuario"></div>
         <div><label>Clave:</label><br><input name="password" type="password" placeholder="Contraseña"></div>
@@ -137,6 +137,5 @@ if(!isset($_SESSION['userid'])) //para saber si existe o no ya la variable de se
     echo '<a href="secretaria/logout.php">Logout</a>'; 
 } 
 ?> 
-
 </body>
 </html>

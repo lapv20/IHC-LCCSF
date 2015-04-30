@@ -11,8 +11,7 @@
 	<link rel="stylesheet" href="archivos/css/bootstrap-fileupload.min.css" type="text/css" />
 	<link rel="stylesheet" href="archivos/css/bootstrap-timepicker.min.css" type="text/css" />
 	<link rel="stylesheet" href="archivos/prettify/prettify.css" type="text/css" />
-	<link rel="shortcut icon" href="logo.png">
-
+	
 	<script type="text/javascript" src="archivos/js/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript" src="archivos/js/jquery-migrate-1.1.1.min.js"></script>
 	<script type="text/javascript" src="archivos/js/jquery-ui-1.9.2.min.js"></script>
@@ -53,8 +52,6 @@
 	            }
 	        });
 		 });
-		 
-		 
 	</script>
 	<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/excanvas.min.js"></script><![endif]-->
 </head>
@@ -65,7 +62,7 @@
     <div class="header" >
 	    <div>
 	        <div class="logo">
-	         	 <a href="principal.php"> <img src="../web/Logo.png"/></a>
+	         	 <a href="principal.php"><img src="archivos/images/LogoLCCSF.png"/></a>
 	    	</div>   
 	    </div>
     </div>

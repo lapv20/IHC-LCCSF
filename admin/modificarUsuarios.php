@@ -15,7 +15,7 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 <h4 class="widgettitle">Modificar Usuarios</h4>
 <table id="dyntable" class="table table-bordered responsive">
                     <colgroup>
-                        <col class="con0" style="align: center; width: 4%" />
+                        <col class="con0" />
                         <col class="con1" />
                         <col class="con0" />
                         <col class="con1" />

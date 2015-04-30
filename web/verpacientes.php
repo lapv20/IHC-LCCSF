@@ -1,6 +1,4 @@
-<?php 
-	include("conexbd.php");
-?>
+<?php include("conexbd.php"); ?>
 <!doctype html>
 <html>
 <head>
@@ -10,14 +8,10 @@
 function MM_openBrWindow(theURL,winName,features) { //v2.0
   window.open(theURL,winName,features);
 }
-
 function eliminar(id){
-	
 	var respuesta = confirm('Desea Eliminar este paciente');
-	
 	if(respuesta){
 		window.location.href = 'gpaciente.php?accion=eliminar&paciente='+id;
-		
 	}
 }
 </script>
@@ -29,6 +23,7 @@ function eliminar(id){
                 <table id="dyntable" class="table table-bordered responsive">
                     <thead>
                         <tr>                          
+                            <th class="head1"></th>
                            	<th class="head1">Nombres</th>
                             <th class="head0">Apellidos</th>
                             <th class="head1">Cedula</th>

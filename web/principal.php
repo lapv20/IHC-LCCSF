@@ -9,49 +9,52 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Laboratorio Clinico Cesar Sanchez Font</title>
 
-<link rel="shortcut icon" href="../admin/logo.png">
+	<link rel="stylesheet" href="../admin/archivos/css/responsive-tables.css">
+	<link rel="stylesheet" href="../admin/archivos/css/style.default.css" type="text/css" />
+	<link rel="stylesheet" href="../admin/archivos/css/bootstrap-fileupload.min.css" type="text/css" />
+	<link rel="stylesheet" href="../admin/archivos/css/bootstrap-timepicker.min.css" type="text/css" />
+	<link rel="stylesheet" href="../admin/archivos/prettify/prettify.css" type="text/css" />
+	
+	<script type="text/javascript" src="../admin/archivos/js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="../admin/archivos/js/jquery-migrate-1.1.1.min.js"></script>
+	<script type="text/javascript" src="../admin/archivos/js/jquery-ui-1.9.2.min.js"></script>
+	<script type="text/javascript" src="../admin/archivos/js/modernizr.min.js"></script>
+	<script type="text/javascript" src="../admin/archivos/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../admin/archivos/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="../admin/archivos/js/jquery.uniform.min.js"></script>
+	<script type="text/javascript" src="../admin/archivos/js/flot/jquery.flot.min.js"></script>
+	<script type="text/javascript" src="../admin/archivos/js/flot/jquery.flot.resize.min.js"></script>
+	<script type="text/javascript" src="../admin/archivos/js/responsive-tables.js"></script>
+	<script type="text/javascript" src="../admin/archivos/js/custom.js"></script>
 
-<link rel="stylesheet" href="../admin/archivos/css/style.default.css" type="text/css" />
-<link rel="stylesheet" href="../admin/archivos/css/bootstrap-fileupload.min.css" type="text/css" />
-<link rel="stylesheet" href="../admin/archivos/css/bootstrap-timepicker.min.css" type="text/css" />
+	<script type="text/javascript" src="../admin/archivos/js/bootstrap-fileupload.min.js"></script>
+	<script type="text/javascript" src="../admin/archivos/js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="../admin/archivos/js/bootstrap-timepicker.min.js"></script>
+	<script type="text/javascript" src="../admin/archivos/js/jquery.tagsinput.min.js"></script>
+	<script type="text/javascript" src="../admin/archivos/js/jquery.autogrow-textarea.js"></script>
+	<script type="text/javascript" src="../admin/archivos/js/charCount.js"></script>
+	<script type="text/javascript" src="../admin/archivos/js/colorpicker.js"></script>
+	<script type="text/javascript" src="../admin/archivos/js/ui.spinner.min.js"></script>
+	<script type="text/javascript" src="../admin/archivos/js/chosen.jquery.min.js"></script>
+	<script type="text/javascript" src="../admin/archivos/js/forms.js"></script>
+	<script type="text/javascript" src="../admin/archivos/js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" src="../admin/archivos/prettify/prettify.js"></script>
+	<script type="text/javascript" src="../admin/archivos/js/jquery.jgrowl.js"></script>
+	<script type="text/javascript" src="../admin/archivos/js/jquery.alerts.js"></script>
+	<script type="text/javascript" src="../admin/archivos/js/elements.js"></script>
+	<script>
+		 jQuery(document).ready(function(){
+	        // dynamic table
+	        jQuery('#dyntable').dataTable({
+	            "sPaginationType": "full_numbers",
+	            "aaSortingFixed": [[0,'asc']],
+	            "fnDrawCallback": function(oSettings) {
+	                jQuery.uniform.update();
+	            }
+	        });
+		 });
+	</script>
 
-<script type="text/javascript" src="../admin/archivos/js/jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="../admin/archivos/js/jquery-migrate-1.1.1.min.js"></script>
-<script type="text/javascript" src="../admin/archivos/js/jquery-ui-1.9.2.min.js"></script>
-<script type="text/javascript" src="../admin/archivos/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="../admin/archivos/js/bootstrap-fileupload.min.js"></script>
-<script type="text/javascript" src="../admin/archivos/js/bootstrap-timepicker.min.js"></script>
-<script type="text/javascript" src="../admin/archivos/js/jquery.uniform.min.js"></script>
-<script type="text/javascript" src="../admin/archivos/js/jquery.validate.min.js"></script>
-<script type="text/javascript" src="../admin/archivos/js/jquery.tagsinput.min.js"></script>
-<script type="text/javascript" src="../admin/archivos/js/jquery.autogrow-textarea.js"></script>
-<script type="text/javascript" src="../admin/archivos/js/charCount.js"></script>
-<script type="text/javascript" src="../admin/archivos/js/colorpicker.js"></script>
-<script type="text/javascript" src="../admin/archivos/js/ui.spinner.min.js"></script>
-<script type="text/javascript" src="../admin/archivos/js/chosen.jquery.min.js"></script>
-<script type="text/javascript" src="../admin/archivos/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="../admin/archivos/js/jquery.cookie.js"></script>
-<script type="text/javascript" src="../admin/archivos/js/modernizr.min.js"></script>
-<script type="text/javascript" src="js/responsive-tables.js"></script>
-<script type="text/javascript" src="../admin/archivos/js/custom.js"></script>
-<script type="text/javascript" src="../admin/archivos/js/forms.js"></script>
-
-
-<script type="text/javascript">
-    jQuery(document).ready(function(){
-        // dynamic table
-        jQuery('#dyntable').dataTable({
-            "sPaginationType": "full_numbers",
-            "aaSortingFixed": [[0,'asc']],
-            "sLengthMenu":     "Mostrar _MENU_ registros",
-            "fnDrawCallback": function(oSettings) {
-                jQuery.uniform.update();
-            },
-
-        });
-        
-    });
-</script>
 </head>
 
 <body>
@@ -60,7 +63,7 @@
     
     <div class="header">
         <div class="logo">
-         <a href="principal.php"> <img src="Logo.png"/></a>
+         <a href="principal.php"> <img src="../admin/archivos/images/LogoLCCSF.png"/></a>
         </div>
      </div>
 </div>

@@ -1,8 +1,6 @@
 <?php 
 	include("conexion.php");
-	
 	$wsql = "select * from usuario,empresa, tipo_usuario where usuario.idempresa=empresa.idempresa and usuario.tipo_usuario=tipo_usuario.idtipousuario";
-	
 	$result = mysql_query($wsql,$link);
 ?>
 <script type="text/javascript">
@@ -19,11 +17,10 @@ function eliminar(e){
 }
 </script>
 
-
 <h4 class="widgettitle">Eliminar Usuarios</h4>
 <table id="dyntable" class="table table-bordered responsive">
                     <colgroup>
-                        <col class="con0" style="align: center; width: 4%" />
+                        <col class="con0" />
                         <col class="con1" />
                         <col class="con0" />
                         <col class="con1" />
@@ -46,15 +43,17 @@ function eliminar(e){
 						?>
                         
                     <tr class="gradeX">
-                          <td class="aligncenter"><span class="center">
-                            <input type="checkbox" />
-           	    </span></td>
-                            <td><?php echo $row['nombre_usuario'];?></td>
-                            <td><?php echo $row['nombre_empresa'];?></td>
-                            <td><?php echo $row['nombres'];?></td>
-                            <td class="center"><?php echo $row['apellidos'];?></td>
-                          <td><center><a title="Eliminar" class=" icon-trash" onClick="eliminar('<?php echo $row['nombre_usuario'];?>');"></a></center></td>
-                        </tr>
-                        <?php }?>
+                        <td class="aligncenter">
+                            <span class="center">
+                                <input type="checkbox" />
+                            </span>
+                        </td>
+                        <td><?php echo $row['nombre_usuario'];?></td>
+                        <td><?php echo $row['nombre_empresa'];?></td>
+                        <td><?php echo $row['nombres'];?></td>
+                        <td class="center"><?php echo $row['apellidos'];?></td>
+                        <td><center><a title="Eliminar" class=" icon-trash" onClick="eliminar('<?php echo $row['nombre_usuario'];?>');"></a></center></td>
+                    </tr>
+                    <?php }?>
 </tbody>
                 </table>

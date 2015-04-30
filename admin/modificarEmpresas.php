@@ -59,12 +59,11 @@ function eliminar(e,n){
                             <td><?php echo $row['telefono'];?></td>
                             <td ><?php echo $row['rif'];?></td>
                   <td ><?php echo $row['direccion'];?></td>
-                          <td><center><a href="#" title="Modificar" class="iconsweets-cog4" onClick="MM_openBrWindow('modificarEmpresa.php?nombre=<?php echo $row['nombre_empresa'];?>&amp;tipo=<?php echo $row['tipo_convenio'];?>','Modificar','width=500,height=500')"></a>
-                          
-                          &nbsp;&nbsp;&nbsp;
-                          
-                          <a href="#" title="Eliminar" class="icon-trash" onClick="eliminar('<?php echo $row['idempresa'];?>','<?php echo $row['nombre_empresa'];?>');"></a></center>
-                           
+                          <td>
+                            <center>
+                              <a href="#" title="Modificar" class="icon-edit" onClick="MM_openBrWindow('modificarEmpresa.php?nombre=<?php echo $row['nombre_empresa'];?>&amp;tipo=<?php echo $row['tipo_convenio'];?>','Modificar','width=805,height=500')"></a>
+                              <a href="#" title="Eliminar" class="icon-trash" onClick="eliminar('<?php echo $row['idempresa'];?>','<?php echo $row['nombre_empresa'];?>');"></a>
+                            </center>
                           </td>
                         </tr>
                         <?php }}?>

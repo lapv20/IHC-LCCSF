@@ -49,7 +49,8 @@ function validarNumeros(e)
         	<p>
                 <label>Nombres<small>Escriba Solo Letras</small></label>
                     <span class="field">  
-                    <input name="nombre1" type="text" onKeyDown="return validarLetras(event)" size="40" required class="input-large" placeholder="Primer Nombre" /><input name="nombre2" type="text" onKeyDown="return validarLetras(event)" size="40" class="input-large" placeholder="Segundo Nombre" />
+                        <input name="nombre1" type="text" onKeyDown="return validarLetras(event)" size="40" required class="input-large" placeholder="Primer Nombre" />
+                        <input name="nombre2" type="text" onKeyDown="return validarLetras(event)" size="40" class="input-large" placeholder="Segundo Nombre" />
                     </span>
             </p>
             <p>

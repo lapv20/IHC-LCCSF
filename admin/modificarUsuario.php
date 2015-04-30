@@ -113,9 +113,8 @@
             </p>
             
             <p class="stdformbutton">
-                <input type="submit" class="btn btn-primary" value="Guardar">
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="button" onclick="window.close();" class="btn btn-primary" value="Cancelar">
+                <button type="submit" class="btn btn-primary"><span class="iconfa-save"></span> Guardar</button>
+                <button type="button" onclick="window.close();" class="btn"><span class="iconfa-remove-sign"></span> Cancelar</button>
             </p>
         </form>
     </div>

@@ -50,7 +50,7 @@
 		},
 		
 		confirm: function(message, title, callback) {
-			if( title == null ) title = 'Confirm';
+			if( title == null ) title = 'Confirmar';
 			$.alerts._show(title, message, null, 'confirm', function(result) {
 				if( callback ) callback(result);
 			});

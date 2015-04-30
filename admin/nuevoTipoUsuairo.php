@@ -12,6 +12,19 @@ function validar(){
 	
 	alert("con "+a);
 }
+function validarLetras(e) 
+{ 
+    tecla = (document.all) ? e.keyCode : e.which; 
+    if (tecla==8) return true; // backspace
+    if (tecla==9) return true; // tabulador
+    if (tecla==32) return true; // espacio
+    if (e.ctrlKey && tecla==86) { return true;} //Ctrl v
+    if (e.ctrlKey && tecla==67) { return true;} //Ctrl c
+    if (e.ctrlKey && tecla==88) { return true;} //Ctrl x
+    patron = /[a-zA-Z]/; //patron
+    te = String.fromCharCode(tecla); 
+    return patron.test(te); // prueba de patron
+}
 </script>
 
 
@@ -20,8 +33,8 @@ function validar(){
     <div class="widgetcontent nopadding">
     	<form class="stdform stdform2" method="post" action="tipoUsuario.php?accion=nuevo">
         	<p>
-                <label>Nombre</label>
-                <span class="field"><input type="text" id="nombre" name="nombre" class="input-xxlarge" placeholder="Nombre" /></span>
+                <label>Nombre<small>Escriba el tipo de usuario</small></label>
+                <span class="field"><input type="text" id="nombre" name="nombre" onKeyDown="return validarLetras(event)" required class="input-xxlarge" placeholder="Nombre" /></span>
             </p>
             <p class="stdformbutton">
                 <button type="submit" class="btn btn-primary"><span class="iconfa-plus"></span> Añadir Nuevo Tipo</button>

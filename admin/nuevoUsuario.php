@@ -12,6 +12,34 @@ function validar(){
 	
 	alert("con "+a);
 }
+function validarLetras(e) 
+{ 
+    tecla = (document.all) ? e.keyCode : e.which; 
+        if (tecla==8) return true; // backspace
+        if (tecla==9) return true; // tabulador
+        if (tecla==32) return true; // espacio
+        if (e.ctrlKey && tecla==86) { return true;} //Ctrl v
+        if (e.ctrlKey && tecla==67) { return true;} //Ctrl c
+        if (e.ctrlKey && tecla==88) { return true;} //Ctrl x
+        patron = /[a-zA-Z]/; //patron
+        te = String.fromCharCode(tecla); 
+        return patron.test(te); // prueba de patron
+}  
+function validarNumeros(e) 
+{ // 1
+    tecla = (document.all) ? e.keyCode : e.which; // 2
+    if (tecla==8) return true; // backspace
+    if (tecla==109) return true; // menos
+    if (tecla==110) return true; // punto
+    if (tecla==189) return false; // guion
+    if (e.ctrlKey && tecla==86) { return true}; //Ctrl v
+    if (e.ctrlKey && tecla==67) { return true}; //Ctrl c
+    if (e.ctrlKey && tecla==88) { return true}; //Ctrl x
+    if (tecla>=96 && tecla<=105) { return true;} //numpad
+    patron = /[0-9]/; // patron
+    te = String.fromCharCode(tecla); 
+    return patron.test(te); // prueba
+}
 </script>
 
 <div class="widget ">
@@ -19,12 +47,17 @@ function validar(){
     <div class="widgetcontent nopadding">
         <form class="stdform stdform2" method="post" action="usuarios.php?accion=nuevo">
         	<p>
-                <label>Nombre</label>
-                <span class="field"><input type="text" id="nombre" name="nombre" class="input-xlarge" placeholder="Nombre" /></span>
+                <label>Nombres<small>Escriba Solo Letras</small></label>
+                    <span class="field">  
+                    <input name="nombre1" type="text" onKeyDown="return validarLetras(event)" size="40" required class="input-large" placeholder="Primer Nombre" /><input name="nombre2" type="text" onKeyDown="return validarLetras(event)" size="40" class="input-large" placeholder="Segundo Nombre" />
+                    </span>
             </p>
             <p>
-                <label>Apellido</label>
-                <span class="field"><input type="text" name="apellido" class="input-xlarge" placeholder="Apellido" /></span>
+                <label>Apellidos<small>Escriba Solo Letras</small></label>
+                    <span class="field">  
+                        <input name="apellido1" type="text" onKeyDown="return validarLetras(event)" size="40" required class="input-large" placeholder="Primer Apellido" />
+                        <input name="apellido2" type="text" onKeyDown="return validarLetras(event)" size="40"  class="input-large" placeholder="Segundo Apellido" />
+                    </span>
             </p>
             
             <?php 
@@ -47,12 +80,14 @@ function validar(){
             </p>
             
             <p>
-                <label>Telefono</label>
-                <span class="field"><input type="text" name="telefono" class="input-xlarge" placeholder="Telefono" /></span>
+                <label>Telefono<small>Escriba Solo Números</small></label>
+                <span class="field">
+                    <input name="telefono" type="text" onkeydown="return validarNumeros(event)" required class="input-large" id="telefono" placeholder="Telefono">
+                </span>
             </p>
             <p>
-                <label>Correo</label>
-                <span class="field"><input type="text" name="correo" class="input-xlarge" placeholder="Correo" /></span>
+                <label>Correo<small>nombre@empresa.com</small></label>
+                <span class="field"><input type="text" name="correo" required class="input-xlarge" placeholder="Correo" /></span>
             </p>
              <?php 
 				$wsql ="select * from tipo_usuario";
@@ -61,8 +96,8 @@ function validar(){
             <p>
                 <label>Tipo Usuario</label>
                 <span class="field">
-                <select name="tipousuario" class="uniformselect">
-                    <option value="-1">Seleecione una Opcion</option>
+                <select name="tipousuario" data-placeholder="Seleccione una Opcion" style="width:350px" class="chzn-select" tabindex="2">
+                    <option value="-1">Seleccione una Opcion</option>
                     <?php 
 						while($row = mysql_fetch_array($result)){
 					?>

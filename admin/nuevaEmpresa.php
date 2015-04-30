@@ -6,21 +6,20 @@
         	<p>
                 <label>Nombre</label>
                 <span class="field"><input type="text" id="nombre" name="nombre" class="input-xxlarge" placeholder="Nombre" /></span>
-            </p>
-            
+            </p>            
             <p>
                 <label>Tipo de Convenio</label>
                 <span class="field">
                 <select  name="tipo_convenio" data-placeholder="Seleccione una Opcion" class="chzn-select" tabindex="2">
                     <option value="-1">Seleccione una Opcion</option>
-                    	<option value="Convenio Empresarial">Convenio Empresarial</option>
+                    	<option value="Convenio Empresarial">Convenio Empresarial</option>                        
                         <option value="Convenio Afiliados">Convenio Afiliados</option>
                 </select>
                 </span>
             </p>
             
             <p>
-                <label>Telefono</label>
+                <label>Telefono<small>Escriba Solo Números</small></label>
                 <span class="field"><input type="text" name="telefono" class="input-xlarge" placeholder="Telefono" /></span>
             </p>
             <p>

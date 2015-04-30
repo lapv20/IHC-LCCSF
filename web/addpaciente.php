@@ -30,8 +30,8 @@
 				tecla = (document.all) ? e.keyCode : e.which; // 2
 				if (tecla==8) return true; // backspace
 				if (tecla==109) return true; // menos
-		if (tecla==110) return true; // punto
-				if (tecla==189) return true; // guion
+		    if (tecla==110) return true; // punto
+				if (tecla==189) return false; // guion
 				if (e.ctrlKey && tecla==86) { return true}; //Ctrl v
 				if (e.ctrlKey && tecla==67) { return true}; //Ctrl c
 				if (e.ctrlKey && tecla==88) { return true}; //Ctrl x
@@ -57,7 +57,8 @@
 								<input name="tipo_cedula" type="radio" required value="V" /> V &nbsp;&nbsp; 
 								<input name="tipo_cedula" type="radio" required value="E" /> E &nbsp;&nbsp;
 							</span>
-						</p><p>
+						</p>
+            <p>
 						<label>Nombres</label>
 						<span class="field">  
 							<input name="nombre1" type="text" onKeyDown="return validarLetras(event)" size="40" required class="input-large" placeholder="Primer Nombre" />
@@ -81,7 +82,7 @@
 				</p><p>
 				<label>Telefonos</label>                       
 				<span class="field">
-					<input name="telefono" type="text" onkeydown="return validarNumeros(event)" required class="input-large" id="telefono" placeholder="04141234567">
+					<input name="telefono" type="text" onkeydown="return validarNumeros(event)" required class="input-large" id="telefono" placeholder="Solo Números">
 					<input name="telefono2" type="tel" onkeydown="return validarNumeros(event)" class="input-large" id="telefono2" placeholder="04141234567">
 				</span>                 
 			</p>

@@ -7,6 +7,7 @@
 <head>
 <meta charset="utf-8">
 <title>Laboratorio Clinico Cesar Sanchez Font</title>
+<script type="text/javascript" src="js/jquery.alerts.js"></script>
 <script type="text/javascript">
 function MM_openBrWindow(theURL,winName,features) { //v2.0
   window.open(theURL,winName,features);
@@ -84,7 +85,8 @@ function anular(id){
                             <td><?php echo $row3['nombre_laboratorio']; ?></td>
                             <td><?php echo $row2['nombre_perfil']; ?></td>
                             <td><?php echo $estatus; ?></td>
-                            <td><a href="#" <?php if($estatus=='Pendiente'){?> onClick="MM_openBrWindow('modificarorden.php?sucursal=<?php echo $row['idsucursal'] ?>&perfil=<?php echo $row['idperfil'] ?>&idordenservicio=<?php echo $idorden ?>','modificarorden','width=600,height=396')"<?php }else{?> onClick="alert('No se puede modificar una orden cuyo estatus no sea pendiente')"<?php } ?> > <li class="icon-edit"></li></a>
+                            <td><a href="#" <?php if($estatus=='Pendiente'){?> onClick="MM_openBrWindow('modificarorden.php?sucursal=<?php echo $row['idsucursal'] ?>&perfil=<?php echo $row['idperfil'] ?>&idordenservicio=<?php echo $idorden ?>','modificarorden','width=600,height=396')"<?php }else{?> onClick="alert('No se puede modificar una orden cuyo estatus no sea pendiente')"<?php } ?> > 
+                            <li class="icon-edit"></li></a>
                             
                             <a href="#" <?php if($estatus=='Pendiente'){?> onClick="anular(<?php echo $row['idordenservicio']; ?>);"<?php }else{?> onClick="alert('No se puede anular una orden cuyo estatus no sea pendiente')"<?php } ?>> <li class="icon-remove"></li></a>
                             </td>

@@ -198,7 +198,7 @@
                 <a href="" data-toggle="dropdown" class="dropdown-toggle"><i class="icon-user"></i> <?php echo $_SESSION['nombres']; echo " "; echo $_SESSION['apellidos']; ?></a>
                 <ul class="dropdown-menu pull-right skin-color">
                     <li><a href="">Ver Mi Información</a></li>
-                    <li><a href="../web/logout.php">Cerrar Sesión</a></li>
+                    <li><a href="logout.php">Cerrar Sesión</a></li>
                 </ul>
             </li>
         </ul>

@@ -6,7 +6,7 @@
 	$result = mysql_query($wsql,$link);
 ?>
 
-<h4 class="widgettitle"><center>Historial</center></h4>
+<h4 class="widgettitle">Historial</h4>
 <table id="dyntable" class="table table-bordered responsive">
                     <colgroup>
                         <col class="con0" />

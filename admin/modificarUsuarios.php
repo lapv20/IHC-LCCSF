@@ -30,7 +30,7 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
                             <th class="head1">Empresa</th>
                             <th class="head0">Nombre</th>
                             <th class="head1">Apellido</th>
-                            <th class="head1">Accion</th>
+                            <th class="head1">Opciones</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -46,7 +46,7 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
                             <td><?php echo $row['clave'];?></td>
                             <td><?php echo $row['nombre_empresa'];?></td>
                             <td><?php echo $row['nombres'];?></td>
-                            <td class="center"><?php echo $row['apellidos'];?></td>
+                            <td><?php echo $row['apellidos'];?></td>
                           <td><center><a href="#" title="Modificar" class="icon-edit" onClick="MM_openBrWindow('modificarUsuario.php?usuario=<?php echo $row['nombre_usuario'];?>','Modificar','width=805,height=500')"></a></center></td>
                         </tr>
                         <?php }?>

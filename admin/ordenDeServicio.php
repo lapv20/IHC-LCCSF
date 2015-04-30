@@ -16,10 +16,10 @@
 	}
 </script>
 
-<h4 class="widgettitle"><center>Anular Orden de Servicio</center></h4>
+<h4 class="widgettitle">Anular Orden de Servicio</h4>
 <table id="dyntable" class="table table-bordered responsive">
                     <colgroup>
-                        <col class="con0" style="align: center; width: 4%" />
+                        <col class="con0" />
                         <col class="con1" />
                         <col class="con0" />
                         <col class="con1" />
@@ -50,9 +50,9 @@
                             <td><?php echo $row['numero_orden'];?></td>
                             <td><?php echo $row['nombre_empresa'];?></td>
                             <td><?php echo $row['nombres'];?></td>
-                            <td class="center"><?php echo $row['apellidos'];?></td>
-                            <td class="center"><?php echo $row['cedula'];?></td>
-                            <td class="center"><?php echo $row['estatus'];?></td>
+                            <td><?php echo $row['apellidos'];?></td>
+                            <td><?php echo $row['cedula'];?></td>
+                            <td><?php echo $row['estatus'];?></td>
                           <td><center>
                          <?php
 						 	if($row['estatus']!="Realizado"){

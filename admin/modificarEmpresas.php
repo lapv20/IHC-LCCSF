@@ -19,9 +19,6 @@ function eliminar(e,n){
 }
 </script>
 
-
-
-
 <h4 class="widgettitle">Modificar Usuarios</h4>
 <table id="dyntable" class="table table-bordered responsive">
                     <colgroup>
@@ -38,7 +35,7 @@ function eliminar(e,n){
                             <th class="head0">Nombre</th>
                             <th class="head1">Convenio</th>
                             <th class="head1">Telefono</th>
-                        <th class="head0">RIF</th>
+                            <th class="head0">RIF</th>
                             <th class="head0">Direccion</th>
                           <th class="head1">Accion</th>
                         </tr>
@@ -46,19 +43,14 @@ function eliminar(e,n){
                     <tbody>
                     	<?php 
 							while($row = mysql_fetch_array($result)){
-								if($row['idempresa']!=="0"){
-									
-						?>
-                        
+								if($row['idempresa']!=="0"){?>
                     <tr class="gradeX">
-                          <td class="aligncenter"><span class="center">
-                            <input type="checkbox" />
-           	    </span></td>
-                            <td><?php echo $row['nombre_empresa'];?></td>
-                            <td><?php echo $row['tipo_convenio'];?></td>
-                            <td><?php echo $row['telefono'];?></td>
-                            <td ><?php echo $row['rif'];?></td>
-                  <td ><?php echo $row['direccion'];?></td>
+                          <td class="aligncenter"></td>
+                          <td><?php echo $row['nombre_empresa'];?></td>
+                          <td><?php echo $row['tipo_convenio'];?></td>
+                          <td><?php echo $row['telefono'];?></td>
+                          <td ><?php echo $row['rif'];?></td>
+                          <td ><?php echo $row['direccion'];?></td>
                           <td>
                             <center>
                               <a href="#" title="Modificar" class="icon-edit" onClick="MM_openBrWindow('modificarEmpresa.php?nombre=<?php echo $row['nombre_empresa'];?>&amp;tipo=<?php echo $row['tipo_convenio'];?>','Modificar','width=805,height=500')"></a>

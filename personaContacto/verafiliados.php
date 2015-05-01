@@ -34,7 +34,6 @@ function eliminar(id){
         </colgroup>
         <thead>
             <tr>
-                <th class="head0 nosort"><input type="checkbox" class="checkall" /></th>
                	<th class="head1">Nombres</th>
                 <th class="head0">Apellidos</th>
                 <th class="head1">Cedula</th>

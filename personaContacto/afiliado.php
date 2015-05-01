@@ -104,7 +104,7 @@
     <div class="rightpanel">
         
         <ul class="breadcrumbs">
-            <li><a href="principal.php"><i class="iconfa-home"></i></a> <span class="separator"></span> Inicio</li>
+            <li><a href="afiliado.php"><i class="iconfa-home"></i></a> <span class="separator"></span> Inicio</li>
             <?php 							
 			if(isset($_GET["pag"])){
 				if($_GET["pag"]=="adde"){?>

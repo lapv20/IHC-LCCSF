@@ -73,7 +73,7 @@ function validarNumeros(e)
 
 	if(isset($_POST['cedula'])){
 	
-	include("conexbd.php"); 
+	include("../admin/conexion.php"); 
 	extract($_POST);
 	
 	

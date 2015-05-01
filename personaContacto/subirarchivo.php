@@ -1,6 +1,6 @@
 
 <?php
-	include("conexbd.php");
+	include("../admin/conexion.php");
 	session_start();
 
 	//echo "tipo del archivo ".$_FILES['uploadFile'] ['type']; //viendo el tipo del archivo (creo que solo usaremos .txt)

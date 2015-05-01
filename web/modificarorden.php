@@ -1,3 +1,4 @@
+<?php include("../admin/conexion.php"); ?>
 <!doctype html>
 <html>
 <head>
@@ -23,7 +24,6 @@
 <body>
 <div class="widget">
 			<?php 
-			include("conexbd.php");
 				$id_orden = $_GET['idordenservicio'];
 				$sucursal = $_GET['sucursal'];
 				$perfil = $_GET['perfil'];

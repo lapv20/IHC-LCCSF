@@ -1,6 +1,6 @@
 <?php 
 	 session_start();
-	 include("conexbd.php");
+	 include("../admin/conexion.php");
 ?>
 <!DOCTYPE html>
 <html>

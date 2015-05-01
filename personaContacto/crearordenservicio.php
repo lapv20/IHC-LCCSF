@@ -1,5 +1,5 @@
 <?php 
-	include("conexbd.php");
+	include("../admin/conexion.php");
 	//session_start();
 ?>
 <meta charset="utf-8">

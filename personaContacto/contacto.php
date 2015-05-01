@@ -1,6 +1,6 @@
 <?php 
 	 session_start();
-	 include("conexbd.php");
+	 include("../admin/conexion.php");
 	 date_default_timezone_set('UTC');
 ?>
 <!DOCTYPE html>

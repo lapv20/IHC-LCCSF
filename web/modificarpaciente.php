@@ -24,7 +24,7 @@
 
 <body>
 <?php 
-	include("conexbd.php");
+	include("../admin/conexion.php");
 	$paciente = $_GET['paciente'];
 	$wsql = "SELECT * from paciente WHERE idpaciente='$paciente'";
 	$result = mysql_query($wsql,$link);

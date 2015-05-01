@@ -5,9 +5,9 @@
 <title>LCCSF-Ayuda</title>
 </head>
 <body>
-
-<div class="accordion accordion-info">
-                            <h3><a href="#">¿Cómo agrego un nuevo paciente?</a></h3>
+<h4 class="widgettitle title-primary">Ayuda</h4><br />
+<div class="accordion accordion-primary">
+                            <h3><a href="#"><span class="iconfa-chevron-down"></span> ¿Cómo agrego un nuevo paciente?</a></h3>
                             <div>
                                 <p>
                                     En el menu lateral izquierdo, ubique la opción "Pacientes" al pulsarla
@@ -15,7 +15,7 @@
                                     un formulario para introducir los datos del paciente.
                                 </p>
                             </div>
-                            <h3><a href="#">¿Cómo modifico los datos de un paciente?</a></h3>
+                            <h3><a href="#"><span class="iconfa-chevron-down"></span> ¿Cómo modifico los datos de un paciente?</a></h3>
                             <div>
                                 <p>
                                     En el menu lateral izquierdo, ubique la opción "Pacientes" al pulsarla
@@ -24,7 +24,7 @@
                                     de la fila que contiene los datos a modificar, pulse el icono de editar, a continuación modifique los datos necesarios.
                                 </p>
                             </div>
-                            <h3><a href="#">¿Cómo elimino un paciente del sistema?</a></h3>
+                            <h3><a href="#"><span class="iconfa-chevron-down"></span> ¿Cómo elimino un paciente del sistema?</a></h3>
                             <div>
                                 <p>
                                     En el menu lateral izquierdo, ubique la opción "Pacientes" al pulsarla
@@ -34,7 +34,7 @@
                                     para confirmar la acción, presione aceptar.
                                 </p>
                             </div>
-                            <h3><a href="#">¿Cómo creo una nueva orden de servicio?</a></h3>
+                            <h3><a href="#"><span class="iconfa-chevron-down"></span> ¿Cómo creo una nueva orden de servicio?</a></h3>
                             <div>
                                 <p>
                                     En el menu lateral izquierdo, ubique la opción "Ordenes de Servicio" al pulsarla
@@ -44,7 +44,7 @@
                                     donde se realizarán.
                                 </p>
                             </div>
-                            <h3><a href="#">¿Cómo modifico una orden de servicio?</a></h3>
+                            <h3><a href="#"><span class="iconfa-chevron-down"></span> ¿Cómo modifico una orden de servicio?</a></h3>
                             <div>
                                 <p>
                                     En el menu lateral izquierdo, ubique la opción "Ordenes de Servicio" al pulsarla
@@ -55,7 +55,7 @@
                                     de lo contrario no podrá encontrar el icono para editar.
                                 </p>
                             </div>
-                            <h3><a href="#">¿Cómo anulo una orden de servicio?</a></h3>
+                            <h3><a href="#"><span class="iconfa-chevron-down"></span> ¿Cómo anulo una orden de servicio?</a></h3>
                             <div>
                                 <p>
                                     En el menu lateral izquierdo, ubique la opción "Ordenes de Servicio" al pulsarla

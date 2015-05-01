@@ -72,7 +72,7 @@
 			$wsql = "delete from usuario where nombre_usuario='$idusuario'";
 			mysql_query($wsql,$link);
 			
-			echo "<script>alert('Usuario eliminado con exito');window.location='principal.php?accion=cuentas&tipo=eliminar';</script>";
+			echo "<script>alert('Usuario eliminado con exito');window.location='principal.php?accion=cuentas&tipo=modificar';</script>";
 		}
 	}
 ?>

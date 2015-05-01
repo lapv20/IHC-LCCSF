@@ -9,6 +9,13 @@
 function MM_openBrWindow(theURL,winName,features) { //v2.0
   window.open(theURL,winName,features);
 }
+function eliminar(e,name){
+    var respuesta = confirm("¿Seguro desea eliminar el usuario? "+name);
+    
+    if(respuesta){
+        window.location='usuarios.php?accion=eliminar&idusuario='+e;
+    }
+}
 </script>
 
 <h4 class="widgettitle">Modificar Usuarios</h4>
@@ -46,7 +53,9 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
                             <td><?php echo $row['nombre_empresa'];?></td>
                             <td><?php echo $row['nombres'];?></td>
                             <td><?php echo $row['apellidos'];?></td>
-                          <td><center><a href="#" title="Modificar" class="icon-edit" onClick="MM_openBrWindow('modificarUsuario.php?usuario=<?php echo $row['nombre_usuario'];?>','Modificar','width=805,height=500')"></a></center></td>
+                          <td><center>
+                            <a href="#" title="Modificar" class="icon-edit"  onClick="MM_openBrWindow('modificarUsuario.php?usuario=<?php echo $row['nombre_usuario'];?>','Modificar','width=805,height=500')"></a>
+                            <a href="#" title="Eliminar"  class="icon-trash" onClick="eliminar('<?php echo $row['nombre_usuario'];?>','<?php echo $row['nombres'];?>');"></a></center></td>
                         </tr>
                         <?php }?>
 </tbody>

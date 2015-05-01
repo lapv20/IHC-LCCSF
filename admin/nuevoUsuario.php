@@ -43,7 +43,7 @@ function validarNumeros(e)
 </script>
 
 <div class="widget ">
-	<h4 class="widgettitle">Nuevo Usuario</h4>
+	<h4 class="widgettitle">Nueva Cuenta de Usuario</h4>
     <div class="widgetcontent nopadding">
         <form class="stdform stdform2" method="post" action="usuarios.php?accion=nuevo">
         	<p>

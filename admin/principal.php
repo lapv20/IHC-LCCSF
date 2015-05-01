@@ -109,9 +109,9 @@
             	<li><a href="principal.php"><span class="iconfa-home"></span> INICIO</a></li>                  
                 <li class="dropdown <?php if($cuentas!=""){ echo $cuentas;}?>"><a href=""><span class="iconfa-user"></span> Cuentas</a>
                 	<ul <?php if ($cuentas!=""){?>style="display: block" <?php  } ?> >
-                    	<li><a href="principal.php?accion=cuentas&tipo=nuevo"><span class="icon-plus"></span> Agregar</a></li>                       
-                        <li><a href="principal.php?accion=cuentas&tipo=modificar"><span class="icon-edit"></span> Modificar</a></li>
-                        <li><a href="principal.php?accion=cuentas&tipo=eliminar"><span class="icon-trash"></span> Eliminar</a></li>
+                    	<li><a href="principal.php?accion=cuentas&tipo=nuevo"><span class="icon-plus"></span> Nueva Cuenta</a></li>                       
+                        <li><a href="principal.php?accion=cuentas&tipo=modificar"><span class="icon-list"></span> Administrar Cuentas</a></li>
+                        <!--<li><a href="principal.php?accion=cuentas&tipo=eliminar"><span class="icon-trash"></span> Eliminar</a></li>-->
                     </ul>
                 </li>
                 
@@ -120,22 +120,22 @@
                 </li>
                 <li class="dropdown <?php if($empresa!=""){ echo $empresa;}?>"><a href=""><span class="iconfa-briefcase"></span> Empresas</a>
                 	<ul <?php if ($empresa!=""){?>style="display: block" <?php  } ?> >
-                    	<li><a href="principal.php?accion=empresa&tipo=nuevo"><span class="icon-plus"></span> Agregar</a></li>
-                        <li><a href="principal.php?accion=empresa&tipo=modificar"><span class="icon-edit"></span> Modificar/Eliminar</a></li>
+                    	<li><a href="principal.php?accion=empresa&tipo=nuevo"><span class="icon-plus"></span> Nueva Empresa</a></li>
+                        <li><a href="principal.php?accion=empresa&tipo=modificar"><span class="icon-list"></span> Administrar Empresas</a></li>
                     </ul>
                 </li>
                 
                 <li class=" dropdown <?php if($sucursal!=""){ echo $sucursal;}?>"><a href=""><span class="iconfa-globe"></span> Sucursales</a>
                 	<ul <?php if ($sucursal!=""){?>style="display: block" <?php  } ?> >
                     	<li><a href="principal.php?accion=sucursal&tipo=nuevo"><span class="icon-plus"></span> Nueva Sucursal</a></li>
-                        <li><a href="principal.php?accion=sucursal&tipo=modificar"><span class="icon-edit"></span> Modificar/Eliminar</a></li>
+                        <li><a href="principal.php?accion=sucursal&tipo=modificar"><span class="icon-list"></span> Administrar Sucursales</a></li>
                     </ul>
                 </li>
                 
                 <li class=" dropdown <?php if($tipoUsuario!=""){ echo $tipoUsuario;}?>"><a href=""><span class="iconfa-group"></span> Tipos de Usuario</a>
                 	<ul <?php if ($tipoUsuario!=""){?>style="display: block" <?php  } ?> >
                     	<li><a href="principal.php?accion=tipoUsuario&tipo=nuevo"><span class="icon-plus"></span> Nuevo Tipo</a></li>
-                        <li><a href="principal.php?accion=tipoUsuario&tipo=modificar"><span class="icon-edit"></span> Modificar/Eliminar</a></li>
+                        <li><a href="principal.php?accion=tipoUsuario&tipo=modificar"><span class="icon-list"></span> Administrar Tipos de Usuario</a></li>
                     </ul>
                 </li>
               
@@ -157,10 +157,7 @@
 					?><li><span class="separator"></span> Cuentas <span class="separator"></span> <a href="principal.php?accion=cuentas&tipo=nuevo">Agregar Cuenta</a></li><?php
 				}
 				if($_GET["accion"]=="cuentas" && $_GET['tipo']=="modificar"){
-					?><li><span class="separator"></span> Cuentas <span class="separator"></span> <a href="principal.php?accion=cuentas&tipo=modificar">Modificar Cuenta</a></li><?php
-				}
-				if($_GET["accion"]=="cuentas" && $_GET['tipo']=="eliminar"){
-					?><li><span class="separator"></span> Cuentas <span class="separator"></span> <a href="principal.php?accion=cuentas&tipo=eliminar">Eliminar Cuenta</a></li><?php
+					?><li><span class="separator"></span> Cuentas <span class="separator"></span> <a href="principal.php?accion=cuentas&tipo=modificar">Administrar Cuentas</a></li><?php
 				}
 				if($_GET["accion"]=="orden" && $_GET["tipo"]=="anular"){
 					?><li><span class="separator"></span> Orden de Servicio <span class="separator"></span> <a href="principal.php?accion=orden&tipo=anular">Anular Orden de Servicio</a></li><?php
@@ -169,26 +166,27 @@
 					?><li><span class="separator"></span> Empresas <span class="separator"></span> <a href="principal.php?accion=empresa&tipo=nuevo">Agregar Nueva Empresa</a></li><?php
 				}
 				if($_GET["accion"]=="empresa" && $_GET["tipo"]=="modificar"){
-					?><li><span class="separator"></span> Empresas <span class="separator"></span> <a href="principal.php?accion=empresa&tipo=modificar">Modificar o Eliminar</a></li><?php
+					?><li><span class="separator"></span> Empresas <span class="separator"></span> <a href="principal.php?accion=empresa&tipo=modificar">Administrar Empresas</a></li><?php
 				}
 				if($_GET["accion"]=="sucursal" && $_GET["tipo"]=="nuevo"){
 					?><li><span class="separator"></span> Sucursales <span class="separator"></span> <a href="principal.php?accion=sucursal&tipo=nuevo">Añadir Sucursal</a></li><?php
 				}
 				if($_GET["accion"]=="sucursal" && $_GET["tipo"]=="modificar"){
-					?><li><span class="separator"></span> Sucursales <span class="separator"></span> <a href="principal.php?accion=sucursal&tipo=modificar">Modificar o Eliminar</a></li><?php
+					?><li><span class="separator"></span> Sucursales <span class="separator"></span> <a href="principal.php?accion=sucursal&tipo=modificar"> Administrar Sucursales</a></li><?php
 				}
 				if($_GET["accion"]=="tipoUsuario" && $_GET["tipo"]=="nuevo"){
 					?><li><span class="separator"></span> Tipos de Usuario <span class="separator"></span> <a href="principal.php?accion=tipoUsuario&tipo=nuevo">Nuevo Tipo</a></li><?php
 				}
 				if($_GET["accion"]=="tipoUsuario" && $_GET["tipo"]=="modificar"){
-					?><li><span class="separator"></span> Tipos de Usuario <span class="separator"></span> <a href="principal.php?accion=tipoUsuario&tipo=modificar">Modificar o Eliminar</a></li><?php
+					?><li><span class="separator"></span> Tipos de Usuario <span class="separator"></span> <a href="principal.php?accion=tipoUsuario&tipo=modificar"> Administrar Tipos de Usuarios</a></li><?php
 				}if($_GET["accion"]=="historial" && $_GET["tipo"]=="consultar"){
 					?><li><span class="separator"></span> Historial <span class="separator"></span> <a href="principal.php?accion=historial&tipo=consultar"> Ver Historial </a></li><?php
 				}
 			}
 		?>
 			<li class="right">
-                <a href="" data-toggle="dropdown" class="dropdown-toggle"><i class="icon-user"></i> <?php echo $_SESSION['nombres']; echo " "; echo $_SESSION['apellidos']; ?></a>
+                <a href="" data-toggle="dropdown" class="dropdown-toggle"><i class="icon-user"></i>
+                	<?php echo $_SESSION['nombres']; echo " "; echo $_SESSION['apellidos']; ?></a>
                 <ul class="dropdown-menu pull-right">
                     <li><a href=""><span class="iconfa-user"></span> Ver Mi Información</a></li>
                     <li class=""><a href="../web/logout.php"><span class="iconfa-off"></span> Salir</a></li>
@@ -208,9 +206,9 @@
 								if($_GET["accion"]=="cuentas" && $_GET['tipo']=="modificar"){
 									include("modificarUsuarios.php");
 								}
-								if($_GET["accion"]=="cuentas" && $_GET['tipo']=="eliminar"){
+								/**if($_GET["accion"]=="cuentas" && $_GET['tipo']=="eliminar"){
 									include("eliminarUsuarios.php");
-								}
+								}**/
 								if($_GET["accion"]=="informacionUsuario"){
 									include("informacionUsuario.php");
 								}
@@ -293,10 +291,13 @@
                 
                 <div class="footer">
                     <div class="footer-left">
-                        <span></span>
+                       <span>Proyecto de IHC</span>
                     </div>
                     <div class="footer-right">
-                        <span></span>
+                       <?php 
+                       date_default_timezone_set('UTC');
+                       echo date('l jS \of F Y');
+                       ?><!-- <span>Designed by: <a href="http://themepixels.com/">ThemePixels</a></span>-->
                     </div>
                 </div><!--footer-->
                 

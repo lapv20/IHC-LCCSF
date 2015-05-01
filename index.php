@@ -105,20 +105,14 @@ if(!isset($_SESSION['userid'])) //para saber si existe o no ya la variable de se
     <img src="admin/archivos/images/LogoLCCSF.png" alt="Laboratorio Clinico Cesar Sánchez Font" width="250px"/>
 </div>
     <form action="" method="post" class="login"> 
-        <!--<div><label>Usuario: </label><br><input name="user" type="text" placeholder="Usuario"></div>
-        <div><label>Clave:</label><br><input name="password" type="password" placeholder="Contraseña"></div>
-        <br> 
-        <div class="inputwrapper"><input name="login" type="submit" value="Ingresar"></div>--> 
-        
         <div class="inputwrapper animate2 bounceIn">
-            <input type="text" name="user" id="username" placeholder="Usuario" autocomplete="off" />
+            <input type="text" name="user" id="username" required placeholder="Usuario" autocomplete="off" />
         </div>
         <div class="inputwrapper animate3 bounceIn">
-            <input type="password" name="password" id="password" placeholder="Contraseña" />
+            <input type="password" name="password" required id="password" placeholder="Contraseña" />
         </div>
         <div class="inputwrapper animate4 bounceIn">
-            <!--<button name="submit">Entrar</button>-->
-            <input name="login" type="submit" value="Ingresar" style="width:270px;">
+            <button name="login" type="submit">Ingresar</button>
         </div>
         
     </form> 

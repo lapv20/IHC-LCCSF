@@ -64,7 +64,7 @@
 <div class="mainwrapper">
     <div class="header">
         <div class="logo">
-           <a href="afiliados.php"><img src="../admin/archivos/images/LogoLCCSF.png" alt="" /></a>
+           <a href="afiliado.php"><img src="../admin/archivos/images/LogoLCCSF.png" alt="" /></a>
         </div>
     </div>
     <div class="leftpanel">
@@ -152,10 +152,13 @@
                 
                 <div class="footer">
                     <div class="footer-left">
-                       <!-- <span>&copy; 2013. Shamcey Admin Template. All Rights Reserved.</span>-->
+                       <span>Proyecto de IHC</span>
                     </div>
                     <div class="footer-right">
-                       <!-- <span>Designed by: <a href="http://themepixels.com/">ThemePixels</a></span>-->
+                       <?php 
+                       date_default_timezone_set('UTC');
+                       echo date('l jS \of F Y');
+                       ?><!-- <span>Designed by: <a href="http://themepixels.com/">ThemePixels</a></span>-->
                     </div>
                 </div><!--footer-->
                 

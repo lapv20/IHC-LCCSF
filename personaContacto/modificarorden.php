@@ -23,7 +23,7 @@
 <body>
 <div class="widget">
 			<?php 
-			include("conexbd.php");
+			include("../admin/conexion.php");
 				$id_orden = $_GET['idordenservicio'];
 				$sucursal = $_GET['sucursal'];
 				$perfil = $_GET['perfil'];

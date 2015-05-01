@@ -1,5 +1,5 @@
 <?php 
-	include("conexbd.php");
+	include("../admin/conexion.php");
 	session_start();
 	if(isset($_GET['action']))
 	{

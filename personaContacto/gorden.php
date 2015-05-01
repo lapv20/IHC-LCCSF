@@ -1,5 +1,5 @@
 <?php 
-	include("conexbd.php");
+	include("../admin/conexion.php");
 	session_start();
 	extract($_POST);
 	$sesionid = $_SESSION['userid'];

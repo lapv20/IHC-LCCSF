@@ -1,6 +1,4 @@
-<?php 
-	include("conexbd.php");
-?>
+<?php include("../admin/conexion.php"); ?>
 <!doctype html>
 <html>
 <head>

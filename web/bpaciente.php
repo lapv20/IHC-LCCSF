@@ -9,7 +9,7 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 <body>
 <?php 
 	
-	include("conexbd.php"); 
+	include("../admin/conexion.php"); 
 	extract($_POST);
 	
 	if(isset($_POST["tipo_cedula"])==true && isset($_POST["cedula"])==true)

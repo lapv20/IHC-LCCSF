@@ -22,7 +22,7 @@ body{
 <body>
 	<div class="widget">
 		<?php 
-		include("conexbd.php");
+		include("../admin/conexion.php");
 		$cedula = $_GET['cedula'];
 		$paciente = mysql_query("SELECT * FROM paciente WHERE cedula='$cedula'");
 		$result_paciente = mysql_fetch_array($paciente);		

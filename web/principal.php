@@ -95,9 +95,6 @@
 								$ayuda="active";
 							break;
 						}
-
-
-						
 					}
 				?>
   <li class="dropdown <?php if($pacientes!=""){ echo $pacientes;}?>"><a href=""><span class="iconfa-user"></span>Pacientes</a>
@@ -112,7 +109,7 @@
                         <li><a href="principal.php?accion=ordenser&tipo=veros"><span class="icon-list"></span> Ver Ordenes de Servicio</a></li>
                     </ul>
                 </li>
-                <li><a href="principal.php?accion=ayuda&tipo=ayuda"><span class="iconfa-info-sign"></span> Ayuda</a></li>
+                <li class="<?php if($ayuda!=""){ echo $ayuda;}?>"><a href="principal.php?accion=ayuda&tipo=ayuda"><span class="iconfa-info-sign"></span> Ayuda</a></li>
                 <li><a href="logout.php"><span class=" iconfa-off"></span> Salir</a></li>
      
         </div><!--leftmenu-->

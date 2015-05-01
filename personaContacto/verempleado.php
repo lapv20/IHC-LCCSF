@@ -44,7 +44,7 @@ function eliminar(id){
                             <th class="head0">Genero</th>
                             <th class="head1">Telefonos</th>
                             <th class="head0">Orden de Servicio</th>
-                            <th>Editar</th> 
+                            <th>Opciones</th> 
                         </tr>
                     </thead>
                     <tbody>
@@ -78,7 +78,7 @@ function eliminar(id){
 							{ echo ('No posee');} ?></td>
                             <td>
                                 <center>
-                                    <a href="#" onClick="MM_openBrWindow('modificarempleado.php?cedula=<?php echo $row['cedula'] ?>','modificarorden','width=805,height=400')"><li class="icon-edit"></li></a>
+                                    <a href="#" onClick="MM_openBrWindow('modificarempleado.php?cedula=<?php echo $row['cedula'] ?>','modificarorden','width=805,height=517')"><li class="icon-edit"></li></a>
                                     <a href="#" onClick="eliminar(<?php echo $row['idpaciente']; ?>);"> <li class="icon-trash"></li></a></center></td>
 
 

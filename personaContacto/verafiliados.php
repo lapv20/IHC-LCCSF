@@ -55,6 +55,7 @@ function eliminar(id){
 			echo mysql_error($link);
 			while($row = mysql_fetch_array($result)) { ?>
             <tr class="gradeX">
+                <td></td>
                 <td><?php echo $row['nombres']; ?></td>
                 <td><?php echo $row['apellidos']; ?></td>
                 <td><?php echo $row['cedula']; ?></td>

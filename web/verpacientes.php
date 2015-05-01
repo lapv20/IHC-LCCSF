@@ -37,8 +37,7 @@ function eliminar(id){
                     <tbody>
                <?php 
 						$wsql="SELECT * FROM convenio_paciente";
-
-						$result = mysql_query($wsql,$link);
+                        $result = mysql_query($wsql,$link);
 						echo mysql_error($link);
 
 						while($row = mysql_fetch_array($result))

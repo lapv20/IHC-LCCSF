@@ -12,12 +12,22 @@
 					<span class="field">
 						<select name="idpaciente" class="uniformselect chzn-select input-xxlarge" required="required" >
 							<option value="-1">Seleccione una Opción</option>
-							<?php 
-								$perf = "SELECT * FROM paciente";
-								$resultperf = mysql_query($perf);
-								while($row = mysql_fetch_array($resultperf)){?>
-									<option value="<?php echo $row['idpaciente'];?>"><?php echo $row['cedula']." - ";echo $row['nombres']." ".$row['apellidos']; ?></option>
-								<?php } ?>
+							<?php
+								$wsql="SELECT * FROM empresa WHERE tipo_convenio = 'Ninguno' OR tipo_convenio = 'Convenio Afiliados'";
+								$result = mysql_query($wsql,$link);
+								while ($row1 = mysql_fetch_array($result)) 
+								{
+									$idemp=$row1['idempresa'];
+									$wsql1 = "SELECT * FROM convenio_paciente WHERE idempresa='$idemp'";
+									$result1 = mysql_query($wsql1,$link);
+									while ($row2 = mysql_fetch_array($result1)) 
+									{
+										$idpaciente = $row2['idpaciente'];
+										$perf = "SELECT * FROM paciente WHERE idpaciente='$idpaciente' ";
+										$resultperf = mysql_query($perf);
+										while($row = mysql_fetch_array($resultperf)){?>
+											<option value="<?php echo $row['idpaciente'];?>"><?php echo $row['cedula']." - ";echo $row['nombres']." ".$row['apellidos']; ?></option>
+								<?php } }}?>
 							</select>
 						</span>   
 					</p>

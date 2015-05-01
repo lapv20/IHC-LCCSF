@@ -55,6 +55,7 @@ function eliminar(id){
                                 $row2 = mysql_fetch_array($result2)
 				?>
                         <tr class="gradeX">
+                            <td></td>
                             <td><?php echo $row1['nombres']; ?></td>
                             <td><?php echo $row1['apellidos']; ?></td>
                             <td><?php echo $row1['cedula']; ?></td>
@@ -64,6 +65,7 @@ function eliminar(id){
                             <td><?php echo $row2['tipo_convenio']; ?></td>
                             <td><a href="#" title="Modificar" class="icon-edit" onClick="MM_openBrWindow('modificarpaciente.php?paciente=<?php echo $row['idpaciente'];?>','Modificar','width=805,height=398')"></a>
                                 <a href="#" title="Eliminar" class="icon-trash" onClick="eliminar(<?php echo $row['idpaciente']; ?>);"></a></td>
+
                         </tr>
                     <?php
 						      }

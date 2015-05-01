@@ -135,33 +135,6 @@
 								{	
 									include("addafiliado.php"); 
 								}
-								/*if($_GET['pag']=="vere")
-								{	
-									include("verafiliado.php"); 
-								}
-								if($_GET['pag']=="co")
-								{	
-									include("crearorden.php"); 
-								}
-								if($_GET['pag']=="bo")
-								{	
-									include("buscarorden.php"); 
-								}
-								if($_GET['pag']=="vo")
-								{	
-									include("verorden_a.php"); 
-								}
-								if($_GET['pag']=="mo")
-								{	
-									include("modificarorden_cedula.php"); 
-								}
-								if($_GET['pag']=="me")
-								{	
-									include("buscarafiliado1.php"); 
-								}
-								if($_GET['pag']=="morosos"){
-									include("morosos.php");
-								}*/
 								if($_GET['pag']=="ay"){
 									include("ayuda2.php");
 								}

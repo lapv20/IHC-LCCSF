@@ -1,7 +1,7 @@
 <?php 
 	include("conexion.php");
 	
-	$wsql = "select numero_orden,hora_estimada,estatus,cedula,empresa.idempresa,ordenservicio.idsucursal,nombres,apellidos,nombre_empresa from paciente,ordenservicio,empresa,laboratorios where paciente.cedula=ordenservicio.cedula_paciente and empresa.idempresa=ordenservicio.idempresa and ordenservicio.idsucursal = laboratorios.idsucursal";
+	$wsql = "SELECT numero_orden,hora_estimada,estatus,cedula,empresa.idempresa,ordenservicio.idsucursal,nombres,apellidos,nombre_empresa from paciente,ordenservicio,empresa,laboratorios where paciente.cedula=ordenservicio.cedula_paciente and empresa.idempresa=ordenservicio.idempresa and ordenservicio.idsucursal = laboratorios.idsucursal";
 	
 	$result = mysql_query($wsql,$link);
 ?>

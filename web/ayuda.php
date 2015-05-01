@@ -50,8 +50,8 @@
                                     En el menu lateral izquierdo, ubique la opción "Ordenes de Servicio" al pulsarla
                                     se desplegará un sub menú, seguidamente pulse "Ver Ordenes de servicio" se mostrarán las ordenes
                                     existentes en el sistema, ubique el panel "opciones" en la parte derecha
-                                    de la fila que contiene los datos de la orden de servicio, pulse el icono de editar <i class="icon-edit"></i>.
-                                    Debe tener en cuenta que para modificar una orden de servicio, el estatus de ésta debe ser pendiente,
+                                    de la fila que contiene los datos de la orden de servicio, pulse el icono de editar <i class="icon-edit"></i>.<br>
+                                    <b>Debe tener en cuenta</b> que para modificar una orden de servicio, el estatus de ésta debe ser <b>"Pendiente"</b>,
                                     de lo contrario no podrá encontrar el icono para editar.
                                 </p>
                             </div>

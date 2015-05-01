@@ -2,8 +2,6 @@
 	include("conexion.php");
 	if(isset($_GET['accion'])){
 		
-		
-		
 		if($_GET['accion']=="nuevo"){
 			extract($_POST);
 			//$wsql = "s123456789106";
@@ -43,7 +41,7 @@
 					//echo $wsql;
 					
 					mysql_query($wsql,$link);
-					echo "<script> location.href='principal.php?accion=informacionUsuario&nombreUsuario=$usuario';alert('Usuario creado con exito'); </script>";
+					echo "<script>location.href='principal.php?accion=informacionUsuario&nombreUsuario=$usuario';alert('Usuario creado con exito'); </script>";
 				}
 				
 			}			
@@ -53,22 +51,19 @@
 			extract($_POST);
 			$usuario = $_GET['usuario'];
 			
-			$wsql ="select * from usuario where idempresa='$empresa'";
-			
+			$wsql ="select * from usuario where idempresa='$empresa' and nombre_usuario='".$usuario."';";
 			$result = mysql_query($wsql,$link);
 			
-			if($result >0){
-				echo "<script>alert('Ya existe un usario asociado a esta empresa');window.location.href='modificarUsuario.php?usuario=$usuario'</script>";
-			}else{
-				
-			
-				$wsql = "update usuario set nombres='$nombre',apellidos='$apellido',idempresa='$empresa',correo='$correo',telefono='$telefono',tipo_usuario='$tipousuario' where nombre_usuario='$usuario'";
-				
-				mysql_query($wsql,$link);
+			if($result > 0){
+				$row = mysql_fetch_array($result);
+				if($row['nombre_usuario'] == $usuario){
+					$wsql = "update usuario set nombres='$nombre',apellidos='$apellido',idempresa='$empresa',correo='$correo',telefono='$telefono',tipo_usuario='$tipousuario' where nombre_usuario='$usuario'";
+					mysql_query($wsql,$link);
+					echo "<script>window.location.href='modificarUsuario.php?usuario=$usuario';window.close();</script>";
+				}else{
+					echo "<script>alert('Ya existe un usario asociado a esta empresa');window.location='modificarUsuario.php?usuario=$usuario'</script>";
+				}
 			}
-			
-			
-			
 		}
 		
 		if($_GET['accion']=='eliminar'){

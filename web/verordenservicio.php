@@ -35,6 +35,7 @@ function anular(id){
 					<th class="head0">Apellidos</th>
 					<th class="head1">Cedula</th>
 					<th class="head0">Numero de Orden</th>
+					<th class="head0">Convenio</th>
 					<th class="head1">Sucursal</th>
 					<th class="head0">Perfil</th>
 					<th class="head1">Estatus</th>
@@ -42,54 +43,73 @@ function anular(id){
 				</tr>
 			</thead>
 			<tbody>
-	   <?php 
-						
-						$wsql="SELECT * FROM ordenservicio o,paciente p WHERE o.cedula_paciente=p.cedula";
-						$result = mysql_query($wsql,$link);
+	   				<?php 
+						$conv="SELECT * FROM convenio_paciente";
+                        $resultc = mysql_query($conv,$link);
 						echo mysql_error($link);
-						while($row = mysql_fetch_array($result))
+						while ($rconv = mysql_fetch_array($resultc)) 
 						{
-							$cedulap=$row['cedula_paciente'];
-							$idorden=$row['idordenservicio'];
-							$wsql1 = "SELECT * FROM paciente WHERE cedula='$cedulap'";
-							$result1 = mysql_query($wsql1,$link);
-							$row1 = mysql_fetch_array($result1);
-							$id_sucursal = $row['idsucursal'];
-							$id_perfil = $row['idperfil'];
-							$estatus = $row['estatus'];
-							
-							$wsql2 = "SELECT * FROM perfiles WHERE idperfil='$id_perfil'";
-							$result2= mysql_query($wsql2,$link);
-							$row2 = mysql_fetch_array($result2);
-							echo mysql_error($link);
-							
-							$wsql3 = "SELECT * FROM laboratorios WHERE idsucursal='$id_sucursal'";
-							$result3 = mysql_query($wsql3,$link);
-							$row3= mysql_fetch_array($result3);
-							echo mysql_error($link);
-							if($estatus!='Anulada')
+							$idpaciente = $rconv['idpaciente'];
+                            $idemp=$rconv['idempresa'];
+                            $wsqlp = "SELECT * FROM paciente WHERE idpaciente='$idpaciente'";
+							$resultp = mysql_query($wsqlp,$link);
+							while ($rowp = mysql_fetch_array($resultp)) 
 							{
+								$cedulap=$rowp['cedula'];
+								$wsqlos="SELECT * FROM ordenservicio o WHERE cedula_paciente='$cedulap'";
+								$resultos = mysql_query($wsqlos,$link);
+								$wsqltp="SELECT tipo_convenio FROM empresa where idempresa= '$idemp'";
+                                $resulttp = mysql_query($wsqltp,$link);
+                                $rowtp = mysql_fetch_array($resulttp);
+								while($rowos = mysql_fetch_array($resultos))
+								{
+									
+									$idorden=$rowos['idordenservicio'];
+									$id_sucursal = $rowos['idsucursal'];
+									$id_perfil = $rowos['idperfil'];
+									$estatus = $rowos['estatus'];
+									
+									$wsql2 = "SELECT * FROM perfiles WHERE idperfil='$id_perfil'";
+									$result2= mysql_query($wsql2,$link);
+									$row2 = mysql_fetch_array($result2);
+									echo mysql_error($link);
+									
+									$wsql3 = "SELECT * FROM laboratorios WHERE idsucursal='$id_sucursal'";
+									$result3 = mysql_query($wsql3,$link);
+									$row3= mysql_fetch_array($result3);
+									echo mysql_error($link);
+									if($estatus!='Anulada')
+									{
 					?>
-						<tr class="gradeX">
-							<td></td>
-							<td><?php echo $row1['nombres']; ?></td>
-							<td><?php echo $row1['apellidos']; ?></td>
-							<td><?php echo $row1['cedula']; ?></td>
-							<td><?php echo $row['numero_orden']; ?></td>
-							<td><?php echo $row3['nombre_laboratorio']; ?></td>
-							<td><?php echo $row2['nombre_perfil']; ?></td>
-							<td><?php echo $estatus; ?></td>
-							<td>
-								<center>
-									<?php if($estatus!='Anulado'){?> <a href="#" onClick="MM_openBrWindow('modificarorden.php?sucursal=<?php echo $row['idsucursal'] ?>&perfil=<?php echo $row['idperfil'] ?>&idordenservicio=<?php echo $idorden ?>','modificarorden','width=805,height=396')"><li class="icon-edit"></li> </a><?php } ?>
-									<a href="#" <?php if($estatus=='Pendiente'){?> onClick="anular(<?php echo $row['idordenservicio']; ?>);"<?php }else{?> onClick="alert('No se puede anular una orden cuyo estatus no sea pendiente')"<?php } ?>> <li class="icon-trash"></li></a>
-								</center>
-							</td>
-						</tr>
+								<tr class="gradeX">
+								<td></td>
+								<td><?php echo $rowp['nombres']; ?></td>
+								<td><?php echo $rowp['apellidos']; ?></td>
+								<td><?php echo $rowp['cedula']; ?></td>
+								<td><?php echo $rowos['numero_orden']; ?></td>
+								<td><?php echo $rowtp['tipo_convenio']; ?></td>
+								<td><?php echo $row3['nombre_laboratorio']; ?></td>
+								<td><?php echo $row2['nombre_perfil']; ?></td>
+								<td><?php echo $estatus; ?></td>
+								<td>
+									<center>
+										<?php if($estatus!='Anulado'){?> <a href="#" onClick="MM_openBrWindow('modificarorden.php?sucursal=<?php echo $row['idsucursal'] ?>&perfil=<?php echo $row['idperfil'] ?>&idordenservicio=<?php echo $idorden ?>','modificarorden','width=805,height=396')"><li class="icon-edit"></li> </a><?php } ?>
+										<a href="#" <?php if($estatus=='Pendiente'){?> onClick="anular(<?php echo $row['idordenservicio']; ?>);"<?php }else{?> onClick="alert('No se puede anular una orden cuyo estatus no sea pendiente')"<?php } ?>> <li class="icon-trash"></li></a>
+									</center>
+								</td>
+								</tr>
 					<?php
 							}
-						 }
+							}
+							}
+						}
 					?>
+								
+							
+						
+
+						
+						
 					 </tbody>
 				</table>
 </body>

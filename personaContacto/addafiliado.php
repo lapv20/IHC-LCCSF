@@ -17,13 +17,14 @@
   <div class="widget">
     <h4 class="widgettitle">Actualizar Afiliados</h4>
     <div class="widgetcontent nopadding">
-      <form class="stdform stdform2" action="subirarchivo.php" method="post" enctype="multipart/form-data" >
+      <form class="stdform stdform2" action="importar.php" method="post" enctype="multipart/form-data" >
         <p>
           <label>Ubicación del Archivo
             <small>Ubique el archivo .xls donde se encuentran los usuarios</small>
           </label>
           <span class="field">
-            <input class="input-xxlarge" type="file" name="archivo" id="archivo" />
+            <input class="input-xxlarge" type="file" name="excel" id="ecxel" />
+			<input type="hidden" value="upload" name="action" />
           </span>
         </p>
         <!-- Subir Archivo:  <input name="userfile" type="file" /> -->

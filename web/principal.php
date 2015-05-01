@@ -77,6 +77,7 @@
 					$pacientes="";
 					$ordenser="";
 					$consultas="";
+					$ayuda="";
 					if(isset($_GET['accion']) && isset($_GET['tipo'])){
 						$accion= $_GET['accion'];
 						$tipo = $_GET["tipo"];
@@ -90,10 +91,10 @@
 							case "consultas" : 
 								$consultas="active";
 							break;
+							case 'ayuda':
+								$ayuda="active";
+							break;
 						}
-
-
-						
 					}
 				?>
   <li class="dropdown <?php if($pacientes!=""){ echo $pacientes;}?>"><a href=""><span class="iconfa-user"></span>Pacientes</a>
@@ -108,7 +109,7 @@
                         <li><a href="principal.php?accion=ordenser&tipo=veros"><span class="icon-list"></span> Ver Ordenes de Servicio</a></li>
                     </ul>
                 </li>
-                
+                <li class="<?php if($ayuda!=""){ echo $ayuda;}?>"><a href="principal.php?accion=ayuda&tipo=ayuda"><span class="iconfa-info-sign"></span> Ayuda</a></li>
                 <li><a href="logout.php"><span class=" iconfa-off"></span> Salir</a></li>
      
         </div><!--leftmenu-->
@@ -132,6 +133,9 @@
 				}
 				if($_GET["accion"]=="ordenser" && $_GET["tipo"]=="veros"){
 					?><li><span class="separator"></span> Ordenes de Servicio <span class="separator"></span> <a href="principal.php?accion=ordenser&tipo=veros">Ver Ordenes de Servicio</a></li><?php
+				}
+				if ($_GET["accion"]=="ayuda") {
+					?><li><span class="separator"></span> Ayuda<?php
 				}
 			}
 		?>
@@ -164,6 +168,9 @@
 								}
 								if($_GET['accion']="busqueda"){
 									include("bpaciente.php");
+								}
+								if($_GET['accion']="ayuda"&& $_GET['tipo']=="ayuda"){
+									include("ayuda.php");
 								}
 							}
 							else

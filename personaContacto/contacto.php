@@ -65,7 +65,7 @@
     <div class="header">
         <div class="logo">
             
-           <a href="afiliados.php"><img src="../admin/archivos/images/LogoLCCSF.png" alt="" /></a>
+           <a href="contacto.php"><img src="../admin/archivos/images/LogoLCCSF.png" alt="" /></a>
        
             <!--headmenu-->
         </div>
@@ -75,20 +75,45 @@
         <div class="leftmenu">        
             <ul class="nav nav-tabs nav-stacked">
             	<li class="nav-header">Menu</li>
-                <li class="active"><a href="contacto.php"><span class="iconfa-home"></span> Inicio</a></li>
-                <li class="dropdown"><a href=""><span class="iconfa-user"></span>Empleados</a>
-                	<ul>                    	
+                <li class=""><a href="contacto.php"><span class="iconfa-home"></span> Inicio</a></li>
+                  <?php 
+                    $empleados="";
+                    $ordenser="";
+                    $consultas="";
+                    $ayuda="";
+                    if(isset($_GET['pag']) && isset($_GET['acc'])){
+                        $pag= $_GET['pag'];
+                        $acc = $_GET["acc"];
+                        switch($pag){
+                            case "adde" : 
+                                $empleados="active";
+                            break;
+                            case "co" : 
+                                $ordenser="active";
+                            break;
+                            case "consultas" : 
+                                $consultas="active";
+                            break;
+                            case 'ay':
+                                $ayuda="active";
+                            break;
+                        }
+                    }
+                ?>
+                <li class="dropdown <?php if($empleados!=""){ echo $empleados;}?>"><a href=""><span class="iconfa-user"></span>Empleados</a>
+                	<ul <?php if ($empleados!=""){?>style="display: block" <?php  } ?>>                    	
                     	<li><a href="contacto.php?pag=adde&acc=pac&tipo=sadde"><span class="icon-plus"></span> Añadir Empleado</a></li>
                         <li><a href="contacto.php?pag=me&acc=pac&tipo=sme"><span class="icon-edit"></span> Modificar Empleado</a></li>
                         <li><a href="contacto.php?pag=vere&acc=pac&tipo=svere"><span class="icon-list"></span> Ver Empleados</a></li>
                     </ul>
                 </li>
-                <li class="dropdown"><a href=""><span class="iconfa-book"></span>Orden de Servicio</a>
-                	<ul>                    	
+                <li class="dropdown <?php if($ordenser!=""){ echo $ordenser;}?>"><a href=""><span class="iconfa-book"></span>Orden de Servicio</a>
+                	<ul <?php if ($ordenser!=""){?>style="display: block" <?php  } ?>>                    	
                     	<li><a href="contacto.php?pag=co&acc=pac&tipo=sco"><span class="icon-plus"></span> Crear Orden de Servicio</a></li>
                         <li><a href="contacto.php?pag=vo&acc=pac&tipo=svo"><span class="icon-list"></span>  Ver Ordenes de Servicio</a></li>                    
                     </ul>
                 </li>
+                <li class="<?php if($ayuda!=""){ echo $ayuda;}?>"><a href="contacto.php?pag=ay&acc=ay&tipo=ay"><span class="iconfa-info-sign"></span> Ayuda</a></li>
                 <li class=""><a href="../web/logout.php"><span class="iconfa-off"></span>Salir</a></li>
               </li>    
         </div><!--leftmenu-->
@@ -119,6 +144,9 @@
 				if($_GET["pag"]=="vo" && $_GET['acc']=="pac" && $_GET['tipo']=="svo"){
 					?><li><span class="separator"></span> Orden de Servicio <span class="separator"></span> <a href="contacto.php?pag=vo&&acc=pac&&tipo=svo">Ver Ordenes de Servicio</a></li><?php
 				}
+                if ($_GET["pag"]=="ay") {
+                    ?><li><span class="separator"></span> Ayuda<?php
+                }
 			}
 		?>
             <li class="right">
@@ -161,6 +189,10 @@
 								{	
 									include("buscarempleado1.php"); 
 								}
+                                if($_GET['pag']=="ay"&&$_GET['acc']=="ay" && $_GET['tipo']=="ay")
+                                {   
+                                    include("ayuda.php"); 
+                                }
 							}
 							else{
 								include("buscarempleado1.php");

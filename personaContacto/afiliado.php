@@ -70,13 +70,30 @@
         <div class="leftmenu">        
             <ul class="nav nav-tabs nav-stacked">
             	<li class="nav-header">Menu</li>
-                <li class="active"><a href="afiliado.php"><span class="iconfa-home"></span> Inicio</a></li>
-                <li class="dropdown"><a href=""><span class="iconfa-user"></span>Afiliados</a>
-                	<ul>                    	
+                <li class=""><a href="afiliado.php"><span class="iconfa-home"></span> Inicio</a></li>
+                <?php 
+                    $afiliados="";
+                    $ayuda="";
+                    if(isset($_GET['pag']) && isset($_GET['acc'])){
+                        $pag= $_GET['pag'];
+                        $acc = $_GET["acc"];
+                        switch($pag){
+                            case "adde" : 
+                                $afiliados="active";
+                            break;
+                            case 'ay':
+                                $ayuda="active";
+                            break;
+                        }
+                    }
+                ?>
+                <li class="dropdown <?php if($afiliados!=""){ echo $afiliados;}?>"><a href=""><span class="iconfa-user"></span>Afiliados</a>
+                	<ul <?php if ($afiliados!=""){?>style="display: block" <?php  } ?>>                    	
                     	<li><a href="afiliado.php?pag=adde&&acc=pac&&tipo=sadde"><span class="icon-refresh"></span> Actualizar Afiliados</a></li>
                                           
                     </ul>
                 </li>
+                <li class="<?php if($ayuda!=""){ echo $ayuda;}?>"><a href="afiliado.php?pag=ay&acc=ay&tipo=ay"><span class="iconfa-info-sign"></span> Ayuda</a></li>
                 <li class=""><a href="../web/logout.php"><span class="iconfa-off"></span>Salir</a></li>
               </li>    
         </div><!--leftmenu-->
@@ -92,6 +109,9 @@
 				if($_GET["pag"]=="adde"){?>
 					<li><span class="separator"></span> Afiliados <span class="separator"></span> <a href="afiliado.php?pag=adde"> Actualizar Afiliados</a></li><?php
 				}
+				if ($_GET["pag"]=="ay") {
+                    ?><li><span class="separator"></span> Ayuda<?php
+                }
 			}
 		?>
 			<li class="right">
@@ -141,6 +161,9 @@
 								if($_GET['pag']=="morosos"){
 									include("morosos.php");
 								}*/
+								if($_GET['pag']=="ay"){
+									include("ayuda2.php");
+								}
 								
 							}
 							else{

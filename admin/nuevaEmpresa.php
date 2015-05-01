@@ -114,7 +114,7 @@ function validarLyNE(e)
             </p>
             <p>
                 <label>Direccion</label>
-                <span class="field"><textarea cols="80" rows="5" class="span10" onKeyDown="return validarLyNE(event)" name="direccion"></textarea></span>
+                <span class="field"><textarea cols="80" rows="5" required class="span10" onKeyDown="return validarLyNE(event)" name="direccion"></textarea></span>
             </p>
                 </span>
             </p>

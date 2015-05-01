@@ -4,16 +4,40 @@
 <meta charset="utf-8">
 <title>Modificar Orden de Servicio</title>
 
-<link rel="stylesheet" href="../admin/archivos/css/style.default.css" type="text/css" />
-<link rel="stylesheet" href="../admin/archivos/css/bootstrap-fileupload.min.css" type="text/css" />
-<link rel="stylesheet" href="../admin/archivos/css/bootstrap-timepicker.min.css" type="text/css" />
+<link rel="stylesheet" href="../admin/archivos/css/responsive-tables.css">
+	<link rel="stylesheet" href="../admin/archivos/css/style.default.css" type="text/css" />
+	<link rel="stylesheet" href="../admin/archivos/css/bootstrap-fileupload.min.css" type="text/css" />
+	<link rel="stylesheet" href="../admin/archivos/css/bootstrap-timepicker.min.css" type="text/css" />
+	<link rel="stylesheet" href="../admin/archivos/prettify/prettify.css" type="text/css" />
+	
+	<script type="text/javascript" src="../admin/archivos/js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="../admin/archivos/js/jquery-migrate-1.1.1.min.js"></script>
+	<script type="text/javascript" src="../admin/archivos/js/jquery-ui-1.9.2.min.js"></script>
+	<script type="text/javascript" src="../admin/archivos/js/modernizr.min.js"></script>
+	<script type="text/javascript" src="../admin/archivos/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../admin/archivos/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="../admin/archivos/js/jquery.uniform.min.js"></script>
+	<script type="text/javascript" src="../admin/archivos/js/flot/jquery.flot.min.js"></script>
+	<script type="text/javascript" src="../admin/archivos/js/flot/jquery.flot.resize.min.js"></script>
+	<script type="text/javascript" src="../admin/archivos/js/responsive-tables.js"></script>
+	<script type="text/javascript" src="../admin/archivos/js/custom.js"></script>
 
-<link href="jQueryAssets/jquery.ui.core.min.css" rel="stylesheet" type="text/css">
-<link href="jQueryAssets/jquery.ui.theme.min.css" rel="stylesheet" type="text/css">
-<link href="jQueryAssets/jquery.ui.datepicker.min.css" rel="stylesheet" type="text/css">
-<script src="jQueryAssets/jquery-1.8.3.min.js" type="text/javascript"></script>
-<script src="jQueryAssets/jquery-ui-1.9.2.datepicker.custom.min.js" type="text/javascript"></script>
-<script src="jQueryAssets/i18n/jquery.ui.datepicker-es.js" type="text/javascript"></script>
+	<script type="text/javascript" src="../admin/archivos/js/bootstrap-fileupload.min.js"></script>
+	<script type="text/javascript" src="../admin/archivos/js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="../admin/archivos/js/bootstrap-timepicker.min.js"></script>
+	<script type="text/javascript" src="../admin/archivos/js/jquery.tagsinput.min.js"></script>
+	<script type="text/javascript" src="../admin/archivos/js/jquery.autogrow-textarea.js"></script>
+	<script type="text/javascript" src="../admin/archivos/js/charCount.js"></script>
+	<script type="text/javascript" src="../admin/archivos/js/colorpicker.js"></script>
+	<script type="text/javascript" src="../admin/archivos/js/ui.spinner.min.js"></script>
+	<script type="text/javascript" src="../admin/archivos/js/chosen.jquery.min.js"></script>
+	<script type="text/javascript" src="../admin/archivos/js/forms.js"></script>
+	<script type="text/javascript" src="../admin/archivos/js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" src="../admin/archivos/prettify/prettify.js"></script>
+	<script type="text/javascript" src="../admin/archivos/js/jquery.jgrowl.js"></script>
+	<script type="text/javascript" src="../admin/archivos/js/jquery.alerts.js"></script>
+	<script type="text/javascript" src="../admin/archivos/js/elements.js"></script>
+
 </head>
 <style type="text/css">
     body{
@@ -50,7 +74,7 @@
 					 </span>
                    </p> 
                    <p><label>Sucursal</label>
-				<span class="field"><select name="sucursal" class="uniformselect">
+				<span class="field"><select name="sucursal" class="uniformselect chzn-select input-xxlarge">
 				   <option value="-1">Seleccione una Opcion</option>
    					<?php 
 					 $labs = "SELECT * FROM laboratorios";

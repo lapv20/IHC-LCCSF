@@ -93,7 +93,7 @@ function anular(id){
 								<td><?php echo $estatus; ?></td>
 								<td>
 									<center>
-										<?php if($estatus!='Anulado'){?> <a href="#" onClick="MM_openBrWindow('modificarorden.php?sucursal=<?php echo $row['idsucursal'] ?>&perfil=<?php echo $row['idperfil'] ?>&idordenservicio=<?php echo $idorden ?>','modificarorden','width=805,height=396')"><li class="icon-edit"></li> </a><?php } ?>
+										<?php if($estatus!='Anulado'){?> <a href="#" onClick="MM_openBrWindow('modificarorden.php?sucursal=<?php echo $row['idsucursal'] ?>&perfil=<?php echo $row['idperfil'] ?>&idordenservicio=<?php echo $idorden ?>','modificarorden','width=805,height=500')"><li class="icon-edit"></li> </a><?php } ?>
 										<a href="#" <?php if($estatus=='Pendiente'){?> onClick="anular(<?php echo $row['idordenservicio']; ?>);"<?php }else{?> onClick="alert('No se puede anular una orden cuyo estatus no sea pendiente')"<?php } ?>> <li class="icon-trash"></li></a>
 									</center>
 								</td>

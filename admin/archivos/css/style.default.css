@@ -76,7 +76,7 @@ h1,h2,h3,h4,h5 { font-weight: normal; line-height: normal; }
 .inputwrapper input { border: 0; padding: 10px; background: #fff; width: 250px; }
 .inputwrapper input:active, .inputwrapper input:focus { background: #fff; border: 0; }
 .inputwrapper button {
-		  display: block; border: 1px solid #0c57a3; padding: 10px; background: #0972dd; width: 100%;
+		  display: block; border: 1px solid #0c57a3; padding: 10px; background: #2530CF; width: 100%;
 		  color: #fff; text-transform: uppercase; }
 .inputwrapper button:focus, .inputwrapper button:active, .inputwrapper button:hover { background: #1e82e8; }
 .inputwrapper label {

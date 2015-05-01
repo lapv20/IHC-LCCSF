@@ -6,7 +6,6 @@
 <title>Laboratorio Clinico Cesar Sanchez Font</title>
 <link rel="icon" type="image/png" href="admin/archivos/images/logo(2).png" />
 <link rel="stylesheet" href="admin/archivos/css/style.default.css" type="text/css" />
-<link rel="stylesheet" href="archivos/css/style.shinyblue.css" type="text/css" />
 <script type="text/javascript" src="admin/archivos/js/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="admin/archivos/js/jquery-migrate-1.1.1.min.js"></script>
 <script type="text/javascript" src="admin/archivos/js/jquery-ui-1.9.2.min.js"></script>
@@ -112,7 +111,7 @@ if(!isset($_SESSION['userid'])) //para saber si existe o no ya la variable de se
             <input type="password" name="password" required id="password" placeholder="Contraseña" />
         </div>
         <div class="inputwrapper animate4 bounceIn">
-            <button name="login" type="submit">Ingresar</button>
+            <button class="btn" name="login" type="submit">Ingresar</button>
         </div>
         
     </form> 

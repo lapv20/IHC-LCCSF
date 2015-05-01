@@ -20,7 +20,7 @@
       <form class="stdform stdform2" action="importar.php" method="post" enctype="multipart/form-data" >
         <p>
           <label>Ubicación del Archivo
-            <small>Ubique el archivo .xls donde se encuentran los usuarios</small>
+            <small>Ubique el archivo .xlsx donde se encuentran los usuarios</small>
           </label>
           <span class="field">
             <input class="input-xxlarge" type="file" name="excel" id="ecxel" />

@@ -4,7 +4,6 @@
 		
 		if($_GET['accion']=="nuevo"){
 			extract($_POST);
-			//$wsql = "s123456789106";
 			
 			$wsql = "select * from usuario order by nombre_usuario desc";
 			$result = mysql_query($wsql,$link);
@@ -21,7 +20,6 @@
 				if(mysql_num_rows($result)>0){
 					echo "<script> location.href='principal.php?accion=cuentas&tipo=nuevo';alert('Ya existe un usuario asociado a esta empresa'); </script>";
 				}else{
-					
 				
 					$wsql = "select * from usuario order by nombre_usuario desc";
 					$result = mysql_query($wsql,$link);
@@ -35,11 +33,13 @@
 					$usuario = "s".$usuario;
 					
 					$clave = rand();
+
+					$nombres = $nombre1." ".$nombre2;
+					$apellidos = $apellido1." ".$apellido2;
 					
-					$wsql="insert into usuario (nombre_usuario,clave,nombres,apellidos,idempresa,tipo_usuario,correo,telefono) values('$usuario','$clave','$nombre','$apellido','$empresa','$tipousuario','$correo','$telefono')";
+					$wsql="insert into usuario (nombre_usuario,clave,nombres,apellidos,idempresa,tipo_usuario,correo,telefono) values('$usuario','$clave','$nombres','$apellidos','$empresa','$tipousuario','$correo','$telefono')";
 					
-					//echo $wsql;
-					
+					echo $wsql;
 					mysql_query($wsql,$link);
 					echo "<script>location.href='principal.php?accion=informacionUsuario&nombreUsuario=$usuario';alert('Usuario creado con exito'); </script>";
 				}

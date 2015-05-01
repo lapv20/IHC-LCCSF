@@ -194,10 +194,7 @@
 								{	
 									include("verorden.php"); 
 								}
-								if($_GET['pag']=="me")
-								{	
-									include("buscarempleado1.php"); 
-								}
+								
                                 if($_GET['pag']=="ay"&&$_GET['acc']=="ay" && $_GET['tipo']=="ay")
                                 {   
                                     include("ayuda.php"); 

@@ -29,7 +29,7 @@ function validarLetras(e)
 
 
 <div class="widget ">
-	<center><h4 class="widgettitle"> Nuevo Tipo de Usuario</h4></center>
+    <h4 class="widgettitle"> Nuevo Tipo de Usuario</h4>
     <div class="widgetcontent nopadding">
     	<form class="stdform stdform2" method="post" action="tipoUsuario.php?accion=nuevo">
         	<p>

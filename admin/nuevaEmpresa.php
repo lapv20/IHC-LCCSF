@@ -38,7 +38,7 @@ function validarNumeros(e)
 </head>
 <body>
 <div class="widget ">
-	<center><h4 class="widgettitle"> Nuevo Empresa</h4></center>
+	<h4 class="widgettitle"> Nuevo Empresa</h4>
     <div class="widgetcontent nopadding">
         <form class="stdform stdform2" method="post" action="empresa.php?accion=nuevo">
         	<p>

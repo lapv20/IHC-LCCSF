@@ -18,11 +18,7 @@ function eliminar(e,n){
 	}
 }
 </script>
-
-
-
-
-<h4 class="widgettitle"><center>Modificar Tipos de Usuarios</center></h4>
+<h4 class="widgettitle">Modificar Tipos de Usuarios</h4>
 <table id="dyntable" class="table table-bordered responsive">
                     <colgroup>
                         <col class="con0" />

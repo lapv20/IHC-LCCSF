@@ -1,4 +1,7 @@
-<?php session_start(); ?>
+<?php
+	session_start();
+	include("../error/no_conex.php");
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -46,7 +49,8 @@
     width:100%;
     height:100%;
     background:#FFFFFF url(archivos/Loaders/Snake.gif) no-repeat center;
-    }
+    z-index: 10000;
+}
 
 </style>
 
@@ -75,10 +79,13 @@
 </head>
 
 <body>
-
-<div id="cargando">
-	 <center><h4><strong>Redireccionando...</strong> </h4></center>                        
-</div>
+	<div id="cargando">
+		<div class="loginpanel">
+			<div class="loginpanelinner">
+				<center><h4><strong>Cargando</strong></h4></center>
+			</div>
+		</div>                     
+	</div>
 
 <div class="mainwrapper">
     <!--<div class="header" style="background:url(logo.png); background-repeat:no-repeat;background-size:500px 500px;">-->
@@ -270,49 +277,8 @@
 									include("ayuda.php");
 								}
 							}else{
-								?>
-							
-							<h4 class="widgettitle title-primary">Información sobre la Acciones</h4><br />
-							<div class="accordion accordion-inverse">
-                            <h3><a href="#">Section 1</a></h3>
-                            <div>
-                            	<a class="btn btn-danger alertdanger"><small>Alert Danger</small></a>
-                                <p>
-                                    Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
-                                    ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
-                                    amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
-                                    odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
-                                </p>
-                            </div>
-                            <h3><a href="#">Section 2</a></h3>
-                            <div>
-                                <p>
-                                    Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
-                                    purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
-                                    velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
-                                    suscipit faucibus urna.
-                                </p>
-                            </div>
-                            <h3><a href="#">Section 3</a></h3>
-                            <div>
-                                <p>
-                                    Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
-                                    Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
-                                    ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
-                                    lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
-                                </p>
-                            </div>
-                            <h3><a href="#">Section 4</a></h3>
-                            <div>
-                                <p>
-                                    Cras dictum. Pellentesque habitant morbi tristique senectus et netus
-                                    et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
-                                    faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
-                                    mauris vel est.
-                                </p>
-                            </div>
-                        </div>
-                        <?php }	?> 
+								include("historial.php");
+							} ?> 
                     </div>
                 </div><!--row-fluid-->
                 
@@ -323,8 +289,10 @@
                     <div class="footer-right">
                        <?php 
                        date_default_timezone_set('UTC');
-                       echo date('l jS \of F Y');
-                       ?><!-- <span>Designed by: <a href="http://themepixels.com/">ThemePixels</a></span>-->
+                       $dias = array("Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sábado");
+        				$meses = array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+                       echo $dias[date('w')]." ".date('d')." de ".$meses[date('n')-1]. " del ".date('Y');
+                       ?>
                     </div>
                 </div><!--footer-->
                 

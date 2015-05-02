@@ -1,5 +1,6 @@
 <?php 
 	session_start();
+	include("../error/no_conex.php");
 	include("../admin/conexion.php");
 ?>
 <!DOCTYPE html>
@@ -193,7 +194,9 @@
                     <div class="footer-right">
                        <?php 
                        date_default_timezone_set('UTC');
-                       echo date('l jS \of F Y');
+                       $dias = array("Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sábado");
+        				$meses = array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+                       echo $dias[date('w')]." ".date('d')." de ".$meses[date('n')-1]. " del ".date('Y');
                        ?><!-- <span>Designed by: <a href="http://themepixels.com/">ThemePixels</a></span>-->
                     </div>
                 </div><!--footer-->

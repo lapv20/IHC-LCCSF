@@ -1,5 +1,6 @@
 <?php 
 	 session_start();
+     include("../error/no_conex.php");
 	 include("../admin/conexion.php");
 	 date_default_timezone_set('UTC');
 ?>
@@ -220,7 +221,12 @@
                        <!-- <span>&copy; 2013. Shamcey Admin Template. All Rights Reserved.</span>-->
                     </div>
                     <div class="footer-right">
-                       <?php echo date('l jS \of F Y'); ?><!-- <span>Designed by: <a href="http://themepixels.com/">ThemePixels</a></span>-->
+                       <?php 
+                       date_default_timezone_set('UTC');
+                       $dias = array("Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sábado");
+                        $meses = array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+                       echo $dias[date('w')]." ".date('d')." de ".$meses[date('n')-1]. " del ".date('Y');
+                       ?><!-- <span>Designed by: <a href="http://themepixels.com/">ThemePixels</a></span>-->
                     </div>
                 </div><!--footer-->
                 

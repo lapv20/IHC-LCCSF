@@ -107,6 +107,7 @@
 					$historial="";
 					$sucursal="";
 					$tipoUsuario="";
+					$ayuda="";
 					if(isset($_GET['accion']) && isset($_GET['tipo'])){
 						$accion= $_GET['accion'];
 						$tipo = $_GET["tipo"];
@@ -171,14 +172,12 @@
                     </ul>
                 </li>
                 <li class="<?php if($historial!=""){ echo $historial;}?>"><a href="principal.php?accion=historial&tipo=consultar"><span class=" iconfa-list-alt"></span> Historial</a>
-                <li><a href="principal.php?accion=ayuda&tipo=ayuda"><span class="iconfa-info-sign"></span> Ayuda</a></li>
+                <li class="<?php if($ayuda!=""){ echo $ayuda;}?>"><a href="principal.php?accion=ayuda&tipo=ayuda"><span class="iconfa-info-sign"></span> Ayuda</a></li>
                 <li><a href="../web/logout.php"><span class=" iconfa-off"></span> Salir</a></li>
                 
             </ul>
         </div><!--leftmenu-->
-        
     </div><!-- leftpanel -->
-    
     <div class="rightpanel">
         <ul class="breadcrumbs">
             <li><a href="principal.php"><i class="iconfa-home"></i></a> <span class="separator"></span> Inicio</li>
@@ -278,18 +277,17 @@
 							} ?> 
                     </div>
                 </div><!--row-fluid-->
-                
                 <div class="footer">
                     <div class="footer-left">
-                       <span>Proyecto de IHC</span>
+                       <span><b>Proyecto de IHC</b><br>Edilianny Sánchez, Argenis García, Jesus Marquez & Luis Pérez</span>
                     </div>
                     <div class="footer-right">
-                       <?php 
-                       date_default_timezone_set('UTC');
-                       $dias = array("Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sábado");
-        				$meses = array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
-                       echo $dias[date('w')]." ".date('d')." de ".$meses[date('n')-1]. " del ".date('Y');
-                       ?>
+                    <?php 
+                    date_default_timezone_set('UTC');
+                    $dias = array("Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sábado");
+                    $meses = array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+                    echo $dias[date('w')]." ".date('d')." de ".$meses[date('n')-1]. " del ".date('Y');
+                    ?>
                     </div>
                 </div><!--footer-->
                 

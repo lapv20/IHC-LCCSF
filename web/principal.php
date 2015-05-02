@@ -70,15 +70,15 @@
 </div>
     
     <div class="leftpanel">
-        
         <div class="leftmenu">        
             <ul class="nav nav-tabs nav-stacked">
-            	<li class=""><a href="principal.php"><span class=" iconfa-home"></span> INICIO</a></li>              
+            	<li class="nav-header">Menu</li>
                  <?php 
 					$pacientes="";
 					$ordenser="";
 					$consultas="";
 					$ayuda="";
+					$inicio="";
 					if(isset($_GET['accion']) && isset($_GET['tipo'])){
 						$accion= $_GET['accion'];
 						$tipo = $_GET["tipo"];
@@ -96,8 +96,11 @@
 								$ayuda="active";
 							break;
 						}
+					}else{
+						$inicio = "active";
 					}
 				?>
+				<li class="<?php if($inicio!=""){ echo $inicio;}?>"><a href="principal.php"><span class=" iconfa-home"></span> INICIO</a></li>
   <li class="dropdown <?php if($pacientes!=""){ echo $pacientes;}?>"><a href=""><span class="iconfa-user"></span>Pacientes</a>
                 	<ul <?php if ($pacientes!=""){?>style="display: block" <?php  } ?> >                    	
                     	<li><a href="principal.php?accion=pacientes&tipo=nuevo"><span class="icon-plus"></span> Añadir Paciente</a></li>
@@ -189,7 +192,7 @@
                 
                 <div class="footer">
                     <div class="footer-left">
-                       <span>Proyecto de IHC</span>
+                       <span><b>Proyecto de IHC</b><br>Edilianny Sánchez, Argenis García, Jesus Marquez & Luis Pérez</span>
                     </div>
                     <div class="footer-right">
                        <?php 

@@ -60,7 +60,7 @@
         	<p>
                 <label>Nombre</label>
                 <span class="field">
-                    <input type="text" id="nombre" name="nombre" class="input-medium" placeholder="Nombre" value="<?php echo $row['nombre_empresa'];?>"/>
+                    <input type="text" id="nombre" name="nombre" class="input-xxlarge" placeholder="Nombre" value="<?php echo $row['nombre_empresa'];?>"/>
                 </span>
             </p>
             <p>
@@ -99,7 +99,7 @@
             <p>
                 <label>Direccion</label>
                     <span class="field">
-                        <input type="text" name="direccion" class="input-medium" placeholder="Correo" value="<?php echo $row['direccion'];?>"/>
+                        <input type="text" name="direccion" class="input-xxlarge" placeholder="Correo" value="<?php echo $row['direccion'];?>"/>
                     </span>
             </p>
             <p class="stdformbutton">

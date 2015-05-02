@@ -76,12 +76,12 @@
         <div class="leftmenu">        
             <ul class="nav nav-tabs nav-stacked">
             	<li class="nav-header">Menu</li>
-                <li class=""><a href="contacto.php"><span class="iconfa-home"></span> Inicio</a></li>
                   <?php 
                     $empleados="";
                     $ordenser="";
                     $consultas="";
                     $ayuda="";
+                    $inicio="";
                     if(isset($_GET['pag']) && isset($_GET['acc'])){
                         $pag= $_GET['pag'];
                         $acc = $_GET["acc"];
@@ -108,8 +108,11 @@
                                 $ayuda="active";
                             break;
                         }
-                    }
+                    }else{
+                            $inicio = "active";
+                        }
                 ?>
+                <li class="<?php if($inicio!=""){ echo $inicio;} ?>"><a href="contacto.php"><span class="iconfa-home"></span> INICIO</a></li>
                 <li class="dropdown <?php if($empleados!=""){ echo $empleados;}?>"><a href=""><span class="iconfa-user"></span>Empleados</a>
                 	<ul <?php if ($empleados!=""){?>style="display: block" <?php  } ?>>                    	
                     	<li><a href="contacto.php?pag=adde&acc=pac&tipo=sadde"><span class="icon-plus"></span> Añadir Empleado</a></li>
@@ -218,7 +221,7 @@
                 
                 <div class="footer">
                     <div class="footer-left">
-                       <!-- <span>&copy; 2013. Shamcey Admin Template. All Rights Reserved.</span>-->
+                       <span><b>Proyecto de IHC</b><br>Edilianny Sánchez, Argenis García, Jesus Marquez & Luis Pérez</span>
                     </div>
                     <div class="footer-right">
                        <?php 

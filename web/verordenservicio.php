@@ -18,7 +18,7 @@ function anular(id){
 </script>
 </head>
 <body>
-	<h4 class="widgettitle">Ordenes de Servicio</h4>
+	<h4 class="widgettitle">Ordenes de Servicio<span class="iconfa-list" style="float:right;"></span></h4>
 		<table id="dyntable" class="table table-bordered responsive">
 			<colgroup>
 				<col class="con0" />

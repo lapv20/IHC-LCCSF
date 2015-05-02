@@ -52,7 +52,7 @@
 	position: absolute;
     width:100%;
     height:100%;
-    background:#fff url(archivos/Loaders/Skype_balls_loader.gif) no-repeat center;
+    background:#fff url(archivos/Loaders/Snake.gif) no-repeat center;
     }
 
 </style>

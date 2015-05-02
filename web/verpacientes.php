@@ -19,7 +19,7 @@ function eliminar(id){
 </head>
 
 <body>
-<h4 class="widgettitle">Pacientes</h4>
+<h4 class="widgettitle">Administrar Pacientes<span class="iconfa-list" style="float:right;"></span></h4>
                 <table id="dyntable" class="table table-bordered responsive">
                     <thead>
                         <tr>                          

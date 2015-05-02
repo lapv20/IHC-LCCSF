@@ -39,11 +39,11 @@
     	<form class="stdform stdform2" method="post" action="gpaciente.php?accion=modificar&paciente=<?php echo $paciente;?>">
         	<p>
                 <label>Nombres</label>
-                <span class="field"><input type="text" id="nombres" name="nombres" class="input-medium" placeholder="Nombre" value="<?php echo $row['nombres'];?>"/></span>
+                <span class="field"><input type="text" id="nombres" name="nombres" class="input-xlarge" placeholder="Nombre" value="<?php echo $row['nombres'];?>"/></span>
             </p>
             <p>
                 <label>Apellidos</label>
-                <span class="field"><input type="text" name="apellidos" class="input-medium" placeholder="Apellido" value="<?php echo $row['apellidos'];?>" /></span>
+                <span class="field"><input type="text" name="apellidos" class="input-xlarge" placeholder="Apellido" value="<?php echo $row['apellidos'];?>" /></span>
             </p>
             <p>
             <label>Fecha de Nacimiento</label>
@@ -53,7 +53,7 @@
             </p>
             <p>
                 <label>Télefono</label>
-                <span class="field"><input type="text" name="telefono" class="input-medium" placeholder="Telefono" value="<?php echo $row['telefono'];?>" /></span>
+                <span class="field"><input type="text" name="telefono" class="input-xlarge" placeholder="Telefono" value="<?php echo $row['telefono'];?>" /></span>
             </p>
             <p class="stdformbutton">
                 <button class="btn btn-primary" type="submit"> <span class="iconfa-save"></span> Guardar</button>

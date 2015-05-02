@@ -101,13 +101,13 @@
   <li class="dropdown <?php if($pacientes!=""){ echo $pacientes;}?>"><a href=""><span class="iconfa-user"></span>Pacientes</a>
                 	<ul <?php if ($pacientes!=""){?>style="display: block" <?php  } ?> >                    	
                     	<li><a href="principal.php?accion=pacientes&tipo=nuevo"><span class="icon-plus"></span> Añadir Paciente</a></li>
-                        <li><a href="principal.php?accion=pacientes&tipo=vep"><span class="icon-list"></span> Ver Pacientes</a></li>                     
+                        <li><a href="principal.php?accion=pacientes&tipo=vep"><span class="icon-list"></span> Administrar Pacientes</a></li>                     
                     </ul>
                 </li>
   <li class="dropdown <?php if($ordenser!=""){ echo $ordenser;}?>"><a href=""><span class="iconfa-file"></span>Ordenes de Servicio</a>
                 	<ul <?php if ($ordenser!=""){?>style="display: block" <?php  } ?> >
                     	<li><a href="principal.php?accion=ordenser&tipo=nuevo"><span class="icon-plus"></span> Crear Orden de Servicio</a></li>
-                        <li><a href="principal.php?accion=ordenser&tipo=veros"><span class="icon-list"></span> Ver Ordenes de Servicio</a></li>
+                        <li><a href="principal.php?accion=ordenser&tipo=veros"><span class="icon-list"></span> Administrar Ordenes de Servicio</a></li>
                     </ul>
                 </li>
                 <li class="<?php if($ayuda!=""){ echo $ayuda;}?>"><a href="principal.php?accion=ayuda&tipo=ayuda"><span class="iconfa-info-sign"></span> Ayuda</a></li>
@@ -127,13 +127,13 @@
 					?><li><span class="separator"></span> Pacientes <span class="separator"></span> <a href="principal.php?accion=pacientes&tipo=nuevo">Añadir Paciente</a></li><?php
 				}
 				if($_GET["accion"]=="pacientes" && $_GET['tipo']=="vep"){
-					?><li><span class="separator"></span> Pacientes <span class="separator"></span> <a href="principal.php?accion=pacientes&tipo=vep">Ver Pacientes</a></li><?php
+					?><li><span class="separator"></span> Pacientes <span class="separator"></span> <a href="principal.php?accion=pacientes&tipo=vep">Administrar Pacientes</a></li><?php
 				}
 				if($_GET["accion"]=="ordenser" && $_GET['tipo']=="nuevo"){
 					?><li><span class="separator"></span> Ordenes de Servicio <span class="separator"></span> <a href="principal.php?accion=ordenser&tipo=nuevo">Crear Orden de Servicio</a></li><?php
 				}
 				if($_GET["accion"]=="ordenser" && $_GET["tipo"]=="veros"){
-					?><li><span class="separator"></span> Ordenes de Servicio <span class="separator"></span> <a href="principal.php?accion=ordenser&tipo=veros">Ver Ordenes de Servicio</a></li><?php
+					?><li><span class="separator"></span> Ordenes de Servicio <span class="separator"></span> <a href="principal.php?accion=ordenser&tipo=veros">Administrar Ordenes de Servicio</a></li><?php
 				}
 				if ($_GET["accion"]=="ayuda") {
 					?><li><span class="separator"></span> Ayuda<?php

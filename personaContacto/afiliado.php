@@ -10,6 +10,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Laboratorio Clinico Cesar Sanchez Font</title>
 
+    <link rel="stylesheet" href="../admin/archivos/css/font-awesomeNEW.min.css">
+    <link rel="stylesheet" href="../admin/archivos/css/font-awesomeNEW.css">
+
 	<link rel="stylesheet" href="../admin/archivos/css/responsive-tables.css">
 	<link rel="stylesheet" href="../admin/archivos/css/style.default.css" type="text/css" />
 	<link rel="stylesheet" href="../admin/archivos/css/bootstrap-fileupload.min.css" type="text/css" />
@@ -45,11 +48,30 @@
 	<script type="text/javascript" src="../admin/archivos/js/elements.js"></script>
 
 <link rel="shortcut icon" href="logo.png">
+<style>
+#cargando {
+	position: absolute;
+    width:100%;
+    height:100%;
+    background:#fff url(archivos/Loaders/Snake.gif) no-repeat center;
+    }
 
+</style>
 
 <script type="text/javascript">
+	jQuery(window).load(function () {
+	  // Una vez se cargue al completo la página desaparecerá el div "cargando"
+		jQuery('#cargando').fadeOut(3000);
+	    
+	  //jQuery('#cargando').hide();
+	  
+});
+</script>
+<script type="text/javascript">
+
     jQuery(document).ready(function(){
         // dynamic table
+//        jQuery('#maincontentinner').fadeIn('slow');
         jQuery('#dyntable2').dataTable( {
             "bScrollInfinite": true,
             "bScrollCollapse": true,
@@ -61,6 +83,9 @@
 <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/excanvas.min.js"></script><![endif]-->
 </head>
 <body>
+<div id="cargando">
+	 <center><h4><strong>Redireccionando...</strong> </h4></center>                        
+</div>
 
 <div class="mainwrapper">
     <div class="header">
@@ -72,7 +97,7 @@
         <div class="leftmenu">        
             <ul class="nav nav-tabs nav-stacked">
             	<li class="nav-header">Menu</li>
-                <li class=""><a href="afiliado.php"><span class="iconfa-home"></span> Inicio</a></li>
+                <li class=""><a href="afiliado.php" onclick="esperar();"><span class="iconfa-home"></span> Inicio</a></li>
                 <?php 
                     $afiliados="";
                     $ayuda="";
@@ -174,6 +199,7 @@
     </div><!--rightpanel-->
     
 </div><!--mainwrapper-->
+
 <script type="text/javascript">
     jQuery(document).ready(function() {
         

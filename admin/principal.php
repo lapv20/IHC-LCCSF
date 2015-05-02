@@ -43,6 +43,24 @@
 	<script type="text/javascript" src="archivos/js/jquery.alerts.js"></script>
 	<script type="text/javascript" src="archivos/js/elements.js"></script>
 
+<style>
+#cargando {
+	position: absolute; 
+    width:100%;
+    height:100%;
+    background:#FFFFFF url(archivos/Loaders/Snake.gif) no-repeat center;
+    }
+
+</style>
+
+<script type="text/javascript">
+	jQuery(window).load(function () {
+	  // Una vez se cargue al completo la página desaparecerá el div "cargando"
+		//jQuery('#cargando').fadeOut(2000);
+	  jQuery('#cargando').hide();
+	  
+});
+</script>
 
 	<script>
 		 jQuery(document).ready(function(){
@@ -60,6 +78,11 @@
 </head>
 
 <body>
+
+<div id="cargando">
+	 <center><h4><strong>Redireccionando...</strong> </h4></center>                        
+</div>
+
 <div class="mainwrapper">
     <!--<div class="header" style="background:url(logo.png); background-repeat:no-repeat;background-size:500px 500px;">-->
     <div class="header" >

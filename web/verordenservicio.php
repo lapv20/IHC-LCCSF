@@ -93,8 +93,9 @@ function anular(id){
 								<td><?php echo $estatus; ?></td>
 								<td>
 									<center>
-										<?php if($estatus!='Anulado'){?> <a href="#" onClick="MM_openBrWindow('modificarorden.php?sucursal=<?php echo $rowos['idsucursal'] ?>&perfil=<?php echo $rowos['idperfil'] ?>&idordenservicio=<?php echo $idorden ?>','modificarorden','width=805,height=500')"><li class="icon-edit"></li> </a><?php } ?>
-										<a href="#" <?php if($estatus=='Pendiente'){?> onClick="anular(<?php echo $rowos['idordenservicio']; ?>);"<?php }else{?> onClick="alert('No se puede anular una orden cuyo estatus no sea pendiente')"<?php } ?>> <li class="icon-trash"></li></a>
+										<?php if($estatus!='Anulado'){?>
+										<a class="btn btn-info" href="#" onClick="MM_openBrWindow('modificarorden.php?sucursal=<?php echo $rowos['idsucursal'] ?>&perfil=<?php echo $rowos['idperfil'] ?>&idordenservicio=<?php echo $idorden ?>','modificarorden','width=805,height=340')"><li class="iconfa-edit"></li> </a><?php } ?>
+										<a class="btn btn-danger" href="#" <?php if($estatus=='Pendiente'){?> onClick="anular(<?php echo $rowos['idordenservicio']; ?>);"<?php }else{?> onClick="alert('No se puede anular una orden cuyo estatus no sea pendiente')"<?php } ?>><li class="iconfa-trash"></li></a>
 									</center>
 								</td>
 								</tr>

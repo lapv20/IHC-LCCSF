@@ -18,7 +18,7 @@ function eliminar(e,n){
 	}
 }
 </script>
-<h4 class="widgettitle">Modificar Tipos de Usuarios</h4>
+<h4 class="widgettitle">Administrar Tipos de Usuarios<span style="float:right;" class="iconfa-list"></span></h4>
 <table id="dyntable" class="table table-bordered responsive">
                     <colgroup>
                         <col class="con0" />
@@ -46,11 +46,10 @@ function eliminar(e,n){
                             <input type="checkbox" />
            	    </span></td>
                             <td><?php echo $row['nombretipo_usuario'];?></td>
-                          <td><center><a href="#" title="Modificar" class="icon-edit" onClick="MM_openBrWindow('modificarTipoUsuario.php?id=<?php echo $row['idtipousuario'];?>','Modificar','width=900,height=200')"></a>
-                          
-                          &nbsp;&nbsp;&nbsp;
-                          <a href="#" title="Eliminar" class="icon-trash" onClick="eliminar('<?php echo $row['idtipousuario'];?>','<?php echo $row['nombretipo_usuario'];?>');"></a></center>
-                           
+                          <td>
+                            <center>
+                              <a title="Modificar" class="btn btn-info" onClick="MM_openBrWindow('modificarTipoUsuario.php?id=<?php echo $row['idtipousuario'];?>','Modificar','width=900,height=200')"><span class="iconfa-edit"></span></a>
+                              <a title="Eliminar" class="btn btn-danger" onClick="eliminar('<?php echo $row['idtipousuario'];?>','<?php echo $row['nombretipo_usuario'];?>');"><span class="iconfa-trash"></span></a></center>
                           </td>
                         </tr>
                         <?php }?>

@@ -171,11 +171,9 @@
                         <li><a href="principal.php?accion=tipoUsuario&tipo=administrar"><span class="icon-list"></span> Administrar Tipos de Usuario</a></li>
                     </ul>
                 </li>
-              
-                
                 <li class="<?php if($historial!=""){ echo $historial;}?>"><a href="principal.php?accion=historial&tipo=consultar"><span class=" iconfa-list-alt"></span> Historial</a>
-                <li class="<?php if($ayuda!=""){ echo $ayuda;}?>"><a href="principal.php?accion=ayuda&tipo=ayuda"><span class="iconfa-info-sign"></span> Ayuda</a></li>
-                <li class=""><a href="../web/logout.php"><span class=" iconfa-off"></span> Salir</a></li>
+                <li><a href="principal.php?accion=ayuda&tipo=ayuda"><span class="iconfa-info-sign"></span> Ayuda</a></li>
+                <li><a href="../web/logout.php"><span class=" iconfa-off"></span> Salir</a></li>
                 
             </ul>
         </div><!--leftmenu-->

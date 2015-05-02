@@ -18,7 +18,7 @@ function eliminar(e,name){
 }
 </script>
 
-<h4 class="widgettitle">Modificar Usuarios</h4>
+<h4 class="widgettitle">Administrar Usuarios<span style="float:right;" class="iconfa-list"></span></h4>
 <table id="dyntable" class="table table-bordered responsive">
                     <colgroup>
                         <col class="con0" />
@@ -53,10 +53,14 @@ function eliminar(e,name){
                             <td><?php echo $row['nombre_empresa'];?></td>
                             <td><?php echo $row['nombres'];?></td>
                             <td><?php echo $row['apellidos'];?></td>
-                          <td><center>
-                            <a href="#" title="Modificar" class="icon-edit"  onClick="MM_openBrWindow('modificarUsuario.php?usuario=<?php echo $row['nombre_usuario'];?>','Modificar','width=805,height=500')"></a>
-                            <a href="#" title="Eliminar"  class="icon-trash" onClick="eliminar('<?php echo $row['nombre_usuario'];?>','<?php echo $row['nombres'];?>');"></a></center></td>
+                    
+                    <td>
+                        <center>
+                            <a class="btn btn-info" title="Modificar"  onClick="MM_openBrWindow('modificarUsuario.php?usuario=<?php echo $row['nombre_usuario'];?>','Modificar','width=805,height=500')"><span class="iconfa-edit"></span></a>
+                            <a class="btn btn-danger" title="Eliminar" onClick="eliminar('<?php echo $row['nombre_usuario'];?>','<?php echo $row['nombres'];?>');"><span class="iconfa-trash"></span></a>
+                        </center>
+                    </td>
                         </tr>
                         <?php }?>
 </tbody>
-                </table>
+</table>

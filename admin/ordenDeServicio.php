@@ -8,15 +8,16 @@
 
 <script>
 	function anular(e){
-		confirm("¿Seguro desea anular la orden "+e+"?");
-		
+		confirm = confirm("¿Seguro desea anular la orden "+e+"?");
 		if(confirm){
 			window.location="ordenServicio.php?accion=anular&numero="+e;
-		}
+		}else{
+            window.location.reload();
+        }
 	}
 </script>
 
-<h4 class="widgettitle">Anular Orden de Servicio</h4>
+<h4 class="widgettitle">Administrar Ordenes de Servicio<span style="float:right;" class="iconfa-list"></span></h4>
 <table id="dyntable" class="table table-bordered responsive">
                     <colgroup>
                         <col class="con0" />
@@ -53,14 +54,13 @@
                             <td><?php echo $row['apellidos'];?></td>
                             <td><?php echo $row['cedula'];?></td>
                             <td><?php echo $row['estatus'];?></td>
-                          <td><center>
-                         <?php
-						 	if($row['estatus']!="Realizado"){
-						  ?>
-                          <a onclick="anular('<?php echo $row['numero_orden'];?>');" title="Anular" style="cursor:pointer; text-decoration:none;" class=" iconfa-trash"></a></center>
-                         <?php } ?>
+                          <td>
+                            <center>
+                            <?php if($row['estatus']!="Realizado"){ ?>
+                                <a class="btn btn-danger" onclick="anular('<?php echo $row['numero_orden'];?>');" title="Anular"><span class="iconfa-trash"></span></a></center>
+                                <?php } ?>
                           </td>
                         </tr>
                         <?php } ?>
 </tbody>
-                </table>
+</table>

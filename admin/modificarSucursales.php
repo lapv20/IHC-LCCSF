@@ -17,7 +17,7 @@ function eliminar(e,n){
 }
 </script>
 
-<h4 class="widgettitle"><center>Modificar Sucursal</center></h4>
+<h4 class="widgettitle">Administrar Sucursales<span style="float:right;" class="iconfa-list"></span></h4>
 <table id="dyntable" class="table table-bordered responsive">
 	<colgroup>
 	<col class="con0" />
@@ -50,8 +50,8 @@ function eliminar(e,n){
 			<td><?php echo $row['telefono'];?></td>
 			<td ><?php echo $row['rif'];?></td>
 			<td><center>
-				<a href="#" title="Modificar" class="icon-edit" onClick="MM_openBrWindow('modificarSucursal.php?id=<?php echo $row['idsucursal'];?>','Modificar','width=900,height=560')"></a>
-				<a href="#" title="Eliminar" class="icon-trash" onClick="eliminar('<?php echo $row['idsucursal'];?>','<?php echo $row['nombre_laboratorio'];?>');"></a></center>
+				<a class="btn btn-info" title="Modificar" onClick="MM_openBrWindow('modificarSucursal.php?id=<?php echo $row['idsucursal'];?>','Modificar','width=900,height=560')"><span class="iconfa-edit"></span></a>
+				<a class="btn btn-danger" title="Eliminar"  onClick="eliminar('<?php echo $row['idsucursal'];?>','<?php echo $row['nombre_laboratorio'];?>');"><span class="iconfa-trash"></span></a></center>
 			</td>
 		</tr>
 		<?php }?>

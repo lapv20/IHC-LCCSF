@@ -71,7 +71,49 @@
                 En el menu lateral izquierdo, ubique la opción "Sucursales" al pulsarla
                 se desplegará un sub menú, seguidamente pulse "Administrar Sucursales" al pulsar ésa opción se mostrarán las sucursales
                 del laboratorio, ubique el panel "Opciones" en la parte derecha
-                de la fila que contiene los datos de la empresa que desea modificar, pulse el icono de editar <i class="icon-edit"></i>.
+                de la fila que contiene los datos de la sucursal que desea modificar, pulse el icono de editar <i class="icon-edit"></i>.
+            </p>
+        </div>
+    <h3><a href="#"><span class="iconfa-chevron-down"></span> ¿Cómo elimino una sucursal del Laboratorio?</a></h3>
+        <div>
+            <p>
+            En el menu lateral izquierdo, ubique la opción "Sucursales" al pulsarla
+            se desplegará un sub menú "Administrar Sucursales" se mostrarán los datos de todas las sucursales en el sistema, ubique el panel "opciones" en la parte derecha
+            de la fila que contiene los datos de la sucursal que desea eliminar, pulse el icono de eliminar <i class="icon-trash"></i>, a continuación verá un mensaje emergente,
+            para confirmar la acción presione aceptar.
+            </p>
+        </div>
+    <h3><a href="#"><span class="iconfa-chevron-down"></span> ¿Cómo agrego un nuevo tipo de usuario al sistema?</a></h3>
+        <div>
+            <p>
+                En el menu lateral izquierdo, ubique la opción "Tipos de Usuario" al pulsarla
+                se desplegará un sub menú, seguidamente pulse "Nuevo Tipo" se mostrará
+                un formulario para introducir los datos del muevo tipo de usuario.
+            </p>
+        </div>
+    <h3><a href="#"><span class="iconfa-chevron-down"></span> ¿Cómo modifico un tipo de usuario?</a></h3>
+        <div>
+            <p>
+                En el menu lateral izquierdo, ubique la opción "Tipos de Usuario" al pulsarla
+                se desplegará un sub menú, seguidamente pulse "Administrar Tipos de Usuario" al pulsar ésa opción se mostrarán los tipos de usuario
+                que pueden utilizar el sistema, ubique el panel "Opciones" en la parte derecha
+                de la fila que contiene los datos del tipo de usuario que desea modificar, pulse el icono de editar <i class="icon-edit"></i>.
+            </p>
+        </div>
+    <h3><a href="#"><span class="iconfa-chevron-down"></span> ¿Cómo elimino un tipo de usuario del sistema?</a></h3>
+        <div>
+            <p>
+            En el menu lateral izquierdo, ubique la opción "Tipos de Usuario" al pulsarla
+            se desplegará un sub menú "Administrar Tipos de Usuario" se mostrarán los datos de todos los tipos de usuario en el sistema, ubique el panel "opciones" en la parte derecha
+            de la fila que contiene los datos del tipo de usuario que desea eliminar, pulse el icono de eliminar <i class="icon-trash"></i>, a continuación verá un mensaje emergente,
+            para confirmar la acción presione aceptar.
+            </p>
+        </div>
+    <h3><a href="#"><span class="iconfa-chevron-down"></span> ¿Qué signifca la opción "Historial" en el menú?</a></h3>
+        <div>
+            <p>
+                Ésta opción le permite ver todas las acciones que los usuarios han realizado en el sistema como añadir empleados, pacientes,
+                afiliados, crear ordenes de servicio entre otras. Esto le servirá para llevar un control del sistema.
             </p>
         </div>
 </div><!--#accordion-->

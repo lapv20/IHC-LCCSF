@@ -32,7 +32,7 @@ function eliminar(e,n){
                         <tr>
                           	<th class="head0 nosort"><input type="checkbox" class="checkall" /></th>
                             <th class="head0"><center>Tipo</center></th>
-                            <th class="head0"><center>Accion</center></th>
+                            <th class="head0"><center>Opciones</center></th>
                         </tr>
                     </thead>
                     <tbody>

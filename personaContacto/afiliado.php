@@ -1,5 +1,6 @@
 <?php 
 	 session_start();
+	  $_SESSION['tiusuario'] = 4;
 	 include("../error/no_conex.php");
 	 include("../admin/conexion.php");
 ?>

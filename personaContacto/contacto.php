@@ -1,5 +1,6 @@
 <?php 
 	 session_start();
+     $_SESSION['tiusuario'] = 3;
      include("../error/no_conex.php");
 	 include("../admin/conexion.php");
 	 date_default_timezone_set('UTC');

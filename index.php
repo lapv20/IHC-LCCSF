@@ -64,16 +64,16 @@ function verificar_usuario($user,$password)
 	$c = mysql_result($b,0);
 	echo ($c);
 	if($c == 1){
-		 header("location:admin/principal.php"); 
+         header("location:admin/principal.php"); 
 	}
 	if($c == 2){
-		 header("location:web/principal.php"); 
+         header("location:web/principal.php"); 
 	}
 	if($c == 3){
-		 header("location:personaContacto/contacto.php"); 
+         header("location:personaContacto/contacto.php"); 
 	}
 	if($c == 4){
-		 header("location:personaContacto/afiliado.php"); 
+         header("location:personaContacto/afiliado.php"); 
 	}
 }
 
@@ -91,6 +91,7 @@ if(!isset($_SESSION['userid'])) //para saber si existe o no ya la variable de se
         { 
             /*Si el login fue correcto, registramos la variable de sesión y al mismo tiempo refrescamos la pagina index.php.*/ 
             $_SESSION['userid'] = $result->nombre_usuario; 
+            $_SESSION['tusuario'] = $result->tipo_usuario;
             $_SESSION['nombres'] = $result->nombres;
             $_SESSION['apellidos'] = $result->apellidos;
             
@@ -111,9 +112,8 @@ if(!isset($_SESSION['userid'])) //para saber si existe o no ya la variable de se
             <input type="password" name="password" required id="password" placeholder="Contraseña" />
         </div>
         <div class="inputwrapper animate4 bounceIn">
-            <button class="btn" name="login" type="submit">Ingresar</button>
+            <button title="Haga clic para iniciar sesion" class="btn" name="login" type="submit">Ingresar</button>
         </div>
-        
     </form> 
     </div><!--loginpanelinner-->
 </div><!--loginpanel-->

@@ -1,5 +1,6 @@
 <?php 
 	session_start();
+	$_SESSION['tiusuario'] = 2;
 	include("../error/no_conex.php");
 	include("../admin/conexion.php");
 ?>
@@ -55,11 +56,35 @@
 	        });
 		 });
 	</script>
+	<style>
+	#cargando {
+		position: absolute; 
+	    width:100%;
+	    height:100%;
+	    background:#FFFFFF url(../admin/archivos/Loaders/Snake.gif) no-repeat center;
+	    z-index: 10000;
+	}
+
+	</style>
+
+	<script type="text/javascript">
+		jQuery(window).load(function () {
+		// Una vez se cargue al completo la página desaparecerá el div "cargando"
+		jQuery('#cargando').fadeOut(2000);
+		//jQuery('#cargando').hide();  
+	});
+	</script>
 
 </head>
 
 <body>
-
+	<div id="cargando">
+		<div class="loginpanel">
+			<div class="loginpanelinner">
+				<center><h4><strong>Cargando</strong></h4></center>
+			</div>
+		</div>
+	</div>
 <div class="mainwrapper">
     
     <div class="header">

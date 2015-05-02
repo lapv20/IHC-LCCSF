@@ -1,5 +1,6 @@
 <?php
 	session_start();
+	$_SESSION['tiusuario'] = 1;
 	include("../error/no_conex.php");
 ?>
 <!DOCTYPE html>
@@ -43,24 +44,24 @@
 	<script type="text/javascript" src="archivos/js/jquery.alerts.js"></script>
 	<script type="text/javascript" src="archivos/js/elements.js"></script>
 
-<style>
-#cargando {
-	position: absolute; 
-    width:100%;
-    height:100%;
-    background:#FFFFFF url(archivos/Loaders/Snake.gif) no-repeat center;
-    z-index: 10000;
-}
+	<style>
+	#cargando {
+		position: absolute; 
+	    width:100%;
+	    height:100%;
+	    background:#FFFFFF url(archivos/Loaders/Snake.gif) no-repeat center;
+	    z-index: 10000;
+	}
 
-</style>
+	</style>
 
-<script type="text/javascript">
-	jQuery(window).load(function () {
-	// Una vez se cargue al completo la página desaparecerá el div "cargando"
-	jQuery('#cargando').fadeOut(2000);
-	//jQuery('#cargando').hide();  
-});
-</script>
+	<script type="text/javascript">
+		jQuery(window).load(function () {
+		// Una vez se cargue al completo la página desaparecerá el div "cargando"
+		jQuery('#cargando').fadeOut(2000);
+		//jQuery('#cargando').hide();  
+	});
+	</script>
 
 	<script>
 		 jQuery(document).ready(function(){
@@ -83,7 +84,7 @@
 			<div class="loginpanelinner">
 				<center><h4><strong>Cargando</strong></h4></center>
 			</div>
-		</div>                     
+		</div>
 	</div>
 
 <div class="mainwrapper">

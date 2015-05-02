@@ -39,8 +39,8 @@
 					
 					$wsql="insert into usuario (nombre_usuario,clave,nombres,apellidos,idempresa,tipo_usuario,correo,telefono) values('$usuario','$clave','$nombres','$apellidos','$empresa','$tipousuario','$correo','$telefono')";
 					
-					echo $wsql;
-					mysql_query($wsql,$link);
+					//echo $wsql;
+					$result = mysql_query($wsql,$link);
 					echo "<script>location.href='principal.php?accion=informacionUsuario&nombreUsuario=$usuario';alert('Usuario creado con exito'); </script>";
 				}
 				

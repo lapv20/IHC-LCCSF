@@ -1,7 +1,7 @@
 <?php 
 	include("conexion.php");
 	
-	$wsql = "select * from historial join actividades where historial.idactividad=actividades.idactividad";
+	$wsql = "select * from historial join actividades where historial.idactividad=actividades.idactividad ORDER BY fecha DESC ";
 	
 	$result = mysql_query($wsql,$link);
 ?>

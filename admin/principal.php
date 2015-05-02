@@ -103,6 +103,9 @@
 							case "tipoUsuario";
 								$tipoUsuario = "active";
 							break;
+							case 'ayuda':
+								$ayuda="active";
+							break;
 						}
 					}
 				?>
@@ -110,37 +113,38 @@
                 <li class="dropdown <?php if($cuentas!=""){ echo $cuentas;}?>"><a href=""><span class="iconfa-user"></span> Cuentas</a>
                 	<ul <?php if ($cuentas!=""){?>style="display: block" <?php  } ?> >
                     	<li><a href="principal.php?accion=cuentas&tipo=nuevo"><span class="icon-plus"></span> Nueva Cuenta</a></li>                       
-                        <li><a href="principal.php?accion=cuentas&tipo=modificar"><span class="icon-list"></span> Administrar Cuentas</a></li>
+                        <li><a href="principal.php?accion=cuentas&tipo=administrar"><span class="icon-list"></span> Administrar Cuentas</a></li>
                         <!--<li><a href="principal.php?accion=cuentas&tipo=eliminar"><span class="icon-trash"></span> Eliminar</a></li>-->
                     </ul>
                 </li>
                 
-                <li class="<?php if($orden!=""){ echo $orden;}?>"><a href="principal.php?accion=orden&tipo=anular"><span class=" iconfa-calendar"></span> Orden de Servicio</a>
+                <li class="<?php if($orden!=""){ echo $orden;}?>"><a href="principal.php?accion=orden&tipo=anular"><span class="iconfa-file"></span> Ordenes de Servicio</a>
                 	
                 </li>
                 <li class="dropdown <?php if($empresa!=""){ echo $empresa;}?>"><a href=""><span class="iconfa-briefcase"></span> Empresas</a>
                 	<ul <?php if ($empresa!=""){?>style="display: block" <?php  } ?> >
                     	<li><a href="principal.php?accion=empresa&tipo=nuevo"><span class="icon-plus"></span> Nueva Empresa</a></li>
-                        <li><a href="principal.php?accion=empresa&tipo=modificar"><span class="icon-list"></span> Administrar Empresas</a></li>
+                        <li><a href="principal.php?accion=empresa&tipo=administrar"><span class="icon-list"></span> Administrar Empresas</a></li>
                     </ul>
                 </li>
                 
                 <li class=" dropdown <?php if($sucursal!=""){ echo $sucursal;}?>"><a href=""><span class="iconfa-globe"></span> Sucursales</a>
                 	<ul <?php if ($sucursal!=""){?>style="display: block" <?php  } ?> >
                     	<li><a href="principal.php?accion=sucursal&tipo=nuevo"><span class="icon-plus"></span> Nueva Sucursal</a></li>
-                        <li><a href="principal.php?accion=sucursal&tipo=modificar"><span class="icon-list"></span> Administrar Sucursales</a></li>
+                        <li><a href="principal.php?accion=sucursal&tipo=administrar"><span class="icon-list"></span> Administrar Sucursales</a></li>
                     </ul>
                 </li>
                 
                 <li class=" dropdown <?php if($tipoUsuario!=""){ echo $tipoUsuario;}?>"><a href=""><span class="iconfa-group"></span> Tipos de Usuario</a>
                 	<ul <?php if ($tipoUsuario!=""){?>style="display: block" <?php  } ?> >
                     	<li><a href="principal.php?accion=tipoUsuario&tipo=nuevo"><span class="icon-plus"></span> Nuevo Tipo</a></li>
-                        <li><a href="principal.php?accion=tipoUsuario&tipo=modificar"><span class="icon-list"></span> Administrar Tipos de Usuario</a></li>
+                        <li><a href="principal.php?accion=tipoUsuario&tipo=administrar"><span class="icon-list"></span> Administrar Tipos de Usuario</a></li>
                     </ul>
                 </li>
               
                 
                 <li class="<?php if($historial!=""){ echo $historial;}?>"><a href="principal.php?accion=historial&tipo=consultar"><span class=" iconfa-list-alt"></span> Historial</a>
+                <li class="<?php if($ayuda!=""){ echo $ayuda;}?>"><a href="principal.php?accion=ayuda&tipo=ayuda"><span class="iconfa-info-sign"></span> Ayuda</a></li>
                 <li class=""><a href="../web/logout.php"><span class=" iconfa-off"></span> Salir</a></li>
                 
             </ul>
@@ -156,8 +160,8 @@
 				if($_GET["accion"]=="cuentas" && $_GET['tipo']=="nuevo"){
 					?><li><span class="separator"></span> Cuentas <span class="separator"></span> <a href="principal.php?accion=cuentas&tipo=nuevo">Agregar Cuenta</a></li><?php
 				}
-				if($_GET["accion"]=="cuentas" && $_GET['tipo']=="modificar"){
-					?><li><span class="separator"></span> Cuentas <span class="separator"></span> <a href="principal.php?accion=cuentas&tipo=modificar">Administrar Cuentas</a></li><?php
+				if($_GET["accion"]=="cuentas" && $_GET['tipo']=="administrar"){
+					?><li><span class="separator"></span> Cuentas <span class="separator"></span> <a href="principal.php?accion=cuentas&tipo=administrar">Administrar Cuentas</a></li><?php
 				}
 				if($_GET["accion"]=="orden" && $_GET["tipo"]=="anular"){
 					?><li><span class="separator"></span> Orden de Servicio <span class="separator"></span> <a href="principal.php?accion=orden&tipo=anular">Anular Orden de Servicio</a></li><?php
@@ -165,22 +169,25 @@
 				if($_GET["accion"]=="empresa" && $_GET["tipo"]=="nuevo"){
 					?><li><span class="separator"></span> Empresas <span class="separator"></span> <a href="principal.php?accion=empresa&tipo=nuevo">Agregar Nueva Empresa</a></li><?php
 				}
-				if($_GET["accion"]=="empresa" && $_GET["tipo"]=="modificar"){
-					?><li><span class="separator"></span> Empresas <span class="separator"></span> <a href="principal.php?accion=empresa&tipo=modificar">Administrar Empresas</a></li><?php
+				if($_GET["accion"]=="empresa" && $_GET["tipo"]=="administrar"){
+					?><li><span class="separator"></span> Empresas <span class="separator"></span> <a href="principal.php?accion=empresa&tipo=administrar">Administrar Empresas</a></li><?php
 				}
 				if($_GET["accion"]=="sucursal" && $_GET["tipo"]=="nuevo"){
 					?><li><span class="separator"></span> Sucursales <span class="separator"></span> <a href="principal.php?accion=sucursal&tipo=nuevo">Añadir Sucursal</a></li><?php
 				}
-				if($_GET["accion"]=="sucursal" && $_GET["tipo"]=="modificar"){
-					?><li><span class="separator"></span> Sucursales <span class="separator"></span> <a href="principal.php?accion=sucursal&tipo=modificar"> Administrar Sucursales</a></li><?php
+				if($_GET["accion"]=="sucursal" && $_GET["tipo"]=="administrar"){
+					?><li><span class="separator"></span> Sucursales <span class="separator"></span> <a href="principal.php?accion=sucursal&tipo=administrar"> Administrar Sucursales</a></li><?php
 				}
 				if($_GET["accion"]=="tipoUsuario" && $_GET["tipo"]=="nuevo"){
 					?><li><span class="separator"></span> Tipos de Usuario <span class="separator"></span> <a href="principal.php?accion=tipoUsuario&tipo=nuevo">Nuevo Tipo</a></li><?php
 				}
-				if($_GET["accion"]=="tipoUsuario" && $_GET["tipo"]=="modificar"){
-					?><li><span class="separator"></span> Tipos de Usuario <span class="separator"></span> <a href="principal.php?accion=tipoUsuario&tipo=modificar"> Administrar Tipos de Usuarios</a></li><?php
+				if($_GET["accion"]=="tipoUsuario" && $_GET["tipo"]=="administrar"){
+					?><li><span class="separator"></span> Tipos de Usuario <span class="separator"></span> <a href="principal.php?accion=tipoUsuario&tipo=administrar"> Administrar Tipos de Usuarios</a></li><?php
 				}if($_GET["accion"]=="historial" && $_GET["tipo"]=="consultar"){
 					?><li><span class="separator"></span> Historial <span class="separator"></span> <a href="principal.php?accion=historial&tipo=consultar"> Ver Historial </a></li><?php
+				}
+				if ($_GET["accion"]=="ayuda") {
+					?><li><span class="separator"></span> Ayuda<?php
 				}
 			}
 		?>
@@ -206,7 +213,7 @@
 								if($_GET["accion"]=="cuentas" && $_GET['tipo']=="nuevo"){
 									include("nuevoUsuario.php");
 								}
-								if($_GET["accion"]=="cuentas" && $_GET['tipo']=="modificar"){
+								if($_GET["accion"]=="cuentas" && $_GET['tipo']=="administrar"){
 									include("modificarUsuarios.php");
 								}
 								if($_GET["accion"]=="informacionUsuario"){
@@ -218,7 +225,7 @@
 								if($_GET["accion"]=="empresa" && $_GET['tipo']=="nuevo"){
 									include("nuevaEmpresa.php");
 								}
-								if($_GET["accion"]=="empresa" && $_GET['tipo']=="modificar"){
+								if($_GET["accion"]=="empresa" && $_GET['tipo']=="administrar"){
 									include("modificarEmpresas.php");
 								}
 								if($_GET["accion"]=="historial" && $_GET['tipo']=="consultar"){
@@ -227,14 +234,17 @@
 								if($_GET["accion"]=="sucursal" && $_GET['tipo']=="nuevo"){
 									include("nuevaSucursal.php");
 								}
-								if($_GET["accion"]=="sucursal" && $_GET['tipo']=="modificar"){
+								if($_GET["accion"]=="sucursal" && $_GET['tipo']=="administrar"){
 									include("modificarSucursales.php");
 								}
 								if($_GET["accion"]=="tipoUsuario" && $_GET['tipo']=="nuevo"){
 									include("nuevoTipoUsuairo.php");
 								}
-								if($_GET["accion"]=="tipoUsuario" && $_GET['tipo']=="modificar"){
+								if($_GET["accion"]=="tipoUsuario" && $_GET['tipo']=="administrar"){
 									include("modificarTipoUsuarios.php");
+								}
+								if($_GET["accion"]=="ayuda" && $_GET['tipo']=="ayuda"){
+									include("ayuda.php");
 								}
 							}else{
 								?>

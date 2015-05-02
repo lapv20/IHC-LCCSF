@@ -33,7 +33,7 @@ function eliminar(e,n){
 		<th class="head0">Nombre</th>
 		<th class="head1">Telefono</th>
 		<th class="head0">RIF</th>
-		<th class="head1">Accion</th>
+		<th class="head1">Opciones</th>
 	</tr>
 </thead>
 <tbody>

@@ -11,7 +11,7 @@
     <div>
         <p>
             En el menu lateral izquierdo, ubique la opción "Afiliados" al pulsarla
-            se desplegará un sub menú, seguidamente pulse "Actualizar Afiliados" se mostrará
+            se desplegará un sub menú, seguidamente pulse "Actualizar Afiliados", al pulsar ésa opción se mostrará
             un formulario que le permitira cargar el archivo en formato excel (.xls) con los datos de los afiliados.
         </p>
     </div>

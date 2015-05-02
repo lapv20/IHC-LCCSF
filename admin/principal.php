@@ -49,7 +49,8 @@
     width:100%;
     height:100%;
     background:#FFFFFF url(archivos/Loaders/Snake.gif) no-repeat center;
-    }
+    z-index: 10000;
+}
 
 </style>
 
@@ -78,10 +79,13 @@
 </head>
 
 <body>
-
-<div id="cargando">
-	 <center><h4><strong>Redireccionando...</strong> </h4></center>                        
-</div>
+	<div id="cargando">
+		<div class="loginpanel">
+			<div class="loginpanelinner">
+				<center><h4><strong>Cargando</strong></h4></center>
+			</div>
+		</div>                     
+	</div>
 
 <div class="mainwrapper">
     <!--<div class="header" style="background:url(logo.png); background-repeat:no-repeat;background-size:500px 500px;">-->

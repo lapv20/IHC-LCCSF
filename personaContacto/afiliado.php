@@ -54,15 +54,14 @@
     width:100%;
     height:100%;
     background:#fff url(archivos/Loaders/Snake.gif) no-repeat center;
-    }
-
+    z-index: 10000;
+}
 </style>
 
 <script type="text/javascript">
 	jQuery(window).load(function () {
 	  // Una vez se cargue al completo la página desaparecerá el div "cargando"
 		jQuery('#cargando').fadeOut(3000);
-	    
 	  //jQuery('#cargando').hide();
 	  
 });
@@ -83,9 +82,13 @@
 <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/excanvas.min.js"></script><![endif]-->
 </head>
 <body>
-<div id="cargando">
-	 <center><h4><strong>Redireccionando...</strong> </h4></center>                        
-</div>
+	<div id="cargando">
+		<div class="loginpanel">
+			<div class="loginpanelinner">
+				<center><h4><strong>Cargando</strong></h4></center>
+			</div>
+		</div>
+	</div>
 
 <div class="mainwrapper">
     <div class="header">

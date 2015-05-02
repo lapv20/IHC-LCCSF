@@ -211,7 +211,7 @@
                 <a href="" data-toggle="dropdown" class="dropdown-toggle"><i class="icon-user"></i>
                 	<?php echo $_SESSION['nombres']; echo " "; echo $_SESSION['apellidos']; ?></a>
                 <ul class="dropdown-menu pull-right">
-                    <li><a href=""><span class="iconfa-user"></span> Ver Mi Información</a></li>
+                    <li><a href="?accion=info"><span class="iconfa-user"></span> Ver Mi Información</a></li>
                     <li class=""><a href="../web/logout.php"><span class="iconfa-off"></span> Salir</a></li>
                 </ul>
             </li>
@@ -223,15 +223,15 @@
                     <div id="dashboard-left" class="span">
                         <?php 							
 							if(isset($_GET["accion"]) || isset($_GET['tipo'])){
+								if($_GET["accion"]=="info"){
+									include("informacionUsuario2.php");
+								}
 								if($_GET["accion"]=="cuentas" && $_GET['tipo']=="nuevo"){
 									include("nuevoUsuario.php");
 								}
 								if($_GET["accion"]=="cuentas" && $_GET['tipo']=="modificar"){
 									include("modificarUsuarios.php");
 								}
-								/**if($_GET["accion"]=="cuentas" && $_GET['tipo']=="eliminar"){
-									include("eliminarUsuarios.php");
-								}**/
 								if($_GET["accion"]=="informacionUsuario"){
 									include("informacionUsuario.php");
 								}
@@ -301,14 +301,8 @@
                                     mauris vel est.
                                 </p>
                             </div>
-                        </div><!--#accordion-->
-
-
-
-								<?php
-							}
-						?>
-                        
+                        </div>
+                        <?php }	?> 
                     </div>
                 </div><!--row-fluid-->
                 

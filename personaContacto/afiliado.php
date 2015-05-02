@@ -143,7 +143,7 @@
 			<li class="right">
                 <a href="" data-toggle="dropdown" class="dropdown-toggle"><i class="icon-user"></i> <?php echo $_SESSION['nombres']; echo " "; echo $_SESSION['apellidos']; ?></a>
                 <ul class="dropdown-menu pull-right">
-                    <li><a href=""><span class="iconfa-user"></span> Ver Mi Información</a></li>
+                    <li><a href="?pag=info"><span class="iconfa-user"></span> Ver Mi Información</a></li>
                     <li class=""><a href="../web/logout.php"><span class="iconfa-off"></span> Salir</a></li>
                 </ul>
             </li>
@@ -162,6 +162,9 @@
 								}
 								if($_GET['pag']=="ay"){
 									include("ayuda2.php");
+								}
+								if($_GET['pag']=="info"){
+									include("../admin/informacionUsuario2.php");
 								}
 								
 							}

@@ -142,7 +142,7 @@
         	<li class="right">
                 <a href="" data-toggle="dropdown" class="dropdown-toggle"><i class="icon-user"></i> <?php echo $_SESSION['nombres']; echo " "; echo $_SESSION['apellidos']; ?></a>
                 <ul class="dropdown-menu pull-right">
-                    <li><a href=""><span class="iconfa-user"></span> Ver Mi Información</a></li>
+                    <li><a href="?accion=info"><span class="iconfa-user"></span> Ver Mi Información</a></li>
                     <li class=""><a href="../web/logout.php"><span class="iconfa-off"></span> Salir</a></li>
                 </ul>
             </li>
@@ -157,6 +157,9 @@
 								if($_GET["accion"]=="pacientes" && $_GET['tipo']=="nuevo"){
 									include("addpaciente.php"); 
 								}
+								if($_GET["accion"]=="info"){
+									include("../admin/informacionUsuario2.php"); 
+								}
 								if($_GET["accion"]=="pacientes" && $_GET['tipo']=="vep"){
 									include("verpacientes.php");
 								}
@@ -166,10 +169,10 @@
 								if($_GET["accion"]=="ordenser" && $_GET['tipo']=="veros"){
 									include("verordenservicio.php");
 								}
-								if($_GET['accion']="busqueda"){
+								if($_GET['accion']=="busqueda"){
 									include("bpaciente.php");
 								}
-								if($_GET['accion']="ayuda"&& $_GET['tipo']=="ayuda"){
+								if($_GET['accion']=="ayuda" && $_GET['tipo']=="ayuda"){
 									include("ayuda.php");
 								}
 							}

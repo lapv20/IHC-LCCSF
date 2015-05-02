@@ -4,13 +4,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Informacion de usuario</title>
 
-
-
-
 </head>
-
 <body>
-
 <?php 
 	include("conexion.php");
 	$nombreUsuario = $_GET['nombreUsuario'];

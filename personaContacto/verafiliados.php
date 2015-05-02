@@ -34,6 +34,7 @@ function eliminar(id){
         </colgroup>
         <thead>
             <tr>
+                <th class="head1"></th>
                	<th class="head1">Nombres</th>
                 <th class="head0">Apellidos</th>
                 <th class="head1">Cedula</th>

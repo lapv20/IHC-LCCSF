@@ -2,9 +2,9 @@
 
 <script type="text/javascript">
 function validateForm() {
-    var nempresa = document.forms["form"]["empresa"].value;
+    var empresa = document.forms["form"]["empresa"].value;
     var tipoU = document.forms["form"]["tipousuario"].value;
-    if (nempresa== null || nempresa== "-1") {
+    if (empresa== null || empresa== "-1") {
         alert("No se ha elegido la empresa asociada a la cuenta");
         return false;
     }
@@ -58,7 +58,7 @@ function validarNumeros(e)
 <div class="widget ">
 	<h4 class="widgettitle">Nueva Cuenta de Usuario</h4>
     <div class="widgetcontent nopadding">
-        <form class="stdform stdform2" if="form" method="post" action="usuarios.php?accion=nuevo" onsubmit="return validateForm()">
+        <form class="stdform stdform2" id="form" method="post" action="usuarios.php?accion=nuevo" onsubmit="return validateForm()">
         	<p>
                 <label>Nombres<small>Escriba Solo Letras</small></label>
                     <span class="field">  

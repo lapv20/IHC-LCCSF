@@ -10,6 +10,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Laboratorio Clinico Cesar Sanchez Font</title>
+<link rel="icon" type="image/png" href="../admin/archivos/images/logo2.png" />
 
     <link rel="stylesheet" href="../admin/archivos/css/font-awesomeNEW.min.css">
     <link rel="stylesheet" href="../admin/archivos/css/font-awesomeNEW.css">

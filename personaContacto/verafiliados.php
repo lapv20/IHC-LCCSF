@@ -21,7 +21,7 @@ function eliminar(id){
 </head>
 
 <body>
-<h4 class="widgettitle">Afiliados</h4>
+<h4 class="widgettitle">Lista de Afiliados<span class="iconfa-list" style="float:right;"></span></h4>
     <table id="dyntable2" class="table table-bordered responsive">
         <colgroup>
             <col class="con0" />
@@ -35,12 +35,12 @@ function eliminar(id){
         <thead>
             <tr>
                 <th class="head1"></th>
-               	<th class="head1">Nombres</th>
-                <th class="head0">Apellidos</th>
-                <th class="head1">Cedula</th>
-                <th class="head1">Fecha de Nacimiento</th>
-                <th class="head0">Genero</th>
-                <th class="head1">Telefonos</th>
+               	<th class="head1">Nombres<span class="iconfa-user" style="float:right; margin-top:5px;"></span></th>
+                <th class="head0">Apellidos<span class="iconfa-leaf" style="float:right; margin-top:5px;"></span></th>
+                <th class="head1">Cedula<span class="iconfa-list" style="float:right; margin-top:5px;"></span></th>
+                <th class="head1">Fecha de Nacimiento<span class="iconfa-calendar" style="float:right; margin-top:5px;"></span></th>
+                <th class="head0">Genero<span class="iconfa-cogs" style="float:right; margin-top:5px;"></span></th>
+                <th class="head1">Telefonos<span class="iconfa-phone-sign" style="float:right; margin-top:5px;"></span></th>
             </tr>
         </thead>
         <tbody>

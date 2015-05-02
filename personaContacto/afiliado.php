@@ -176,9 +176,7 @@
 								include("verafiliados.php");
 							}
 					  
-					  ?>  
-                     
-                        
+					  ?>
                     </div>
                 </div><!--row-fluid-->
                 

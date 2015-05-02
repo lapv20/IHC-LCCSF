@@ -120,7 +120,7 @@
                 <li class="dropdown <?php if($ordenser!=""){ echo $ordenser;}?>"><a href=""><span class="iconfa-book"></span>Ordenes de Servicio</a>
                 	<ul <?php if ($ordenser!=""){?>style="display: block" <?php  } ?>>                    	
                     	<li><a href="contacto.php?pag=co&acc=pac&tipo=sco"><span class="icon-plus"></span> Crear Orden de Servicio</a></li>
-                        <li><a href="contacto.php?pag=vo&acc=pac&tipo=svo"><span class="icon-list"></span>  Ver Ordenes de Servicio</a></li>                    
+                        <li><a href="contacto.php?pag=vo&acc=pac&tipo=svo"><span class="icon-list"></span> Administrar Ordenes de Servicio</a></li>                    
                     </ul>
                 </li>
                 <li class="<?php if($ayuda!=""){ echo $ayuda;}?>"><a href="contacto.php?pag=ay&acc=ay&tipo=ay"><span class="iconfa-info-sign"></span> Ayuda</a></li>
@@ -143,7 +143,7 @@
 					?><li><span class="separator"></span> Empleados <span class="separator"></span> <a href="contacto.php?pag=me&&acc=pac&&tipo=sme">Modificar Empleado</a></li><?php
 				}
 				if($_GET["pag"]=="vere" && $_GET['acc']=="pac" && $_GET['tipo']=="svere"){
-					?><li><span class="separator"></span> Empleados <span class="separator"></span> <a href="contacto.php?pag=vere&&acc=pac&&tipo=svere">Ver Empleados</a></li><?php
+					?><li><span class="separator"></span> Empleados <span class="separator"></span> <a href="contacto.php?pag=vere&&acc=pac&&tipo=svere">Administrar Empleados</a></li><?php
 				}
 				if($_GET["pag"]=="co" && $_GET['acc']=="pac" && $_GET['tipo']=="sco"){
 					?><li><span class="separator"></span> Orden de Servicio <span class="separator"></span> <a href="contacto.php?pag=co&&acc=pac&&tipo=sco">Crear Orden de Servicio</a></li><?php
@@ -152,7 +152,7 @@
 					?><li><span class="separator"></span> Orden de Servicio <span class="separator"></span> <a href="contacto.php?pag=mo&&acc=pac&&tipo=smo">Modificar Orden de Servicio</a></li><?php
 				}
 				if($_GET["pag"]=="vo" && $_GET['acc']=="pac" && $_GET['tipo']=="svo"){
-					?><li><span class="separator"></span> Orden de Servicio <span class="separator"></span> <a href="contacto.php?pag=vo&&acc=pac&&tipo=svo">Ver Ordenes de Servicio</a></li><?php
+					?><li><span class="separator"></span> Orden de Servicio <span class="separator"></span> <a href="contacto.php?pag=vo&&acc=pac&&tipo=svo">Administrar Ordenes de Servicio</a></li><?php
 				}
                 if ($_GET["pag"]=="ay") {
                     ?><li><span class="separator"></span> Ayuda<?php

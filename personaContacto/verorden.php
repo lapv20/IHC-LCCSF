@@ -21,7 +21,7 @@ function anular(id){
 </head>
 
 <body>
-<h4 class="widgettitle">Ordenes de Servicio</h4>
+<h4 class="widgettitle">Administrar Ordenes de Servicio<span style="float:right;" class="iconfa-list"></span></h4>
                 <table class="table table-bordered table-infinite" id="dyntable2">
                     <colgroup>
                         <col class="con0" />
@@ -84,8 +84,9 @@ function anular(id){
                             <td><?php echo $esta; ?></td>
                             <td>
                             	<center>
-                            		<?php if($esta!='Anulado'){?><a href="#" onClick="MM_openBrWindow('modificarorden.php?sucursal=<?php echo $row['idsucursal'] ?>&perfil=<?php echo $row['idperfil'] ?>&idordenservicio=<?php echo $id_orden; ?>','modificarorden','width=805,height=280')"><li class="icon-edit"></li></a><?php } ?>
-                            		<a href="#" <?php if($esta=='Pendiente'){?> onClick="anular(<?php echo $row['idordenservicio']; ?>);"<?php }else{?> onClick="alert('No se puede anular una orden cuyo estatus no sea pendiente')"<?php } ?>> <li class="icon-trash"></li></a>
+                            		<?php if($esta!='Anulado'){?>
+                                    <a class="btn btn-info" onClick="MM_openBrWindow('modificarorden.php?sucursal=<?php echo $row['idsucursal'] ?>&perfil=<?php echo $row['idperfil'] ?>&idordenservicio=<?php echo $id_orden; ?>','modificarorden','width=805,height=280')"><span class="iconfa-edit"></span></a><?php } ?>
+                            		<a class="btn btn-danger" <?php if($esta=='Pendiente'){?> onClick="anular(<?php echo $row['idordenservicio']; ?>);"<?php }else{?> onClick="alert('No se puede anular una orden cuyo estatus no sea pendiente')"<?php } ?>> <span class="iconfa-trash"></span></a>
                             	</center>
                             </td>
 	

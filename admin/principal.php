@@ -56,10 +56,9 @@
 
 <script type="text/javascript">
 	jQuery(window).load(function () {
-	  // Una vez se cargue al completo la página desaparecerá el div "cargando"
-		//jQuery('#cargando').fadeOut(2000);
-	  jQuery('#cargando').hide();
-	  
+	// Una vez se cargue al completo la página desaparecerá el div "cargando"
+	jQuery('#cargando').fadeOut(2000);
+	//jQuery('#cargando').hide();  
 });
 </script>
 
@@ -139,7 +138,7 @@
 						}
 					}
 				?>
-            	<li><a href="principal.php"><span class="iconfa-home"></span> INICIO</a></li>                  
+				<li class="nav-header">Menu</li>
                 <li class="dropdown <?php if($cuentas!=""){ echo $cuentas;}?>"><a href=""><span class="iconfa-user"></span> Cuentas</a>
                 	<ul <?php if ($cuentas!=""){?>style="display: block" <?php  } ?> >
                     	<li><a href="principal.php?accion=cuentas&tipo=nuevo"><span class="icon-plus"></span> Nueva Cuenta</a></li>                       

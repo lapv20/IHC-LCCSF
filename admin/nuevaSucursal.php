@@ -34,6 +34,18 @@ function validarNumeros(e)
     te = String.fromCharCode(tecla); 
     return patron.test(te); // prueba
 }
+function validarLyN(e) 
+{  
+    tecla = (document.all) ? e.keyCode : e.which; // 2
+    if (tecla==8) return true; // backspace
+    if (e.ctrlKey && tecla==86) { return true}; //Ctrl v
+    if (e.ctrlKey && tecla==67) { return true}; //Ctrl c
+    if (e.ctrlKey && tecla==88) { return true}; //Ctrl x
+    if (tecla>=96 && tecla<=105) { return true;} //numpad
+    patron = /[0-9-a-zA-Z]/; // patron
+    te = String.fromCharCode(tecla); 
+    return patron.test(te); // prueba
+}
 </script>
 </head>
 <body>
@@ -43,12 +55,12 @@ function validarNumeros(e)
     	<form class="stdform stdform2" method="post" action="sucursal.php?accion=nuevo">
         	<p>
                 <label>Nombre<small>Escriba el nombre de la sucursal</small></label>
-                <span class="field"><textarea cols="80" rows="5" class="span10" name="nombre" ></textarea></span>
+                <span class="field"><textarea cols="80" rows="5" required class="span10" name="nombre" ></textarea></span>
             </p>
             
             <p>
                 <label>Direccion</label>
-                <span class="field"><textarea cols="80" rows="5" class="span10" name="direccion"></textarea></span>
+                <span class="field"><textarea cols="80" rows="5" required class="span10" name="direccion"></textarea></span>
             </p>
             
             <p>
@@ -56,16 +68,17 @@ function validarNumeros(e)
                 <span class="field"><input type="text" name="telefono" onkeydown="return validarNumeros(event)" required class="input-xlarge" placeholder="Telefono" /></span>
             </p>
             <p>
-            	<label>RIF<small>Registro de Identificación Fiscal</small></label>
+                <label>RIF<small>Registro de Identificación Fiscal</small></label>
                 <span class="field">
-                	<select  name="rif1" data-placeholder="Seleccione una Opcion" style="width:50px; margin-top: 10px;"  tabindex="2">
-                        	<option value="V">V</option>
-                            <option value="J">J</option>
-                            <option value="E">E</option>
-                            <option value="G">G</option>
-                    </select>
-                    <input type="text" name="rif2" class="input-medium" placeholder="RIF" maxlength="8"/>
-                    <input type="text" name="rif3" class="input-small" style="width:10px;"  maxlength="1"/>
+                <select  name="rif1" data-placeholder="Seleccione una Opcion" style="width:50px; margin-top:10px;" tabindex="2">
+                        <option value="V">V</option>
+                        <option value="J">J</option>
+                        <option value="E">E</option>
+                        <option value="G">G</option>
+                </select>
+                
+                <input name="rif2" type="text" onKeyDown="return validarLyN(event)"  required class="input-medium" placeholder="RIF" maxlength="8"/>
+                <input name="rif3" type="text" onKeyDown="return validarN(event)"  required class="input-small"  style="width:10px;" maxlength="1"/>
                 </span>
             </p>
             <p class="stdformbutton">

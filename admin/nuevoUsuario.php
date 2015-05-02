@@ -1,6 +1,19 @@
 <?php include("conexion.php");?>
 
-<script>
+<script type="text/javascript">
+function validateForm() {
+    var nempresa = document.forms["form"]["empresa"].value;
+    var tipoU = document.forms["form"]["tipousuario"].value;
+    if (nempresa== null || nempresa== "-1") {
+        alert("No se ha elegido la empresa asociada a la cuenta");
+        return false;
+    }
+        if (tipoU== null || tipoU == "-1") {
+        alert("No se ha elegido el tipo usuario");
+        return false;
+    }
+}
+
 function validar(){
 	var formulario  =  document.getElementsByTagName('form');
 	var con = 0,a="";
@@ -45,7 +58,7 @@ function validarNumeros(e)
 <div class="widget ">
 	<h4 class="widgettitle">Nueva Cuenta de Usuario</h4>
     <div class="widgetcontent nopadding">
-        <form class="stdform stdform2" method="post" action="usuarios.php?accion=nuevo">
+        <form class="stdform stdform2" if="form" method="post" action="usuarios.php?accion=nuevo" onsubmit="return validateForm()">
         	<p>
                 <label>Nombres<small>Escriba Solo Letras</small></label>
                     <span class="field">  
@@ -69,7 +82,7 @@ function validarNumeros(e)
             <p>
                 <label>Empresa</label>
                 <span class="field">
-                <select  name="empresa" data-placeholder="Seleccione una Opcion" style="width:350px" class="chzn-select" tabindex="2">
+                <select  name="empresa" data-placeholder="Seleccione una Opcion" style="width:350px" class="chzn-select" >
                     <option value="-1">Seleccione una Opcion</option>
                     <?php 
 						while($row = mysql_fetch_array($result)){

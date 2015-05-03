@@ -52,7 +52,8 @@
         jQuery('#dyntable2').dataTable( {
             "bScrollInfinite": true,
             "bScrollCollapse": true,
-            "sScrollY": "300px"
+            "sScrollY": "300px",
+            "sPaginationType": "full_numbers"
         });
 	 });
 </script>
@@ -73,10 +74,8 @@
       //jQuery('#cargando').hide();
 });
 </script>
-
 <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/excanvas.min.js"></script><![endif]-->
 </head>
-
 <body>
     <div id="cargando">
         <div class="loginpanel">
@@ -86,14 +85,10 @@
             </div>
         </div>
     </div>
-<div class="mainwrapper">
-    
+<div class="mainwrapper">    
     <div class="header">
         <div class="logo">
-            
            <a href="contacto.php"><img src="../admin/archivos/images/LogoLCCSF.png" alt="" /></a>
-       
-            <!--headmenu-->
         </div>
     </div>
     <div class="leftpanel">
@@ -111,32 +106,17 @@
                         $pag= $_GET['pag'];
                         $acc = $_GET["acc"];
                         switch($pag){
-                            case "adde" : 
-                                $empleados="active";
-                            break;
-                            case "vere" : 
-                                $empleados="active";
-                            break;
-                            case "me" : 
-                                $empleados="active";
-                            break;
-                            case "co" : 
-                                $ordenser="active";
-                            break;
-                            case 'vo':
-                                $ordenser="active";
-                            break;
-                            case "consultas" : 
-                                $consultas="active";
-                            break;
-                            case 'ay':
-                                $ayuda="active";
-                            break;
+                            case "adde"      : $empleados = "active"; break;
+                            case "vere"      : $empleados = "active"; break;
+                            case "me"        : $empleados = "active"; break;
+                            case "co"        : $ordenser = "active"; break;
+                            case 'vo'        : $ordenser = "active"; break;
+                            case "consultas" : $consultas = "active"; break;
+                            case 'ay'        : $ayuda = "active"; break;
                         }
                     }else{
                             $inicio = "active";
-                        }
-                ?>
+                    } ?>
                 <li class="<?php if($inicio!=""){ echo $inicio;} ?>"><a href="contacto.php"><span class="iconfa-home"></span> INICIO</a></li>
                 <li class="dropdown <?php if($empleados!=""){ echo $empleados;}?>"><a href=""><span class="iconfa-user"></span>Empleados</a>
                 	<ul <?php if ($empleados!=""){?>style="display: block" <?php  } ?>>                    	
@@ -164,27 +144,13 @@
         <li><a href="contacto.php"><i class="iconfa-home"></i></a> <span class="separator"></span> Inicio</li>
             <?php 							
 			if(isset($_GET["pag"]) || isset($_GET['acc']) || isset($_GET['tipo'])){
-				if($_GET["pag"]=="adde" && $_GET['acc']=="pac" && $_GET['tipo']=="sadde"){
-					?><li><span class="separator"></span> Empleados <span class="separator"></span> <a href="contacto.php?pag=adde&&acc=pac&&tipo=sadde">Añadir Empleado</a></li><?php
-				}
-				if($_GET["pag"]=="me" && $_GET['acc']=="pac" && $_GET['tipo']=="sme"){
-					?><li><span class="separator"></span> Empleados <span class="separator"></span> <a href="contacto.php?pag=me&&acc=pac&&tipo=sme">Modificar Empleado</a></li><?php
-				}
-				if($_GET["pag"]=="vere" && $_GET['acc']=="pac" && $_GET['tipo']=="svere"){
-					?><li><span class="separator"></span> Empleados <span class="separator"></span> <a href="contacto.php?pag=vere&&acc=pac&&tipo=svere">Administrar Empleados</a></li><?php
-				}
-				if($_GET["pag"]=="co" && $_GET['acc']=="pac" && $_GET['tipo']=="sco"){
-					?><li><span class="separator"></span> Orden de Servicio <span class="separator"></span> <a href="contacto.php?pag=co&&acc=pac&&tipo=sco">Crear Orden de Servicio</a></li><?php
-				}
-				if($_GET["pag"]=="mo" && $_GET['acc']=="pac" && $_GET['tipo']=="smo"){
-					?><li><span class="separator"></span> Orden de Servicio <span class="separator"></span> <a href="contacto.php?pag=mo&&acc=pac&&tipo=smo">Modificar Orden de Servicio</a></li><?php
-				}
-				if($_GET["pag"]=="vo" && $_GET['acc']=="pac" && $_GET['tipo']=="svo"){
-					?><li><span class="separator"></span> Orden de Servicio <span class="separator"></span> <a href="contacto.php?pag=vo&&acc=pac&&tipo=svo">Administrar Ordenes de Servicio</a></li><?php
-				}
-                if ($_GET["pag"]=="ay") {
-                    ?><li><span class="separator"></span> Ayuda<?php
-                }
+				if($_GET["pag"]=="adde" && $_GET['acc']=="pac" && $_GET['tipo']=="sadde"){ ?><li><span class="separator"></span> Empleados <span class="separator"></span> <a href="contacto.php?pag=adde&&acc=pac&&tipo=sadde">Añadir Empleado</a></li><?php	}
+				if($_GET["pag"]=="me" && $_GET['acc']=="pac" && $_GET['tipo']=="sme"){ ?><li><span class="separator"></span> Empleados <span class="separator"></span> <a href="contacto.php?pag=me&&acc=pac&&tipo=sme">Modificar Empleado</a></li><?php	}
+				if($_GET["pag"]=="vere" && $_GET['acc']=="pac" && $_GET['tipo']=="svere"){ ?><li><span class="separator"></span> Empleados <span class="separator"></span> <a href="contacto.php?pag=vere&&acc=pac&&tipo=svere">Administrar Empleados</a></li><?php	}
+				if($_GET["pag"]=="co" && $_GET['acc']=="pac" && $_GET['tipo']=="sco"){ ?><li><span class="separator"></span> Orden de Servicio <span class="separator"></span> <a href="contacto.php?pag=co&&acc=pac&&tipo=sco">Crear Orden de Servicio</a></li><?php	}
+				if($_GET["pag"]=="mo" && $_GET['acc']=="pac" && $_GET['tipo']=="smo"){ ?><li><span class="separator"></span> Orden de Servicio <span class="separator"></span> <a href="contacto.php?pag=mo&&acc=pac&&tipo=smo">Modificar Orden de Servicio</a></li><?php	}
+				if($_GET["pag"]=="vo" && $_GET['acc']=="pac" && $_GET['tipo']=="svo"){ ?><li><span class="separator"></span> Orden de Servicio <span class="separator"></span> <a href="contacto.php?pag=vo&&acc=pac&&tipo=svo">Administrar Ordenes de Servicio</a></li><?php	}
+                if ($_GET["pag"]=="ay"){ ?><li><span class="separator"></span> Ayuda</li><?php  }
 			}
 		?>
             <li class="right">
@@ -195,55 +161,25 @@
                 </ul>
             </li>
         </ul>
-        
         <div class="maincontent">
             <div class="maincontentinner">
                 <div class="row-fluid">
                     <div id="dashboard-left" class="span">
                       <?php 
-					  		if(isset($_GET['pag']))
-							{
-								if($_GET['pag']=="adde")
-								{	
-									include("addempleado.php"); 
-								}
-								if($_GET['pag']=="vere")
-								{	
-									include("verempleado.php"); 
-								}
-								if($_GET['pag']=="co")
-								{	
-									include("crearordenservicio.php"); 
-								}
-								if($_GET['pag']=="bo")
-								{	
-									include("buscarorden.php"); 
-								}
-								if($_GET['pag']=="vo")
-								{	
-									include("verorden.php"); 
-								}
-								if($_GET['pag']=="me")
-                                {   
-                                    include("buscarempleado1.php"); 
-                                }
-                                if($_GET['pag']=="info")
-								{	
-									include("../admin/informacionUsuario2.php"); 
-								}
-                                if($_GET['pag']=="ay"&&$_GET['acc']=="ay" && $_GET['tipo']=="ay")
-                                {   
-                                    include("ayuda.php"); 
-                                }
-							}
-							else{
-								include("buscarempleado1.php");
-							}
-					  
-					  ?>   
+				  		if(isset($_GET['pag'])){
+							if($_GET['pag']=="adde"){ include("addempleado.php"); }
+							if($_GET['pag']=="vere"){ include("verempleado.php"); }
+							if($_GET['pag']=="co"){ include("crearordenservicio.php"); }
+							if($_GET['pag']=="bo"){ include("buscarorden.php"); }
+							if($_GET['pag']=="vo"){ include("verorden.php"); }
+							if($_GET['pag']=="me"){ include("buscarempleado1.php"); }
+                            if($_GET['pag']=="info"){ include("../admin/informacionUsuario2.php"); }
+                            if($_GET['pag']=="ay"&&$_GET['acc']=="ay" && $_GET['tipo']=="ay"){    include("ayuda.php"); }
+						}else{
+							include("buscarempleado1.php");
+						} ?>   
                     </div>
                 </div><!--row-fluid-->
-                
                 <div class="footer">
                     <div class="footer-left">
                        <span><b>Proyecto de IHC</b><br>Edilianny Sánchez, Argenis García, Jesus Marquez & Luis Pérez</span>
@@ -258,12 +194,9 @@
                        <!-- <span>Designed by: <a href="http://themepixels.com/">ThemePixels</a></span>-->
                     </div>
                 </div><!--footer-->
-                
             </div><!--maincontentinner-->
         </div><!--maincontent-->
-        
     </div><!--rightpanel-->
-    
 </div><!--mainwrapper-->
 </body>
 </html>

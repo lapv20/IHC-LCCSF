@@ -3,7 +3,6 @@
      $_SESSION['tiusuario'] = 3;
      include("../error/no_conex.php");
 	 include("../admin/conexion.php");
-	 date_default_timezone_set('UTC');
 ?>
 <!DOCTYPE html>
 <html>
@@ -251,11 +250,12 @@
                     </div>
                     <div class="footer-right">
                        <?php 
-                       date_default_timezone_set('UTC');
+                       date_default_timezone_set('America/Caracas');
                        $dias = array("Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sábado");
                         $meses = array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
                        echo $dias[date('w')]." ".date('d')." de ".$meses[date('n')-1]. " del ".date('Y');
-                       ?><!-- <span>Designed by: <a href="http://themepixels.com/">ThemePixels</a></span>-->
+                       ?>
+                       <!-- <span>Designed by: <a href="http://themepixels.com/">ThemePixels</a></span>-->
                     </div>
                 </div><!--footer-->
                 

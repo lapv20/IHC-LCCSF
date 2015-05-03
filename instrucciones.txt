@@ -1,0 +1,14 @@
+Intrucciones:
+
+	-Requisitos:
+		-Servidor apache con version PHP 5.4 equivalente o inferior.
+
+
+	-Pasos para probar el sistema:
+
+		-Importar la base de datos  que se encuentra en el archivo "lccsf.sql" al servidor local donde se correra el sistema.
+		
+		-Configurar el acceso a la base de datos. Se puede hacer de 2 maneras las cuales son:
+			-Configurar el archivo de conexion del sistema que se encuentra en la ruta "admin/conexion.php" con los ajustes del servidor local.
+				Ó
+			-Crear un usuario en el servidor local con los siguientes parametros: Usuario: laboratorio Contraseña: elaj2015 y darle los permisos necesarios sobre la base de datos del sistema.

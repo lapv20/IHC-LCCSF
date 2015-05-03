@@ -10,13 +10,14 @@ Intrucciones:
 
 		- Tener los requisitos instalados y funcionando correctamente.
 
-		- Copiar el directorio del proyecto en la carpeta 'C:\wamp\www'
+		- Copiar el directorio del proyecto en la carpeta 'C:\wamp\www' o 'C:\xampp\htdocs' dependiendo del servidor apache que utilice.
 
 		- Importar la base de datos  que se encuentra en el archivo "lccsf.sql" al servidor local donde se correra el sistema.
 		
 		- CONFIGURACIÓN DE ACCESO A LA BASE DE DATOS:
 			- Configurar el archivo de conexion del sistema que se encuentra en la ruta "admin/conexion.php"
 			con los ajustes del servidor local de su instalación, modificando los últimos 2 parametros de la función 'mysql_connect()', correspondientes al usuario y clave respectivamente.
+			$link = mysql_connect("localhost","laboratorio","elaj2015"); especificamente  ésta.
 
 		- En el navegador web, ir a la siguiente dirección 'localhost/LCCSF/'
 			al visualizar el login de la aplicación puede elegir entre uno de los siguientes usuarios

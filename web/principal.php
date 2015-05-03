@@ -222,7 +222,6 @@
                     </div>
                     <div class="footer-right">
                        <?php 
-                       date_default_timezone_set('UTC');
                        $dias = array("Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sábado");
         				$meses = array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
                        echo $dias[date('w')]." ".date('d')." de ".$meses[date('n')-1]. " del ".date('Y');
@@ -236,7 +235,7 @@
     </div><!--rightpanel-->
     
 </div><!--mainwrapper-->
-<script type="text/javascript">
+<!--<script type="text/javascript">
     jQuery(document).ready(function() {
         
       // simple chart
@@ -305,6 +304,6 @@
         // tabbed widget
         jQuery('.tabbedwidget').tabs();
     });
-</script>
+</script>->
 </body>
 </html>

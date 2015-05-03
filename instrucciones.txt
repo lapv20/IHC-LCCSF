@@ -1,14 +1,19 @@
 Intrucciones:
 
-	-Requisitos:
-		-Servidor apache con version PHP 5.4 equivalente o inferior.
+	#REQUISITOS:
+		- Servidor Apache con version PHP 5.4 equivalente o inferior.
+		- Base de Datos: MySQL 5.6.12 o una versión superior
+		- Java versión 8
 
 
-	-Pasos para probar el sistema:
+	#PASOS PARA CORRER LA APLICACIÓN:
 
-		-Importar la base de datos  que se encuentra en el archivo "lccsf.sql" al servidor local donde se correra el sistema.
+		- Tener los requisitos instalados y funcionando correctamente.
+
+		- Copiar el directorio del proyecto en la carpeta 'C:\wamp\www'
+
+		- Importar la base de datos  que se encuentra en el archivo "lccsf.sql" al servidor local donde se correra el sistema.
 		
-		-Configurar el acceso a la base de datos. Se puede hacer de 2 maneras las cuales son:
-			-Configurar el archivo de conexion del sistema que se encuentra en la ruta "admin/conexion.php" con los ajustes del servidor local.
-				Ó
-			-Crear un usuario en el servidor local con los siguientes parametros: Usuario: laboratorio Contraseña: elaj2015 y darle los permisos necesarios sobre la base de datos del sistema.
+		- CONFIGURACIÓN DE ACCESO A LA BASE DE DATOS:
+			- Configurar el archivo de conexion del sistema que se encuentra en la ruta "admin/conexion.php"
+			con los ajustes del servidor local de su instalación, modificando los últimos 2 parametros de la función 'mysql_connect()', correspondientes al usuario y clave respectivamente.

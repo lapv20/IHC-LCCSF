@@ -1,0 +1,29 @@
+Intrucciones:
+
+	#REQUISITOS:
+		- Servidor Apache con version PHP 5.4 equivalente o inferior.
+		- Base de Datos: MySQL 5.6.12 o una versión superior
+		- Java versión 8
+
+
+	#PASOS PARA CORRER LA APLICACIÓN:
+
+		- Tener los requisitos instalados y funcionando correctamente.
+
+		- Copiar el directorio del proyecto en la carpeta 'C:\wamp\www'
+
+		- Importar la base de datos  que se encuentra en el archivo "lccsf.sql" al servidor local donde se correra el sistema.
+		
+		- CONFIGURACIÓN DE ACCESO A LA BASE DE DATOS:
+			- Configurar el archivo de conexion del sistema que se encuentra en la ruta "admin/conexion.php"
+			con los ajustes del servidor local de su instalación, modificando los últimos 2 parametros de la función 'mysql_connect()', correspondientes al usuario y clave respectivamente.
+
+		- En el navegador web, ir a la siguiente dirección 'localhost/LCCSF/'
+			al visualizar el login de la aplicación puede elegir entre uno de los siguientes usuarios
+
+			Usuario 	Clave 		Tipo Usuario
+			-------------------------------------------------
+			allin1 		1234 		Administrador 
+			edy1192 	1234 		Secretaria
+			sapv1993 	2743 		Persona Contacto Afiliado
+			lapv1992	lapv1992	Persona Contacto Empresa

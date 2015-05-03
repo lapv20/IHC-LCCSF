@@ -12,7 +12,7 @@
         <p>
             En el menu lateral izquierdo, ubique la opción "Afiliados" al pulsarla
             se desplegará un sub menú, seguidamente pulse "Actualizar Afiliados", al pulsar ésa opción se mostrará
-            un formulario que le permitira cargar el archivo en formato excel (.xls) con los datos de los afiliados.
+            un formulario que le permitira cargar el archivo en formato excel (.xls o .xlsx) con los datos de los afiliados.
         </p>
     </div>
     <h3><a href="#"><span class="iconfa-chevron-down"></span> ¿Cuál es el formato del archivo de los afiliados?</a></h3>

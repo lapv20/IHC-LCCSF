@@ -116,7 +116,12 @@
     } else { 
         // Si la variable de sesión 'userid' ya existe, que muestre el mensaje de saludo. 
         echo 'Su usuario ingreso correctamente.'; 
-        echo '<a href="secretaria/logout.php">Logout</a>'; 
+        echo '<a href="secretaria/logout.php">Logout</a>';
+        $c = $_SESSION['tusuario'];
+        if($c == 1){ header("location:admin/principal.php"); }
+        if($c == 2){ header("location:web/principal.php"); }
+        if($c == 3){ header("location:personaContacto/contacto.php"); }
+        if($c == 4){ header("location:personaContacto/afiliado.php"); }
     } ?> 
 </body>
 </html>

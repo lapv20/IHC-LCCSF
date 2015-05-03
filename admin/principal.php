@@ -88,7 +88,7 @@
 		</div>
 	</div>
 
-<div class="mainwrapper">
+	<div class="mainwrapper">
     <!--<div class="header" style="background:url(logo.png); background-repeat:no-repeat;background-size:500px 500px;">-->
     <div class="header" >
 	    <div>
@@ -299,14 +299,14 @@
     </div><!--rightpanel-->
     
 </div><!--mainwrapper-->
-<script type="text/javascript">
+<!--<script type="text/javascript">
 
     jQuery(document).ready(function() {
 		
 		
       // simple chart
 		var flash = [[0, 11], [1, 9], [2,12], [3, 8], [4, 7], [5, 3], [6, 1]];
-		var html5 = [[0, 5], [1, 4], [2,4], [3, 1], [4, 9], [5, 10], [6, 13]];
+	var html5 = [[0, 5], [1, 4], [2,4], [3, 1], [4, 9], [5, 10], [6, 13]];
       var css3 = [[0, 6], [1, 1], [2,9], [3, 12], [4, 10], [5, 12], [6, 11]];
 			
 		function showTooltip(x, y, contents) {
@@ -369,6 +369,6 @@
         // tabbed widget
         jQuery('.tabbedwidget').tabs();
     });
-</script>
+</script>-->
 </body>
 </html>

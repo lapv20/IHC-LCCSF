@@ -225,7 +225,12 @@
                                 $genero = $objPHPExcel->getActiveSheet()->getCell('E' . $i)->getCalculatedValue();
                                 $telefono = $objPHPExcel->getActiveSheet()->getCell('F' . $i)->getCalculatedValue();
                                 
-                                //echo "Iteracion numero: " . $i. "<br>";
+
+                                $timestamp = PHPExcel_Shared_Date::ExcelToPHP($fecha_nac);
+
+                                $fecha_nac = date("Y-m-d",$timestamp);
+                                
+
 
                                 if (($contador!=0) && ($objPHPExcel->getActiveSheet()->getCell('A'.$i)->getCalculatedValue()!=NULL)) 
                                 {                        
@@ -292,8 +297,6 @@
                                 
                                 if($objPHPExcel->getActiveSheet()->getCell('A'.$i)->getCalculatedValue()==NULL) //pregunto que si ha encontrado un valor null en una columna inicie un parametro en 1 que indicaria el fin del ciclo while
                                 {
-                                    
-                                    //echo "Iteracion numero FINAL <br>";
                                     $param=1; //para detener el ciclo cuando haya encontrado un valor NULL
                                 }
                                 $i++;
@@ -403,7 +406,12 @@
     });
 </script>
 
+<?php 
+function fexcel2unix($f){
+    return ($f-25568)*86400;
+}
 
+ ?>
     
 </body>
 </html>

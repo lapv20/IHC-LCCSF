@@ -11,6 +11,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Laboratorio Clinico Cesar Sanchez Font</title>
+<link rel="icon" type="image/png" href="../admin/archivos/images/logo2.png" />
 
 <link rel="stylesheet" href="../admin/archivos/css/style.default.css" type="text/css" />
 <link rel="stylesheet" href="../admin/archivos/css/bootstrap-fileupload.min.css" type="text/css" />
@@ -56,12 +57,36 @@
         });
 	 });
 </script>
+<style>
+#cargando {
+    position: absolute;
+    width:100%;
+    height:100%;
+    background:#fff url(archivos/Loaders/Snake.gif) no-repeat center;
+    z-index: 10000;
+}
+</style>
+
+<script type="text/javascript">
+    jQuery(window).load(function () {
+      // Una vez se cargue al completo la página desaparecerá el div "cargando"
+        jQuery('#cargando').fadeOut(3000);
+      //jQuery('#cargando').hide();
+});
+</script>
 
 <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/excanvas.min.js"></script><![endif]-->
 </head>
 
 <body>
-
+    <div id="cargando">
+        <div class="loginpanel">
+            <div class="loginpanelinner">
+                <!--<div class="logo" style="margin-bottom: 50px;"><img src="../admin/archivos/images/LogoLCCSF.png" width="350px"/></div> -->
+                <center><h4><strong>Cargando</strong></h4></center>
+            </div>
+        </div>
+    </div>
 <div class="mainwrapper">
     
     <div class="header">

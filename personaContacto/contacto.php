@@ -166,6 +166,7 @@
                 if ($_GET["pag"]=="ay") {
                     ?><li><span class="separator"></span> Ayuda<?php
                 }
+            }
 		?>
             <li class="right">
                 <a href="" data-toggle="dropdown" class="dropdown-toggle"><i class="icon-user"></i> <?php echo $_SESSION['nombres']; echo " "; echo $_SESSION['apellidos']; ?></a>
